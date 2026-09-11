@@ -1,0 +1,77 @@
+{
+  "id": "a1-001",
+  "title": "Present Simple",
+  "description": "Practice Present Simple.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A1",
+  "level": "A1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Choose the correct form: She ___ to school every day.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use -s with he/she/it in the present simple.",
+      "correctIndex": 1,
+      "answers": [
+        "goes",
+        "go",
+        "going",
+        "gone"
+      ]
+    },
+    {
+      "question": "Choose the correct form: He ___ coffee every morning.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use -s with he/she/it in the present simple.",
+      "correctIndex": 3,
+      "answers": [
+        "go",
+        "going",
+        "goes",
+        "gone"
+      ]
+    },
+    {
+      "question": "Choose the correct form: My sister ___ English at school.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use -s with he/she/it in the present simple.",
+      "correctIndex": 2,
+      "answers": [
+        "go",
+        "goes",
+        "going",
+        "gone"
+      ]
+    },
+    {
+      "question": "Choose the correct form: The bus ___ at seven every day.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use -s with he/she/it in the present simple.",
+      "correctIndex": 4,
+      "answers": [
+        "go",
+        "going",
+        "gone",
+        "goes"
+      ]
+    },
+    {
+      "question": "Choose the correct form: Tom ___ his homework after dinner.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use -s with he/she/it in the present simple.",
+      "correctIndex": 4,
+      "answers": [
+        "go",
+        "going",
+        "gone",
+        "goes"
+      ]
+    }
+  ]
+}

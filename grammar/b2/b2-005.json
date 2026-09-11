@@ -1,0 +1,77 @@
+{
+  "id": "b2-005",
+  "title": "Participle Clauses",
+  "description": "Practice Participle Clauses.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B2",
+  "level": "B2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "___ the report, she sent it to the manager.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Having + past participle shows the first action happened before the second.",
+      "correctIndex": 1,
+      "answers": [
+        "Having finished",
+        "Finishing",
+        "To finish",
+        "Finished"
+      ]
+    },
+    {
+      "question": "___ the meeting, he sent the notes to everyone.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Having + past participle shows the first action happened before the second.",
+      "correctIndex": 3,
+      "answers": [
+        "Finishing",
+        "To finish",
+        "Having finished",
+        "Finished"
+      ]
+    },
+    {
+      "question": "___ the contract, she emailed the final version.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Having + past participle shows the first action happened before the second.",
+      "correctIndex": 2,
+      "answers": [
+        "Finishing",
+        "Having finished",
+        "To finish",
+        "Finished"
+      ]
+    },
+    {
+      "question": "___ the data, they presented the results.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Having + past participle shows the first action happened before the second.",
+      "correctIndex": 4,
+      "answers": [
+        "Finishing",
+        "To finish",
+        "Finished",
+        "Having finished"
+      ]
+    },
+    {
+      "question": "___ the application, he submitted it online.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Having + past participle shows the first action happened before the second.",
+      "correctIndex": 4,
+      "answers": [
+        "Finishing",
+        "To finish",
+        "Finished",
+        "Having finished"
+      ]
+    }
+  ]
+}

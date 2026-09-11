@@ -1,0 +1,77 @@
+{
+  "id": "a1-009",
+  "title": "Prepositions",
+  "description": "Practice Prepositions.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A1",
+  "level": "A1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The keys are ___ the table.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use on for a surface.",
+      "correctIndex": 2,
+      "answers": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ]
+    },
+    {
+      "question": "The phone is ___ the desk.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use on for a surface.",
+      "correctIndex": 3,
+      "answers": [
+        "in",
+        "at",
+        "on",
+        "to"
+      ]
+    },
+    {
+      "question": "Your shoes are ___ the bed.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use on for a surface.",
+      "correctIndex": 4,
+      "answers": [
+        "in",
+        "at",
+        "to",
+        "on"
+      ]
+    },
+    {
+      "question": "The picture is ___ the wall.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use on for a surface.",
+      "correctIndex": 1,
+      "answers": [
+        "on",
+        "in",
+        "at",
+        "to"
+      ]
+    },
+    {
+      "question": "The cups are ___ the table.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use on for a surface.",
+      "correctIndex": 3,
+      "answers": [
+        "in",
+        "at",
+        "on",
+        "to"
+      ]
+    }
+  ]
+}

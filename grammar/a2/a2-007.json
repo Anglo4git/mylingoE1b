@@ -1,0 +1,77 @@
+{
+  "id": "a2-007",
+  "title": "Adverbs of Frequency",
+  "description": "Practice Adverbs of Frequency.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A2",
+  "level": "A2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "She ___ gets up early; almost every day.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Usually means something happens often but not always.",
+      "correctIndex": 1,
+      "answers": [
+        "usually",
+        "never",
+        "rarely",
+        "never is"
+      ]
+    },
+    {
+      "question": "He ___ walks to work; almost every day.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Usually means something happens often but not always.",
+      "correctIndex": 3,
+      "answers": [
+        "never",
+        "rarely",
+        "usually",
+        "never is"
+      ]
+    },
+    {
+      "question": "I ___ read before bed; almost every night.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Usually means something happens often but not always.",
+      "correctIndex": 4,
+      "answers": [
+        "never",
+        "rarely",
+        "never is",
+        "usually"
+      ]
+    },
+    {
+      "question": "She ___ visits her grandparents; nearly every weekend.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Usually means something happens often but not always.",
+      "correctIndex": 2,
+      "answers": [
+        "never",
+        "usually",
+        "rarely",
+        "never is"
+      ]
+    },
+    {
+      "question": "We ___ eat lunch together; most days.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Usually means something happens often but not always.",
+      "correctIndex": 4,
+      "answers": [
+        "never",
+        "rarely",
+        "never is",
+        "usually"
+      ]
+    }
+  ]
+}

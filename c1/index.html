@@ -1,0 +1,165 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="../shared/brand/icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../shared/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../shared/brand/favicon-192.png">
+<link rel="apple-touch-icon" href="../shared/brand/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1959d1">
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
+<title>Mylingo</title>
+<style>
+:root{--brand:#1959d1;--brand-dark:#0e45ae;--brand-soft:#eaf1fc;--success:#58cc02;--success-dark:#46a302;--success-soft:#e9f8df;--ink:#17212b;--muted:#4b5563;--line:#e5e7eb;--bg:#f7f9fc;--ease-micro:cubic-bezier(0.25,0.1,0.25,1);--ease-release:cubic-bezier(0.34,1.56,0.64,1)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:var(--ink)}
+:focus-visible{outline:3px solid #1a73e8;outline-offset:2px}
+a{color:inherit}
+.skip-link{position:absolute;left:8px;top:-48px;background:var(--brand);color:#fff;padding:10px 16px;border-radius:10px;font-weight:800;text-decoration:none;z-index:1000;transition:top .15s ease}
+.skip-link:focus{top:8px}
+header{padding:22px 16px;background:#fff;border-bottom:1px solid var(--line);padding-top:calc(22px + env(safe-area-inset-top))}
+.headrow{max-width:950px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand-logo{height:26px;width:auto;display:block}
+.headrow nav a{font-size:13px;font-weight:700;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:12px 16px;display:inline-flex;align-items:center;min-height:44px}
+main{max-width:950px;margin:auto;padding:20px 16px 60px}
+h1{margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 18px}
+.controls{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+input[type=search],select{font:inherit;padding:11px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;min-height:44px}
+input[type=search]{flex:1 1 220px}
+select{flex:0 1 180px}
+.count{color:var(--muted);font-size:13px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;list-style:none;padding:0;margin:0}\n.topic-group{grid-column:1/-1;list-style:none;margin:8px 0 0;padding:0}\n.topic-group h2{font-size:16px;margin:0 0 8px;padding:0 2px}\n.topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;list-style:none;padding:0;margin:0}
+.card{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;text-decoration:none;color:inherit;position:relative;transition:transform 220ms var(--ease-release),border-color 120ms var(--ease-micro)}
+.card:hover{border-color:#c9d0d8}
+.card:active{transform:scale(.985);transition-duration:80ms;transition-timing-function:var(--ease-micro)}
+.card b{display:block;margin-bottom:6px}
+.tagrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.chip{font-size:11px;color:#2f6d06;background:var(--success-soft);border-radius:99px;padding:3px 9px;font-weight:700}
+.best{position:absolute;top:14px;right:14px;font-size:11px;font-weight:900;color:#2f6d06;background:var(--success-soft);border-radius:99px;padding:4px 9px}
+.qstatus{font-size:11px;font-weight:800;color:var(--muted);margin-top:6px;display:block}
+footer{max-width:950px;margin:0 auto;padding:24px 16px 40px;color:var(--muted);font-size:13px;text-align:center}
+small{display:block;color:var(--muted);margin-top:2px}
+.empty,.err{text-align:center;color:var(--muted);padding:50px 20px;grid-column:1/-1}
+.skel{background:#fff;border:1px solid var(--line);border-radius:18px;height:96px;position:relative;overflow:hidden}
+.skel::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(0,0,0,.04),transparent);animation:sh 1.2s infinite}
+@keyframes sh{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+.more{display:block;margin:24px auto 0;background:#f1f3f5;border:0;padding:13px 26px;border-radius:99px;font-weight:800;cursor:pointer;min-height:44px;transition:transform 220ms var(--ease-release),background-color 120ms var(--ease-micro)}
+.more:active{transform:scale(.97);transition-duration:80ms;transition-timing-function:var(--ease-micro)}
+@media(prefers-reduced-motion:reduce){.skel::after{animation:none}.card,.more{transition:none}.card:active,.more:active{transform:none}}
+
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:page-out .28s cubic-bezier(.4,0,.2,1) both}
+::view-transition-new(root){animation:page-in .28s cubic-bezier(.4,0,.2,1) both}
+@keyframes page-out{to{opacity:0;transform:scale(.96)}}
+@keyframes page-in{from{opacity:0;transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+</style><link rel="stylesheet" href="../shared/css/app-shell.css"></head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header><div class="headrow">
+  <img class="brand-logo" src="../shared/brand/logo-horizontal.svg" alt="Mylingo">
+  <nav><a href="./dashboard.html">My progress</a> <a id="hubLink" href="../main/index.html">All levels</a></nav>
+</div></header>
+<main id="main-content">
+  <h1 id="pageTitle">Practice</h1>
+  <p class="sub" id="pageSub"></p>
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search quizzes…" aria-label="Search quizzes">
+    <select id="cat" aria-label="Filter by category"><option value="">All categories</option></select>
+  </div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <ul class="grid" id="grid" role="list" aria-live="polite"></ul>
+  <button class="more" id="more" style="display:none">Show more</button>
+</main>
+<footer>Mylingo · Works offline once installed · Free forever</footer>
+<script>
+(function(){
+'use strict';
+const $=x=>document.getElementById(x);
+const KEY='mylingo.progress.v1';
+const parts=location.pathname.split('/').filter(Boolean);
+const level=(parts[parts.length-2]||'a1').toLowerCase();
+const PAGE=24;
+let shown=PAGE, all=[], filtered=[];
+
+document.title='Mylingo '+level.toUpperCase();
+$('pageTitle').textContent=level.toUpperCase()+' Practice';
+
+function progressFor(id){
+  try{ const v=JSON.parse(localStorage.getItem(KEY)||'{}'); return v[id]||null }catch(e){ return null }
+}
+
+function renderSkeleton(){
+  $('grid').innerHTML=Array.from({length:6}).map(()=>'<li class="skel" aria-hidden="true"></li>').join('');
+}
+
+function applyFilters(){
+  const term=$('q').value.trim().toLowerCase();
+  const cat=$('cat').value;
+  filtered=all.filter(item=>{
+    if(cat && item.category!==cat) return false;
+    if(!term) return true;
+    const hay=(item.title+' '+(item.topic||'')+' '+item.category+' '+(item.tags||'')).toLowerCase();
+    return hay.includes(term);
+  });
+  shown=PAGE;
+  paint();
+}
+
+function paint(){
+  const grid=$('grid');
+  if(filtered.length===0){
+    grid.innerHTML='<li class="empty">No quizzes match your search.</li>';
+    $('more').style.display='none';
+    $('count').textContent='0 results';
+    return;
+  }
+  const slice=filtered.slice(0,shown);
+  $('count').textContent=filtered.length+' quiz'+(filtered.length===1?'':'zes')+(filtered.length!==all.length?' (filtered from '+all.length+')':'');
+  const groups=[];
+  slice.forEach(item=>{
+    const topic=item.topic||item.title||'Other';
+    let group=groups.find(g=>g.topic===topic);
+    if(!group){group={topic,items:[]};groups.push(group)}
+    group.items.push(item);
+  });
+  grid.innerHTML=groups.map(group=>{
+    const cards=group.items.map(item=>{
+      const prog=progressFor(item.id);
+      const best=prog&&prog.best!=null?'<span class="best">Best '+prog.best+'%</span>':'';
+      const status=prog?(prog.status==='completed'?'Completed':'In progress'):'Not started';
+      const tags=(item.tags||'').split(',').map(t=>t.trim()).filter(Boolean).slice(0,3)
+        .map(t=>'<span class="chip">'+escapeHtml(t)+'</span>').join('');
+      return '<li><a class="card" href="../shared/quiz.html?quiz='+encodeURIComponent(item.id)+'&level='+level+'" aria-label="'+escapeHtml(item.title)+', '+status+'">'+
+        best+'<b>'+escapeHtml(item.title)+'</b><small>'+escapeHtml(item.category||'')+'</small>'+
+        '<span class="qstatus">'+status+'</span>'+
+        (tags?'<div class="tagrow">'+tags+'</div>':'')+'</a></li>';
+    }).join('');
+    return '<li class="topic-group"><h2>'+escapeHtml(group.topic)+'</h2><ul class="topic-grid" role="list">'+cards+'</ul></li>';
+  }).join('');
+  $('more').style.display = (shown<filtered.length) ? 'block' : 'none';
+}
+function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+
+$('more').onclick=()=>{shown+=PAGE;paint()};
+$('q').addEventListener('input',applyFilters);
+$('cat').addEventListener('change',applyFilters);
+
+async function load(){
+  renderSkeleton();
+  let res;
+  try{ res=await fetch('./quizzes.json',{cache:'no-store'}) }
+  catch(e){ $('grid').innerHTML='<li class="err">Couldn\'t load the quiz list. Check your connection and refresh.</li>'; return }
+  if(!res.ok){ $('grid').innerHTML='<li class="err">Couldn\'t load the quiz list (error '+res.status+').</li>'; return }
+  try{ all=await res.json() }catch(e){ $('grid').innerHTML='<li class="err">The quiz list file is corrupted.</li>'; return }
+  if(!Array.isArray(all)){ $('grid').innerHTML='<li class="err">The quiz list has an unexpected format.</li>'; return }
+
+  $('pageSub').textContent=all.length+' quiz'+(all.length===1?'':'zes')+' at '+level.toUpperCase()+'. Data-driven, one runtime.';
+  const cats=[...new Set(all.map(a=>a.category).filter(Boolean))].sort();
+  $('cat').innerHTML='<option value="">All categories</option>'+cats.map(c=>'<option value="'+escapeHtml(c)+'">'+escapeHtml(c)+'</option>').join('');
+  filtered=all;
+  paint();
+}
+load();
+})();
+</script>
+<script src="../shared/js/app-shell.js"></script></body></html>

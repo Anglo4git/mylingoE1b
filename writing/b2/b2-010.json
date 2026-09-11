@@ -1,0 +1,77 @@
+{
+  "id": "b2-010",
+  "title": "Register",
+  "description": "Practice Register.",
+  "brand": "Mylingo",
+  "category": "Writing",
+  "tags": "Writing,B2",
+  "level": "B2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Which is most appropriate in a formal report?",
+      "category": "Writing",
+      "tags": "Writing,B2",
+      "explanation": "Formal reports favor precise, neutral vocabulary.",
+      "correctIndex": 2,
+      "answers": [
+        "Kids need more help.",
+        "Children require additional support.",
+        "Kids gotta get help.",
+        "Children need stuff."
+      ]
+    },
+    {
+      "question": "Which sentence is most appropriate in a formal report?",
+      "category": "Writing",
+      "tags": "Writing,B2",
+      "explanation": "Formal reports favor precise, neutral vocabulary.",
+      "correctIndex": 4,
+      "answers": [
+        "Kids need more help.",
+        "Kids gotta get help.",
+        "Children need stuff.",
+        "Children require additional support."
+      ]
+    },
+    {
+      "question": "Which wording best fits a formal academic report?",
+      "category": "Writing",
+      "tags": "Writing,B2",
+      "explanation": "Formal reports favor precise, neutral vocabulary.",
+      "correctIndex": 1,
+      "answers": [
+        "Children require additional support.",
+        "Kids need more help.",
+        "Kids gotta get help.",
+        "Children need stuff."
+      ]
+    },
+    {
+      "question": "Which option is most suitable for a professional report?",
+      "category": "Writing",
+      "tags": "Writing,B2",
+      "explanation": "Formal reports favor precise, neutral vocabulary.",
+      "correctIndex": 3,
+      "answers": [
+        "Kids need more help.",
+        "Kids gotta get help.",
+        "Children require additional support.",
+        "Children need stuff."
+      ]
+    },
+    {
+      "question": "Which sentence has the most formal register for a report?",
+      "category": "Writing",
+      "tags": "Writing,B2",
+      "explanation": "Formal reports favor precise, neutral vocabulary.",
+      "correctIndex": 3,
+      "answers": [
+        "Kids need more help.",
+        "Kids gotta get help.",
+        "Children require additional support.",
+        "Children need stuff."
+      ]
+    }
+  ]
+}

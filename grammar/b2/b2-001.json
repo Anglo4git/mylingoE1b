@@ -1,0 +1,77 @@
+{
+  "id": "b2-001",
+  "title": "Mixed Conditionals",
+  "description": "Practice Mixed Conditionals.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B2",
+  "level": "B2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "If I had studied harder, I ___ more confident now.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "A past condition can have a present result.",
+      "correctIndex": 1,
+      "answers": [
+        "would be",
+        "will be",
+        "am",
+        "would have been"
+      ]
+    },
+    {
+      "question": "If she had accepted the job, she ___ happier now.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "A past condition can have a present result.",
+      "correctIndex": 3,
+      "answers": [
+        "will be",
+        "am",
+        "would be",
+        "would have been"
+      ]
+    },
+    {
+      "question": "If we had left earlier, we ___ home by now.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "A past condition can have a present result.",
+      "correctIndex": 2,
+      "answers": [
+        "will be",
+        "would be",
+        "am",
+        "would have been"
+      ]
+    },
+    {
+      "question": "If he had prepared properly, he ___ more confident today.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "A past condition can have a present result.",
+      "correctIndex": 4,
+      "answers": [
+        "will be",
+        "am",
+        "would have been",
+        "would be"
+      ]
+    },
+    {
+      "question": "If they had invested sooner, they ___ richer now.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "A past condition can have a present result.",
+      "correctIndex": 4,
+      "answers": [
+        "will be",
+        "am",
+        "would have been",
+        "would be"
+      ]
+    }
+  ]
+}

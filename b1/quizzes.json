@@ -1,0 +1,122 @@
+[
+  {
+    "file": "grammar/b1/b1-001.json",
+    "id": "b1-001",
+    "title": "Present Perfect vs Past Simple",
+    "topic": "Present Perfect vs Past Simple",
+    "description": "Practice Present Perfect vs Past Simple.",
+    "category": "Grammar",
+    "tags": "Grammar,B1",
+    "level": "B1",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b1/b1-002.json",
+    "id": "b1-002",
+    "title": "Second Conditional",
+    "topic": "Second Conditional",
+    "description": "Practice Second Conditional.",
+    "category": "Grammar",
+    "tags": "Grammar,B1",
+    "level": "B1",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b1/b1-003.json",
+    "id": "b1-003",
+    "title": "Relative Clauses",
+    "topic": "Relative Clauses",
+    "description": "Practice Relative Clauses.",
+    "category": "Grammar",
+    "tags": "Grammar,B1",
+    "level": "B1",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b1/b1-004.json",
+    "id": "b1-004",
+    "title": "Reported Speech",
+    "topic": "Reported Speech",
+    "description": "Practice Reported Speech.",
+    "category": "Grammar",
+    "tags": "Grammar,B1",
+    "level": "B1",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b1/b1-005.json",
+    "id": "b1-005",
+    "title": "Gerunds and Infinitives",
+    "topic": "Gerunds and Infinitives",
+    "description": "Practice Gerunds and Infinitives.",
+    "category": "Grammar",
+    "tags": "Grammar,B1",
+    "level": "B1",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b1/b1-006.json",
+    "id": "b1-006",
+    "title": "Modal Deduction",
+    "topic": "Modal Deduction",
+    "description": "Practice Modal Deduction.",
+    "category": "Grammar",
+    "tags": "Grammar,B1",
+    "level": "B1",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b1/b1-007.json",
+    "id": "b1-007",
+    "title": "Passive Voice",
+    "topic": "Passive Voice",
+    "description": "Practice Passive Voice.",
+    "category": "Grammar",
+    "tags": "Grammar,B1",
+    "level": "B1",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "writing/b1/b1-008.json",
+    "id": "b1-008",
+    "title": "Linkers",
+    "topic": "Linkers",
+    "description": "Practice Linkers.",
+    "category": "Writing",
+    "tags": "Writing,B1",
+    "level": "B1",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b1/b1-009.json",
+    "id": "b1-009",
+    "title": "Used to",
+    "topic": "Used to",
+    "description": "Practice Used to.",
+    "category": "Grammar",
+    "tags": "Grammar,B1",
+    "level": "B1",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "vocabulary/b1/b1-010.json",
+    "id": "b1-010",
+    "title": "Phrasal Verbs",
+    "topic": "Phrasal Verbs",
+    "description": "Practice Phrasal Verbs.",
+    "category": "Vocabulary",
+    "tags": "Vocabulary,B1",
+    "level": "B1",
+    "questions": 5,
+    "version": 1
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "id": "a1-007",
+  "title": "Past Simple",
+  "description": "Practice Past Simple.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A1",
+  "level": "A1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Yesterday, I ___ at home.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use the past simple for a finished past action.",
+      "correctIndex": 1,
+      "answers": [
+        "stayed",
+        "stay",
+        "stays",
+        "staying"
+      ]
+    },
+    {
+      "question": "Last night, I ___ at home.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use the past simple for a finished past action.",
+      "correctIndex": 2,
+      "answers": [
+        "stay",
+        "stayed",
+        "stays",
+        "staying"
+      ]
+    },
+    {
+      "question": "Yesterday, she ___ to the market.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use the past simple for a finished past action.",
+      "correctIndex": 4,
+      "answers": [
+        "stay",
+        "stays",
+        "staying",
+        "stayed"
+      ]
+    },
+    {
+      "question": "On Saturday, we ___ football.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use the past simple for a finished past action.",
+      "correctIndex": 3,
+      "answers": [
+        "stay",
+        "stays",
+        "stayed",
+        "staying"
+      ]
+    },
+    {
+      "question": "This morning, he ___ the bus.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use the past simple for a finished past action.",
+      "correctIndex": 3,
+      "answers": [
+        "stay",
+        "stays",
+        "stayed",
+        "staying"
+      ]
+    }
+  ]
+}

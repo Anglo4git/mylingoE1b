@@ -1,0 +1,203 @@
+{
+  "id": "placement-001",
+  "title": "C1 Level Check",
+  "description": "A 10-question placement check for C1.",
+  "brand": "Mylingo",
+  "category": "Placement",
+  "tags": "Placement,C1",
+  "level": "C1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Had I known about the delay, I ___ earlier.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Had I known is an inverted third conditional.",
+      "correctIndex": 2,
+      "answers": [
+        "would leave",
+        "would have left",
+        "will have left",
+        "left"
+      ],
+      "id": "c1-placement-001",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 5,
+      "cefr": "C1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "It is essential that every applicant ___ the form.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Formal English may use the base form after essential that.",
+      "correctIndex": 2,
+      "answers": [
+        "completes",
+        "complete",
+        "completed",
+        "will complete"
+      ],
+      "id": "c1-placement-002",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 5,
+      "cefr": "C1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "___ I object to is the lack of evidence.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "What I object to is a cleft construction.",
+      "correctIndex": 1,
+      "answers": [
+        "What",
+        "That",
+        "Which",
+        "It"
+      ],
+      "id": "c1-placement-003",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 5,
+      "cefr": "C1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The proposal is ambitious. ___, it is financially realistic.",
+      "category": "Writing",
+      "tags": "Writing,C1",
+      "explanation": "Nevertheless signals contrast.",
+      "correctIndex": 1,
+      "answers": [
+        "Nevertheless",
+        "For example",
+        "Similarly",
+        "Consequently"
+      ],
+      "id": "c1-placement-004",
+      "skill": "writing",
+      "subskill": "discourse-marker",
+      "difficulty": 5,
+      "cefr": "C1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The committee decided to delay the vote. The ___ was unexpected.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Decision is the noun form of decide.",
+      "correctIndex": 2,
+      "answers": [
+        "decide",
+        "decision",
+        "deciding",
+        "decisive"
+      ],
+      "id": "c1-placement-005",
+      "skill": "usage",
+      "subskill": "language-usage",
+      "difficulty": 5,
+      "cefr": "C1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "I can finish the report, and she can ___ too.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "The repeated main verb can be retained or omitted after a modal; finish is the natural completion.",
+      "correctIndex": 1,
+      "answers": [
+        "finish",
+        "does",
+        "so",
+        "can"
+      ],
+      "id": "c1-placement-006",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 5,
+      "cefr": "C1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The evidence was ___; it supported several interpretations.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Ambiguous means open to more than one interpretation.",
+      "correctIndex": 1,
+      "answers": [
+        "ambiguous",
+        "ambitious",
+        "arbitrary",
+        "obsolete"
+      ],
+      "id": "c1-placement-007",
+      "skill": "vocabulary",
+      "subskill": "contextual-vocabulary",
+      "difficulty": 5,
+      "cefr": "C1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Read: The committee had expected strong support for the proposal. However, several members raised concerns about cost, and the vote was delayed. Why was the vote delayed?",
+      "category": "Reading",
+      "tags": "Reading,C1",
+      "explanation": "The passage says several members raised concerns about cost, leading to the delay.",
+      "correctIndex": 1,
+      "answers": [
+        "Members raised concerns about cost.",
+        "The proposal was withdrawn.",
+        "The meeting was cancelled.",
+        "Support was unanimous."
+      ],
+      "id": "c1-placement-008",
+      "skill": "reading",
+      "subskill": "reading-cause",
+      "difficulty": 5,
+      "cefr": "C1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The findings ___ indicate a relationship between the variables.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Appear to indicates cautious academic interpretation.",
+      "correctIndex": 1,
+      "answers": [
+        "appear to",
+        "definitely prove",
+        "obviously are",
+        "must"
+      ],
+      "id": "c1-placement-009",
+      "skill": "usage",
+      "subskill": "language-usage",
+      "difficulty": 5,
+      "cefr": "C1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The report draws ___ attention to a serious gap.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Draw sharp attention to is a natural formal collocation.",
+      "correctIndex": 2,
+      "answers": [
+        "strong",
+        "sharp",
+        "heavy",
+        "big"
+      ],
+      "id": "c1-placement-010",
+      "skill": "vocabulary",
+      "subskill": "contextual-vocabulary",
+      "difficulty": 5,
+      "cefr": "C1",
+      "estimated_time_seconds": 20
+    }
+  ],
+  "metadata_note": "Question skill/difficulty/CEFR/time fields are internal product metadata, not official CEFR certification."
+}

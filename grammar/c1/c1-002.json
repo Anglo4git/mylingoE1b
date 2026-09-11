@@ -1,0 +1,77 @@
+{
+  "id": "c1-002",
+  "title": "Subjunctive",
+  "description": "Practice Subjunctive.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,C1",
+  "level": "C1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "It is essential that every applicant ___ the form.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Formal English may use the base form after essential that.",
+      "correctIndex": 2,
+      "answers": [
+        "completes",
+        "complete",
+        "completed",
+        "will complete"
+      ]
+    },
+    {
+      "question": "It is essential that each student ___ the instructions carefully.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Formal English may use the base form after essential that.",
+      "correctIndex": 3,
+      "answers": [
+        "completes",
+        "completed",
+        "complete",
+        "will complete"
+      ]
+    },
+    {
+      "question": "It is vital that every member ___ on time.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Formal English may use the base form after essential that.",
+      "correctIndex": 1,
+      "answers": [
+        "complete",
+        "completes",
+        "completed",
+        "will complete"
+      ]
+    },
+    {
+      "question": "The policy requires that each applicant ___ the declaration.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Formal English may use the base form after essential that.",
+      "correctIndex": 4,
+      "answers": [
+        "completes",
+        "completed",
+        "will complete",
+        "complete"
+      ]
+    },
+    {
+      "question": "It is important that she ___ the form today.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Formal English may use the base form after essential that.",
+      "correctIndex": 4,
+      "answers": [
+        "completes",
+        "completed",
+        "will complete",
+        "complete"
+      ]
+    }
+  ]
+}

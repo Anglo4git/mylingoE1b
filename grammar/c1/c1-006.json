@@ -1,0 +1,77 @@
+{
+  "id": "c1-006",
+  "title": "Ellipsis",
+  "description": "Practice Ellipsis.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,C1",
+  "level": "C1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "I can finish the report, and she can ___ too.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "The repeated main verb can be retained or omitted after a modal; finish is the natural completion.",
+      "correctIndex": 3,
+      "answers": [
+        "does",
+        "so",
+        "finish",
+        "can"
+      ]
+    },
+    {
+      "question": "I can complete the draft, and she can ___ too.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "The repeated main verb can be retained or omitted after a modal; finish is the natural completion.",
+      "correctIndex": 1,
+      "answers": [
+        "finish",
+        "does",
+        "so",
+        "can"
+      ]
+    },
+    {
+      "question": "They can finish the task, and we can ___ too.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "The repeated main verb can be retained or omitted after a modal; finish is the natural completion.",
+      "correctIndex": 4,
+      "answers": [
+        "does",
+        "so",
+        "can",
+        "finish"
+      ]
+    },
+    {
+      "question": "He can prepare the summary, and she can ___ too.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "The repeated main verb can be retained or omitted after a modal; finish is the natural completion.",
+      "correctIndex": 2,
+      "answers": [
+        "does",
+        "finish",
+        "so",
+        "can"
+      ]
+    },
+    {
+      "question": "I can revise the proposal, and they can ___ too.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "The repeated main verb can be retained or omitted after a modal; finish is the natural completion.",
+      "correctIndex": 2,
+      "answers": [
+        "does",
+        "finish",
+        "so",
+        "can"
+      ]
+    }
+  ]
+}

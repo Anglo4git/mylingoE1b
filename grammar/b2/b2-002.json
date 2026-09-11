@@ -1,0 +1,77 @@
+{
+  "id": "b2-002",
+  "title": "Inversion",
+  "description": "Practice Inversion.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B2",
+  "level": "B2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Rarely ___ such a beautiful performance.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Restrictive adverbs at the front can trigger inversion.",
+      "correctIndex": 2,
+      "answers": [
+        "I have seen",
+        "have I seen",
+        "I saw",
+        "did I have seen"
+      ]
+    },
+    {
+      "question": "Rarely ___ such a difficult problem.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Restrictive adverbs at the front can trigger inversion.",
+      "correctIndex": 3,
+      "answers": [
+        "I have seen",
+        "I saw",
+        "have I seen",
+        "did I have seen"
+      ]
+    },
+    {
+      "question": "Seldom ___ so much support.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Restrictive adverbs at the front can trigger inversion.",
+      "correctIndex": 4,
+      "answers": [
+        "I have seen",
+        "I saw",
+        "did I have seen",
+        "have I seen"
+      ]
+    },
+    {
+      "question": "Never ___ such a crowded hall.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Restrictive adverbs at the front can trigger inversion.",
+      "correctIndex": 1,
+      "answers": [
+        "have I seen",
+        "I have seen",
+        "I saw",
+        "did I have seen"
+      ]
+    },
+    {
+      "question": "Hardly ever ___ a mistake like that.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Restrictive adverbs at the front can trigger inversion.",
+      "correctIndex": 2,
+      "answers": [
+        "I have seen",
+        "have I seen",
+        "I saw",
+        "did I have seen"
+      ]
+    }
+  ]
+}

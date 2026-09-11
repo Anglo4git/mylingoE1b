@@ -1,0 +1,77 @@
+{
+  "id": "b2-009",
+  "title": "Concession",
+  "description": "Practice Concession.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B2",
+  "level": "B2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "___ the heavy traffic, we arrived on time.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Despite is followed by a noun phrase or gerund.",
+      "correctIndex": 2,
+      "answers": [
+        "Although of",
+        "Despite",
+        "However",
+        "Because"
+      ]
+    },
+    {
+      "question": "___ the bad weather, the event continued.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Despite is followed by a noun phrase or gerund.",
+      "correctIndex": 4,
+      "answers": [
+        "Although of",
+        "However",
+        "Because",
+        "Despite"
+      ]
+    },
+    {
+      "question": "___ the delay, the train arrived on time.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Despite is followed by a noun phrase or gerund.",
+      "correctIndex": 3,
+      "answers": [
+        "Although of",
+        "However",
+        "Despite",
+        "Because"
+      ]
+    },
+    {
+      "question": "___ the high cost, they approved the project.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Despite is followed by a noun phrase or gerund.",
+      "correctIndex": 1,
+      "answers": [
+        "Despite",
+        "Although of",
+        "However",
+        "Because"
+      ]
+    },
+    {
+      "question": "___ the noise, she completed the interview.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Despite is followed by a noun phrase or gerund.",
+      "correctIndex": 4,
+      "answers": [
+        "Although of",
+        "However",
+        "Because",
+        "Despite"
+      ]
+    }
+  ]
+}

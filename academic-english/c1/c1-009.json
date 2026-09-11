@@ -1,0 +1,77 @@
+{
+  "id": "c1-009",
+  "title": "Academic Stance",
+  "description": "Practice Academic Stance.",
+  "brand": "Mylingo",
+  "category": "Academic English",
+  "tags": "Academic English,C1",
+  "level": "C1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The findings ___ indicate a relationship between the variables.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Appear to indicates cautious academic interpretation.",
+      "correctIndex": 2,
+      "answers": [
+        "definitely prove",
+        "appear to",
+        "obviously are",
+        "must"
+      ]
+    },
+    {
+      "question": "The results ___ indicate a link between the two variables.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Appear to indicates cautious academic interpretation.",
+      "correctIndex": 4,
+      "answers": [
+        "definitely prove",
+        "obviously are",
+        "must",
+        "appear to"
+      ]
+    },
+    {
+      "question": "The findings ___ suggest that the method is effective.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Appear to indicates cautious academic interpretation.",
+      "correctIndex": 3,
+      "answers": [
+        "definitely prove",
+        "obviously are",
+        "appear to",
+        "must"
+      ]
+    },
+    {
+      "question": "The studies ___ appear to support the proposed explanation.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Appear to indicates cautious academic interpretation.",
+      "correctIndex": 1,
+      "answers": [
+        "appear to",
+        "definitely prove",
+        "obviously are",
+        "must"
+      ]
+    },
+    {
+      "question": "The data ___ indicate a relationship between the factors.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Appear to indicates cautious academic interpretation.",
+      "correctIndex": 1,
+      "answers": [
+        "appear to",
+        "definitely prove",
+        "obviously are",
+        "must"
+      ]
+    }
+  ]
+}

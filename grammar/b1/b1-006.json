@@ -1,0 +1,77 @@
+{
+  "id": "b1-006",
+  "title": "Modal Deduction",
+  "description": "Practice Modal Deduction.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B1",
+  "level": "B1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The lights are off. They ___ be at home.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Can't expresses a strong negative deduction.",
+      "correctIndex": 1,
+      "answers": [
+        "can't",
+        "must",
+        "should",
+        "need"
+      ]
+    },
+    {
+      "question": "The office is dark. They ___ be there.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Can't expresses a strong negative deduction.",
+      "correctIndex": 3,
+      "answers": [
+        "must",
+        "should",
+        "can't",
+        "need"
+      ]
+    },
+    {
+      "question": "Her phone is off. She ___ be asleep.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Can't expresses a strong negative deduction.",
+      "correctIndex": 2,
+      "answers": [
+        "must",
+        "can't",
+        "should",
+        "need"
+      ]
+    },
+    {
+      "question": "The lights are out. The staff ___ be working.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Can't expresses a strong negative deduction.",
+      "correctIndex": 4,
+      "answers": [
+        "must",
+        "should",
+        "need",
+        "can't"
+      ]
+    },
+    {
+      "question": "Nobody answered. He ___ be at home.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Can't expresses a strong negative deduction.",
+      "correctIndex": 3,
+      "answers": [
+        "must",
+        "should",
+        "can't",
+        "need"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "c2-007",
+  "title": "Inversion with Negative Adverbial",
+  "description": "Practice Inversion with Negative Adverbial.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,C2",
+  "level": "C2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Under no circumstances ___ the data be altered.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Negative fronted adverbials trigger inversion.",
+      "correctIndex": 3,
+      "answers": [
+        "the data should",
+        "would",
+        "should",
+        "have"
+      ]
+    },
+    {
+      "question": "Under no circumstances ___ confidential data be shared.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Negative fronted adverbials trigger inversion.",
+      "correctIndex": 2,
+      "answers": [
+        "the data should",
+        "should",
+        "would",
+        "have"
+      ]
+    },
+    {
+      "question": "Under no circumstances ___ the rules be ignored.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Negative fronted adverbials trigger inversion.",
+      "correctIndex": 4,
+      "answers": [
+        "the data should",
+        "would",
+        "have",
+        "should"
+      ]
+    },
+    {
+      "question": "Under no circumstances ___ these figures be altered.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Negative fronted adverbials trigger inversion.",
+      "correctIndex": 1,
+      "answers": [
+        "should",
+        "the data should",
+        "would",
+        "have"
+      ]
+    },
+    {
+      "question": "Under no circumstances ___ the evidence be removed.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Negative fronted adverbials trigger inversion.",
+      "correctIndex": 1,
+      "answers": [
+        "should",
+        "the data should",
+        "would",
+        "have"
+      ]
+    }
+  ]
+}

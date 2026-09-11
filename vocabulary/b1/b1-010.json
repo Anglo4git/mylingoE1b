@@ -1,0 +1,77 @@
+{
+  "id": "b1-010",
+  "title": "Phrasal Verbs",
+  "description": "Practice Phrasal Verbs.",
+  "brand": "Mylingo",
+  "category": "Vocabulary",
+  "tags": "Vocabulary,B1",
+  "level": "B1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Please ___ the lights before you leave.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B1",
+      "explanation": "Turn off means switch something off.",
+      "correctIndex": 4,
+      "answers": [
+        "turn up to",
+        "turning off",
+        "turned",
+        "turn off"
+      ]
+    },
+    {
+      "question": "Please ___ the computer before you leave.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B1",
+      "explanation": "Turn off means switch something off.",
+      "correctIndex": 2,
+      "answers": [
+        "turn up to",
+        "turn off",
+        "turning off",
+        "turned"
+      ]
+    },
+    {
+      "question": "Remember to ___ the TV when you go out.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B1",
+      "explanation": "Turn off means switch something off.",
+      "correctIndex": 1,
+      "answers": [
+        "turn off",
+        "turn up to",
+        "turning off",
+        "turned"
+      ]
+    },
+    {
+      "question": "Can you ___ the fan before bed?",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B1",
+      "explanation": "Turn off means switch something off.",
+      "correctIndex": 3,
+      "answers": [
+        "turn up to",
+        "turning off",
+        "turn off",
+        "turned"
+      ]
+    },
+    {
+      "question": "Please ___ the lights in the hallway.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B1",
+      "explanation": "Turn off means switch something off.",
+      "correctIndex": 1,
+      "answers": [
+        "turn off",
+        "turn up to",
+        "turning off",
+        "turned"
+      ]
+    }
+  ]
+}

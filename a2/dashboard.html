@@ -1,0 +1,172 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="../shared/brand/icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../shared/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../shared/brand/favicon-192.png">
+<link rel="apple-touch-icon" href="../shared/brand/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1959d1">
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
+<title>Mylingo Dashboard</title>
+<style>
+:root{--brand:#1959d1;--brand-dark:#0e45ae;--brand-soft:#eaf1fc;--success:#58cc02;--success-dark:#46a302;--success-soft:#e9f8df;--ink:#17212b;--muted:#4b5563;--line:#e5e7eb;--bg:#f7f9fc;--ease-micro:cubic-bezier(0.25,0.1,0.25,1);--ease-release:cubic-bezier(0.34,1.56,0.64,1)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:var(--ink)}
+:focus-visible{outline:3px solid #1a73e8;outline-offset:2px}
+a{color:inherit}
+.skip-link{position:absolute;left:8px;top:-48px;background:var(--brand);color:#fff;padding:10px 16px;border-radius:10px;font-weight:800;text-decoration:none;z-index:1000;transition:top .15s ease}
+.skip-link:focus{top:8px}
+header{padding:22px 16px;background:#fff;border-bottom:1px solid var(--line);padding-top:calc(22px + env(safe-area-inset-top))}
+.headrow{max-width:950px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand-logo{height:26px;width:auto;display:block}
+.headrow nav a{font-size:13px;font-weight:700;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:12px 16px;display:inline-flex;align-items:center;min-height:44px}
+main{max-width:950px;margin:auto;padding:20px 16px 60px}
+h1{margin:0 0 16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:26px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
+.stat .n{font-size:26px;font-weight:900}
+.stat .l{color:var(--muted);font-size:12px;margin-top:2px}
+.section-title{font-size:14px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;margin:24px 0 10px}
+.row{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin-bottom:8px}
+.row .meta{flex:1;min-width:0}
+.row b{display:block}
+.row small{color:var(--muted)}
+.bar{height:8px;background:#edf0f3;border-radius:99px;overflow:hidden;width:110px;flex:0 0 auto}
+.bar i{display:block;height:100%;background:var(--brand)}
+.pct{width:42px;text-align:right;font-weight:800;font-size:13px;flex:0 0 auto}
+.status{font-size:11px;font-weight:800;border-radius:99px;padding:3px 9px;flex:0 0 auto}
+.status.completed{background:var(--success-soft);color:#2f6d06}
+.status.in-progress{background:#fff7e0;color:#8a6100}
+.status.not-started{background:#f1f3f5;color:var(--muted)}
+.empty{text-align:center;color:var(--muted);padding:40px 20px;background:#fff;border:1px solid var(--line);border-radius:18px}
+.empty a{color:var(--brand);font-weight:800;text-decoration:none}
+.reset{margin-top:30px;text-align:right}
+.reset button{background:none;border:1px solid var(--line);color:var(--muted);padding:9px 16px;border-radius:99px;font-size:12px;cursor:pointer;min-height:44px;transition:transform 220ms var(--ease-release),background-color 120ms var(--ease-micro)}
+.reset button:active{transform:scale(.96);transition-duration:80ms;transition-timing-function:var(--ease-micro)}
+footer{max-width:950px;margin:0 auto;padding:24px 16px 40px;color:var(--muted);font-size:13px;text-align:center}
+
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:page-out .28s cubic-bezier(.4,0,.2,1) both}
+::view-transition-new(root){animation:page-in .28s cubic-bezier(.4,0,.2,1) both}
+@keyframes page-out{to{opacity:0;transform:scale(.96)}}
+@keyframes page-in{from{opacity:0;transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}.reset button{transition:none}.reset button:active{transform:none}}
+</style><link rel="stylesheet" href="../shared/css/app-shell.css"></head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header><div class="headrow">
+  <img class="brand-logo" src="../shared/brand/logo-horizontal.svg" alt="Mylingo">
+  <nav><a href="./index.html">Practice</a> <a id="hubLink" href="../main/index.html">All levels</a></nav>
+</div></header>
+<main id="main-content">
+  <h1 id="title">My progress</h1>
+  <div class="stats" id="stats"></div>
+  <div id="body"></div>
+  <div class="reset" id="resetWrap" style="display:none"><button id="resetBtn">Reset this level's progress</button></div>
+<div id="masteryReviewMount"></div><div id="offlinePacksMount"></div>
+</main>
+<footer>Mylingo · Works offline once installed · Free forever</footer>
+<script src="../shared/js/gamification.js"></script><script src="../shared/js/skill-mastery.js"></script><script src="../shared/js/review-scheduler.js"></script><script src="../shared/js/mastery-review-ui.js"></script><script src="../shared/js/offline-packs.js"></script><script src="../shared/js/offline-packs-ui.js"></script>
+<script>
+(function(){
+'use strict';
+const $=x=>document.getElementById(x);
+const KEY='mylingo.progress.v1';
+const parts=location.pathname.split('/').filter(Boolean);
+const level=(parts[parts.length-2]||'a1').toLowerCase();
+document.title='Mylingo '+level.toUpperCase()+' · Dashboard';
+$('title').textContent=level.toUpperCase()+' progress';
+
+try{if(window.MylingoMasteryReviewUI){window.MylingoMasteryReviewUI.mount(document.getElementById('masteryReviewMount'),{level:level});}}catch(e){}
+
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function gp(){try{const v=JSON.parse(localStorage.getItem(KEY)||'{}');return (v&&typeof v==='object')?v:{}}catch(e){return{}}}
+function timeAgo(ts){
+  if(!ts)return'';
+  const s=Math.max(1,Math.round((Date.now()-ts)/1000));
+  if(s<60)return s+'s ago';
+  const m=Math.round(s/60); if(m<60)return m+'m ago';
+  const h=Math.round(m/60); if(h<24)return h+'h ago';
+  const d=Math.round(h/24); return d+'d ago';
+}
+
+async function load(){
+  let manifest=[];
+  try{
+    const res=await fetch('./quizzes.json',{cache:'no-store'});
+    if(res.ok) manifest=await res.json();
+  }catch(e){ /* dashboard still works from progress alone */ }
+
+  const progress=gp();
+  const entries=Object.values(progress).filter(e=>e && (e.level||'').toLowerCase()===level);
+  const attemptedIds=new Set(entries.map(e=>e.id));
+  const notStarted=(Array.isArray(manifest)?manifest:[]).filter(m=>!attemptedIds.has(m.id));
+
+  const completed=entries.filter(e=>e.status==='completed');
+  const bestScores=entries.map(e=>e.best).filter(v=>v!=null);
+  const avg=bestScores.length?Math.round(bestScores.reduce((a,b)=>a+b,0)/bestScores.length):null;
+
+  let statTiles=[
+    ['Attempted',entries.length],
+    ['Completed',completed.length],
+    ['Avg. best score',avg!=null?avg+'%':'—'],
+    ['Not started',notStarted.length]
+  ];
+  try{
+    if(window.MylingoGamification){
+      const g=window.MylingoGamification.getState();
+      statTiles.push(['XP earned',g.xpTotal]);
+      statTiles.push(['Day streak',g.streak+(g.streak?' '+'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>':'')]);
+    }
+  }catch(e){ /* gamification is optional; dashboard still works without it */ }
+  $('stats').innerHTML=statTiles.map(([l,n])=>'<div class="stat"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>').join('');
+
+  if(entries.length===0 && notStarted.length===0){
+    $('body').innerHTML='<div class="empty">No quizzes found for this level yet.</div>';
+    $('resetWrap').style.display='none';
+    return;
+  }
+  if(entries.length===0){
+    $('body').innerHTML='<div class="empty">You haven\'t started any '+level.toUpperCase()+' quizzes yet. <a href="./index.html">Browse quizzes →</a></div>';
+    $('resetWrap').style.display='none';
+    return;
+  }
+
+  entries.sort((a,b)=>(b.lastAccess||0)-(a.lastAccess||0));
+  const rows=entries.map(e=>{
+    const pct=e.best!=null?e.best:(e.latest!=null?e.latest:0);
+    const statusClass=e.status==='completed'?'completed':'in-progress';
+    const statusLabel=e.status==='completed'?'Completed':'In progress';
+    return '<a class="row" href="../shared/quiz.html?quiz='+encodeURIComponent(e.id)+'&level='+level+'" style="text-decoration:none;color:inherit">'+
+      '<div class="meta"><b>'+esc(e.title||e.id)+'</b><small>'+(e.attempts||0)+' attempt'+((e.attempts||0)===1?'':'s')+' · '+timeAgo(e.lastAccess)+'</small></div>'+
+      '<span class="status '+statusClass+'">'+statusLabel+'</span>'+
+      '<div class="bar" aria-hidden="true"><i style="width:'+pct+'%"></i></div>'+
+      '<div class="pct">'+pct+'%</div>'+
+      '</a>';
+  }).join('');
+
+  let notStartedHtml='';
+  if(notStarted.length){
+    notStartedHtml='<p class="section-title">Not started ('+notStarted.length+')</p>'+
+      notStarted.slice(0,10).map(m=>'<a class="row" href="../shared/quiz.html?quiz='+encodeURIComponent(m.id)+'&level='+level+'" style="text-decoration:none;color:inherit">'+
+      '<div class="meta"><b>'+esc(m.title)+'</b><small>'+esc(m.category||'')+'</small></div>'+
+      '<span class="status not-started">Not started</span></a>').join('') +
+      (notStarted.length>10?'<p style="color:#6b7280;font-size:13px">+'+(notStarted.length-10)+' more — <a href="./index.html">browse all</a></p>':'');
+  }
+
+  $('body').innerHTML='<p class="section-title">In progress</p>'+rows+notStartedHtml;
+  $('resetWrap').style.display='block';
+}
+
+$('resetBtn').onclick=()=>{
+  if(!confirm('Reset all saved progress for '+level.toUpperCase()+'? This can\'t be undone.'))return;
+  const all=gp();
+  Object.keys(all).forEach(k=>{ if(all[k] && (all[k].level||'').toLowerCase()===level) delete all[k] });
+  try{localStorage.setItem(KEY,JSON.stringify(all))}catch(e){}
+  load();
+};
+
+load();
+})();
+try{if(window.MylingoOfflinePacksUI){window.MylingoOfflinePacksUI.mount(document.getElementById('offlinePacksMount'),{level:level});}}catch(e){}
+</script>
+<script src="../shared/js/app-shell.js"></script></body></html>

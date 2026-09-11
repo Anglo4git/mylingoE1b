@@ -1,0 +1,77 @@
+{
+  "id": "a1-002",
+  "title": "Be: am/is/are",
+  "description": "Practice Be: am/is/are.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A1",
+  "level": "A1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "I ___ a student.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use am with the pronoun I in the present simple.",
+      "correctIndex": 2,
+      "answers": [
+        "is",
+        "am",
+        "are",
+        "be"
+      ]
+    },
+    {
+      "question": "She ___ my friend.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use is with he, she, or it in the present simple.",
+      "correctIndex": 1,
+      "answers": [
+        "am",
+        "is",
+        "are",
+        "be"
+      ]
+    },
+    {
+      "question": "We ___ ready for class.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use are with we in the present simple.",
+      "correctIndex": 4,
+      "answers": [
+        "is",
+        "are",
+        "be",
+        "am"
+      ]
+    },
+    {
+      "question": "They ___ at home today.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use are with they in the present simple.",
+      "correctIndex": 3,
+      "answers": [
+        "is",
+        "are",
+        "am",
+        "be"
+      ]
+    },
+    {
+      "question": "You ___ very kind.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use are with you in the present simple.",
+      "correctIndex": 3,
+      "answers": [
+        "is",
+        "are",
+        "am",
+        "be"
+      ]
+    }
+  ]
+}

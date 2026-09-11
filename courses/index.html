@@ -1,0 +1,146 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="../shared/brand/icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../shared/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../shared/brand/favicon-192.png">
+<link rel="apple-touch-icon" href="../shared/brand/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1959d1">
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
+<title>Mylingo · Courses</title>
+<style>
+:root{--brand:#1959d1;--brand-dark:#0e45ae;--brand-soft:#eaf1fc;--success:#58cc02;--success-dark:#46a302;--success-soft:#e9f8df;--ink:#17212b;--muted:#4b5563;--line:#e5e7eb;--bg:#f7f9fc;--ease-micro:cubic-bezier(0.25,0.1,0.25,1);--ease-release:cubic-bezier(0.34,1.56,0.64,1)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:var(--ink)}
+:focus-visible{outline:3px solid #1a73e8;outline-offset:2px}
+a{color:inherit}
+.skip-link{position:absolute;left:8px;top:-48px;background:var(--brand);color:#fff;padding:10px 16px;border-radius:10px;font-weight:800;text-decoration:none;z-index:1000;transition:top .15s ease}
+.skip-link:focus{top:8px}
+header{padding:22px 16px;background:#fff;border-bottom:1px solid var(--line);padding-top:calc(22px + env(safe-area-inset-top))}
+.headrow{max-width:950px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand-logo{height:26px;width:auto;display:block}
+.headrow nav a{font-size:13px;font-weight:700;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:12px 16px;display:inline-flex;align-items:center;min-height:44px}
+main{max-width:950px;margin:auto;padding:20px 16px 60px}
+h1{margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 20px;max-width:60ch}
+.findlevel{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--brand-soft);border-radius:18px;padding:16px 20px;margin-bottom:22px;flex-wrap:wrap}
+.findlevel p{margin:0;font-weight:700}
+.findlevel a{background:var(--brand);color:#fff;text-decoration:none;font-weight:800;font-size:13px;padding:11px 18px;border-radius:99px;min-height:44px;display:inline-flex;align-items:center;transition:transform 220ms var(--ease-release)}
+.findlevel a:active{transform:scale(.97)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;list-style:none;padding:0;margin:0}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;transition:transform 220ms var(--ease-release),border-color 120ms var(--ease-micro)}
+.card:hover{border-color:#c9d0d8}
+.card h2{margin:0 0 4px;font-size:19px}
+.card .lvl{display:inline-block;font-size:11px;font-weight:900;color:var(--brand);background:var(--brand-soft);border-radius:99px;padding:3px 10px;margin-bottom:8px}
+.card p{margin:0 0 12px;color:var(--muted);font-size:13px}
+.stats{display:flex;gap:14px;color:var(--muted);font-size:12px;margin-bottom:14px;flex-wrap:wrap}
+.stats b{color:var(--ink);font-weight:800}
+.bar{height:8px;background:#edf0f3;border-radius:99px;overflow:hidden;margin-bottom:6px}
+.bar i{display:block;height:100%;background:var(--brand)}
+.pctrow{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:14px}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{flex:1 1 auto;text-align:center;text-decoration:none;font-weight:800;font-size:13px;padding:11px 14px;border-radius:99px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;transition:transform 220ms var(--ease-release)}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--brand);color:#fff}
+.btn.secondary{background:#f1f3f5;color:var(--ink)}
+.skel{background:#fff;border:1px solid var(--line);border-radius:18px;height:180px;position:relative;overflow:hidden}
+.skel::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(0,0,0,.04),transparent);animation:sh 1.2s infinite}
+@keyframes sh{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+.err{text-align:center;color:var(--muted);padding:50px 20px;grid-column:1/-1}
+footer{max-width:950px;margin:0 auto;padding:24px 16px 40px;color:var(--muted);font-size:13px;text-align:center}
+@media(prefers-reduced-motion:reduce){.skel::after{animation:none}.card,.btn,.findlevel a{transition:none}.btn:active,.findlevel a:active{transform:none}}
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:page-out .28s cubic-bezier(.4,0,.2,1) both}
+::view-transition-new(root){animation:page-in .28s cubic-bezier(.4,0,.2,1) both}
+@keyframes page-out{to{opacity:0;transform:scale(.96)}}
+@keyframes page-in{from{opacity:0;transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+</style><link rel="stylesheet" href="../shared/css/app-shell.css"></head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header><div class="headrow">
+  <img class="brand-logo" src="../shared/brand/logo-horizontal.svg" alt="Mylingo">
+  <nav><a href="../main/index.html">All levels</a></nav>
+</div></header>
+<main id="main-content">
+  <h1>Courses</h1>
+  <p class="sub">A guided path through each level — short revision, then practice, organized into units and lessons. You can also jump straight into any level and practice directly, any time.</p>
+  <div class="findlevel">
+    <p>Not sure where to start?</p>
+    <a href="../main/index.html">Find my level</a>
+  </div>
+  <ul class="grid" id="grid" role="list" aria-live="polite">
+    <li class="skel" aria-hidden="true"></li>
+    <li class="skel" aria-hidden="true"></li>
+    <li class="skel" aria-hidden="true"></li>
+    <li class="skel" aria-hidden="true"></li>
+    <li class="skel" aria-hidden="true"></li>
+    <li class="skel" aria-hidden="true"></li>
+  </ul>
+</main>
+<footer>Mylingo · Works offline once installed · Free forever</footer>
+<script>
+(function(){
+'use strict';
+var $=function(x){return document.getElementById(x)};
+var PROGRESS_KEY='mylingo.progress.v1';
+var LEVEL_LABEL={A1:'Beginner',A2:'Elementary',B1:'Intermediate',B2:'Upper-intermediate',C1:'Advanced',C2:'Proficiency'};
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]})}
+
+function readProgress(){
+  try{ var v=JSON.parse(localStorage.getItem(PROGRESS_KEY)||'{}'); return (v&&typeof v==='object')?v:{} }catch(e){ return {} }
+}
+
+function fetchJson(url){
+  return fetch(url,{cache:'no-store'}).then(function(r){ if(!r.ok) throw new Error('http '+r.status); return r.json() });
+}
+
+function renderError(){
+  $('grid').innerHTML='<li class="err">Courses aren\u2019t available right now. <a href="../main/index.html">Go to levels</a> instead.</li>';
+}
+
+Promise.all([
+  fetchJson('../course_content/courses.json'),
+  fetchJson('../course_content/units.json'),
+  fetchJson('../course_content/lessons.json')
+]).then(function(results){
+  var courses=results[0], units=results[1], lessons=results[2];
+  var progress=readProgress();
+  var order=['A1','A2','B1','B2','C1','C2'];
+  var published=courses.filter(function(c){ return c.status==='published' });
+  published.sort(function(a,b){ return order.indexOf(a.level)-order.indexOf(b.level) });
+
+  if(!published.length){ renderError(); return }
+
+  var html=published.map(function(course){
+    var courseUnits=units.filter(function(u){ return u.course_id===course.course_id });
+    var unitIds={}; courseUnits.forEach(function(u){ unitIds[u.unit_id]=true });
+    var courseLessons=lessons.filter(function(l){ return unitIds[l.unit_id] && l.status==='published' });
+    var exerciseIds=[]; courseLessons.forEach(function(l){ (l.exercise_quiz_ids||[]).forEach(function(id){ exerciseIds.push(id) }) });
+    var completedLessons=courseLessons.filter(function(l){
+      var ids=l.exercise_quiz_ids||[];
+      return ids.length>0 && ids.every(function(id){ return progress[id] && progress[id].status==='completed' });
+    }).length;
+    var startedAny=courseLessons.some(function(l){ return (l.exercise_quiz_ids||[]).some(function(id){ return !!progress[id] }) });
+    var pct=courseLessons.length ? Math.round(completedLessons/courseLessons.length*100) : 0;
+    var level=course.level.toLowerCase();
+    var ctaLabel=pct>=100 && courseLessons.length ? 'Practice again' : (startedAny ? 'Continue' : 'Start course');
+
+    return '<li class="card">'+
+      '<span class="lvl">'+esc(course.level)+' \u00b7 '+esc(LEVEL_LABEL[course.level]||'')+'</span>'+
+      '<h2>'+esc(course.title)+'</h2>'+
+      '<p>'+esc(course.description)+'</p>'+
+      '<div class="stats"><span><b>'+courseUnits.length+'</b> units</span><span><b>'+courseLessons.length+'</b> lessons</span><span><b>'+exerciseIds.length+'</b> exercises</span></div>'+
+      (courseLessons.length ? '<div class="bar"><i style="width:'+pct+'%"></i></div><div class="pctrow"><span>'+pct+'% complete</span></div>' : '')+
+      '<div class="actions">'+
+        '<a class="btn primary" href="./course.html?level='+level+'">'+ctaLabel+'</a>'+
+        '<a class="btn secondary" href="../'+level+'/index.html">Practice directly</a>'+
+      '</div>'+
+    '</li>';
+  }).join('');
+
+  $('grid').innerHTML=html;
+}).catch(function(){ renderError() });
+})();
+</script>
+<script src="../shared/js/app-shell.js"></script></body></html>

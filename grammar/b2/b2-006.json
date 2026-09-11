@@ -1,0 +1,77 @@
+{
+  "id": "b2-006",
+  "title": "Advanced Passive",
+  "description": "Practice Advanced Passive.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B2",
+  "level": "B2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The suspect is believed ___ abroad.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Is believed + to have + past participle reports an earlier action.",
+      "correctIndex": 4,
+      "answers": [
+        "fleeing to have",
+        "that fled",
+        "to fleeing",
+        "to have fled"
+      ]
+    },
+    {
+      "question": "The witness is believed ___ abroad.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Is believed + to have + past participle reports an earlier action.",
+      "correctIndex": 2,
+      "answers": [
+        "fleeing to have",
+        "to have fled",
+        "that fled",
+        "to fleeing"
+      ]
+    },
+    {
+      "question": "The suspect is thought ___ the country.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Is believed + to have + past participle reports an earlier action.",
+      "correctIndex": 1,
+      "answers": [
+        "to have fled",
+        "fleeing to have",
+        "that fled",
+        "to fleeing"
+      ]
+    },
+    {
+      "question": "The official is reported ___ abroad.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Is believed + to have + past participle reports an earlier action.",
+      "correctIndex": 3,
+      "answers": [
+        "fleeing to have",
+        "that fled",
+        "to have fled",
+        "to fleeing"
+      ]
+    },
+    {
+      "question": "The fugitive is believed ___ the country.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Is believed + to have + past participle reports an earlier action.",
+      "correctIndex": 4,
+      "answers": [
+        "fleeing to have",
+        "that fled",
+        "to fleeing",
+        "to have fled"
+      ]
+    }
+  ]
+}

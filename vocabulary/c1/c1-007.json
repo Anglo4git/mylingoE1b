@@ -1,0 +1,77 @@
+{
+  "id": "c1-007",
+  "title": "Lexical Precision",
+  "description": "Practice Lexical Precision.",
+  "brand": "Mylingo",
+  "category": "Vocabulary",
+  "tags": "Vocabulary,C1",
+  "level": "C1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The evidence was ___; it supported several interpretations.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Ambiguous means open to more than one interpretation.",
+      "correctIndex": 2,
+      "answers": [
+        "ambitious",
+        "ambiguous",
+        "arbitrary",
+        "obsolete"
+      ]
+    },
+    {
+      "question": "The evidence was ___; it allowed several interpretations.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Ambiguous means open to more than one interpretation.",
+      "correctIndex": 4,
+      "answers": [
+        "ambitious",
+        "arbitrary",
+        "obsolete",
+        "ambiguous"
+      ]
+    },
+    {
+      "question": "The wording was ___; readers disagreed about its meaning.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Ambiguous means open to more than one interpretation.",
+      "correctIndex": 3,
+      "answers": [
+        "ambitious",
+        "arbitrary",
+        "ambiguous",
+        "obsolete"
+      ]
+    },
+    {
+      "question": "The statement remained ___; the context was unclear.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Ambiguous means open to more than one interpretation.",
+      "correctIndex": 1,
+      "answers": [
+        "ambiguous",
+        "ambitious",
+        "arbitrary",
+        "obsolete"
+      ]
+    },
+    {
+      "question": "The message was ___; it could be understood in different ways.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Ambiguous means open to more than one interpretation.",
+      "correctIndex": 2,
+      "answers": [
+        "ambitious",
+        "ambiguous",
+        "arbitrary",
+        "obsolete"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "a2-005",
+  "title": "First Conditional",
+  "description": "Practice First Conditional.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A2",
+  "level": "A2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "If it rains, we ___ at home.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "The first conditional uses if + present, then will + base verb.",
+      "correctIndex": 1,
+      "answers": [
+        "will stay",
+        "stay",
+        "stayed",
+        "would stay"
+      ]
+    },
+    {
+      "question": "If I finish early, I ___ at home.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "The first conditional uses if + present, then will + base verb.",
+      "correctIndex": 2,
+      "answers": [
+        "stay",
+        "will stay",
+        "stayed",
+        "would stay"
+      ]
+    },
+    {
+      "question": "If she misses the bus, she ___ at home.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "The first conditional uses if + present, then will + base verb.",
+      "correctIndex": 4,
+      "answers": [
+        "stay",
+        "stayed",
+        "would stay",
+        "will stay"
+      ]
+    },
+    {
+      "question": "If they arrive late, they ___ at home.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "The first conditional uses if + present, then will + base verb.",
+      "correctIndex": 3,
+      "answers": [
+        "stay",
+        "stayed",
+        "will stay",
+        "would stay"
+      ]
+    },
+    {
+      "question": "If it rains all day, we ___ at home.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "The first conditional uses if + present, then will + base verb.",
+      "correctIndex": 2,
+      "answers": [
+        "stay",
+        "will stay",
+        "stayed",
+        "would stay"
+      ]
+    }
+  ]
+}

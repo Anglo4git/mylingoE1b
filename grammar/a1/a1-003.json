@@ -1,0 +1,77 @@
+{
+  "id": "a1-003",
+  "title": "Articles",
+  "description": "Practice Articles.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A1",
+  "level": "A1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "I have ___ apple.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use an before a vowel sound.",
+      "correctIndex": 1,
+      "answers": [
+        "an",
+        "a",
+        "the",
+        "some"
+      ]
+    },
+    {
+      "question": "She ate ___ orange after lunch.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use an before a vowel sound.",
+      "correctIndex": 2,
+      "answers": [
+        "a",
+        "an",
+        "the",
+        "some"
+      ]
+    },
+    {
+      "question": "He bought ___ new notebook.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use an before a vowel sound.",
+      "correctIndex": 4,
+      "answers": [
+        "a",
+        "the",
+        "some",
+        "an"
+      ]
+    },
+    {
+      "question": "I saw ___ elephant at the zoo.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use an before a vowel sound.",
+      "correctIndex": 3,
+      "answers": [
+        "a",
+        "the",
+        "an",
+        "some"
+      ]
+    },
+    {
+      "question": "We need ___ umbrella today.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use an before a vowel sound.",
+      "correctIndex": 4,
+      "answers": [
+        "a",
+        "the",
+        "some",
+        "an"
+      ]
+    }
+  ]
+}

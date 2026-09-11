@@ -1,0 +1,57 @@
+/* Mylingo App Shell — shared bottom navigation (Agent 87)
+   Included on every page via <link rel="stylesheet" href=".../shared/css/app-shell.css">.
+   Uses the same design tokens (--brand etc.) already defined per-page; falls back to
+   sane defaults here so the bar still renders correctly even before those vars load. */
+:root{
+  --as-brand:var(--brand,#1959d1);
+  --as-muted:var(--muted,#6b7280);
+  --as-line:var(--line,#e5e7eb);
+  --as-bg:#ffffff;
+}
+.mylingo-appshell{
+  position:fixed;
+  left:0;right:0;bottom:0;
+  display:flex;
+  justify-content:space-around;
+  align-items:stretch;
+  background:rgba(255,255,255,.96);
+  -webkit-backdrop-filter:blur(18px);
+  backdrop-filter:blur(18px);
+  border-top:1px solid var(--as-line);
+  padding-bottom:env(safe-area-inset-bottom);
+  z-index:60;
+}
+.mylingo-appshell .as-tab{
+  flex:1 1 0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:3px;
+  min-height:56px;
+  min-width:44px;
+  padding:7px 4px 6px;
+  text-decoration:none;
+  color:var(--as-muted);
+  font-size:11px;
+  font-weight:800;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  -webkit-tap-highlight-color:transparent;
+  transition:color 120ms ease;
+}
+.mylingo-appshell .as-tab:active{opacity:.7}
+.mylingo-appshell .as-tab.active{color:var(--as-brand)}
+.mylingo-appshell .as-icon{display:block;line-height:0}
+.mylingo-appshell .as-icon svg{width:22px;height:22px;display:block}
+.mylingo-appshell .as-label{line-height:1}
+
+/* Reserve room at the bottom of the document so fixed nav never covers content. */
+body.has-mylingo-appshell{padding-bottom:calc(60px + env(safe-area-inset-bottom))}
+
+/* Quiz engine: nav is toggled visible/hidden by shared/quiz.html's show() hook.
+   Default to visible; JS sets display:none while a question is active. */
+.mylingo-appshell[data-hidden="true"]{display:none}
+
+@media(prefers-reduced-motion:reduce){
+  .mylingo-appshell .as-tab{transition:none}
+}

@@ -1,0 +1,77 @@
+{
+  "id": "b1-005",
+  "title": "Gerunds and Infinitives",
+  "description": "Practice Gerunds and Infinitives.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B1",
+  "level": "B1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "She enjoys ___ books.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Enjoy is followed by a gerund (-ing form).",
+      "correctIndex": 4,
+      "answers": [
+        "read",
+        "to read",
+        "reads",
+        "reading"
+      ]
+    },
+    {
+      "question": "He enjoys ___ music.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Enjoy is followed by a gerund (-ing form).",
+      "correctIndex": 2,
+      "answers": [
+        "read",
+        "reading",
+        "to read",
+        "reads"
+      ]
+    },
+    {
+      "question": "They avoid ___ late at night.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Enjoy is followed by a gerund (-ing form).",
+      "correctIndex": 1,
+      "answers": [
+        "reading",
+        "read",
+        "to read",
+        "reads"
+      ]
+    },
+    {
+      "question": "I love ___ novels.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Enjoy is followed by a gerund (-ing form).",
+      "correctIndex": 3,
+      "answers": [
+        "read",
+        "to read",
+        "reading",
+        "reads"
+      ]
+    },
+    {
+      "question": "She dislikes ___ in cold weather.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Enjoy is followed by a gerund (-ing form).",
+      "correctIndex": 2,
+      "answers": [
+        "read",
+        "reading",
+        "to read",
+        "reads"
+      ]
+    }
+  ]
+}

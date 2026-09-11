@@ -1,0 +1,77 @@
+{
+  "id": "a1-008",
+  "title": "Possessive Adjectives",
+  "description": "Practice Possessive Adjectives.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A1",
+  "level": "A1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "This is ___ book. I own it.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "My comes before a noun.",
+      "correctIndex": 1,
+      "answers": [
+        "my",
+        "me",
+        "I",
+        "mine"
+      ]
+    },
+    {
+      "question": "This is ___ bag. I own it.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "My comes before a noun.",
+      "correctIndex": 3,
+      "answers": [
+        "me",
+        "I",
+        "my",
+        "mine"
+      ]
+    },
+    {
+      "question": "That is ___ coat. It belongs to me.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "My comes before a noun.",
+      "correctIndex": 2,
+      "answers": [
+        "me",
+        "my",
+        "I",
+        "mine"
+      ]
+    },
+    {
+      "question": "Here is ___ notebook. It is mine.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "My comes before a noun.",
+      "correctIndex": 4,
+      "answers": [
+        "me",
+        "I",
+        "mine",
+        "my"
+      ]
+    },
+    {
+      "question": "I cannot find ___ keys; they belong to me.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "My comes before a noun.",
+      "correctIndex": 2,
+      "answers": [
+        "me",
+        "my",
+        "I",
+        "mine"
+      ]
+    }
+  ]
+}

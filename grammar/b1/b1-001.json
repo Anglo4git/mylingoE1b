@@ -1,0 +1,77 @@
+{
+  "id": "b1-001",
+  "title": "Present Perfect vs Past Simple",
+  "description": "Practice Present Perfect vs Past Simple.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B1",
+  "level": "B1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "I ___ London twice, but I first went there in 2022.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use present perfect for life experience without a finished past time.",
+      "correctIndex": 2,
+      "answers": [
+        "visited",
+        "have visited",
+        "am visiting",
+        "visit"
+      ]
+    },
+    {
+      "question": "I ___ Paris three times, and I first went there in 2021.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use present perfect for life experience without a finished past time.",
+      "correctIndex": 4,
+      "answers": [
+        "visited",
+        "am visiting",
+        "visit",
+        "have visited"
+      ]
+    },
+    {
+      "question": "We ___ the book twice, but we first bought it last month.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use present perfect for life experience without a finished past time.",
+      "correctIndex": 3,
+      "answers": [
+        "visited",
+        "am visiting",
+        "have visited",
+        "visit"
+      ]
+    },
+    {
+      "question": "They ___ this museum several times, but their first visit was in 2020.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use present perfect for life experience without a finished past time.",
+      "correctIndex": 1,
+      "answers": [
+        "have visited",
+        "visited",
+        "am visiting",
+        "visit"
+      ]
+    },
+    {
+      "question": "I ___ Rome before, and I first visited in 2019.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use present perfect for life experience without a finished past time.",
+      "correctIndex": 1,
+      "answers": [
+        "have visited",
+        "visited",
+        "am visiting",
+        "visit"
+      ]
+    }
+  ]
+}

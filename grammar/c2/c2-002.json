@@ -1,0 +1,77 @@
+{
+  "id": "c2-002",
+  "title": "Concessive Inversion",
+  "description": "Practice Concessive Inversion.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,C2",
+  "level": "C2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Much as I ___ the argument, I cannot accept the conclusion.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Much as + verb introduces a strong concession.",
+      "correctIndex": 4,
+      "answers": [
+        "am admiring",
+        "admired",
+        "would admire",
+        "admire"
+      ]
+    },
+    {
+      "question": "Much as I ___ the proposal, I cannot endorse it.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Much as + verb introduces a strong concession.",
+      "correctIndex": 1,
+      "answers": [
+        "admire",
+        "am admiring",
+        "admired",
+        "would admire"
+      ]
+    },
+    {
+      "question": "Much as we ___ the theory, the evidence remains weak.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Much as + verb introduces a strong concession.",
+      "correctIndex": 2,
+      "answers": [
+        "am admiring",
+        "admire",
+        "admired",
+        "would admire"
+      ]
+    },
+    {
+      "question": "Much as she ___ the approach, she chose another method.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Much as + verb introduces a strong concession.",
+      "correctIndex": 3,
+      "answers": [
+        "am admiring",
+        "admired",
+        "admire",
+        "would admire"
+      ]
+    },
+    {
+      "question": "Much as they ___ the speaker, they disagreed with the conclusion.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Much as + verb introduces a strong concession.",
+      "correctIndex": 3,
+      "answers": [
+        "am admiring",
+        "admired",
+        "admire",
+        "would admire"
+      ]
+    }
+  ]
+}

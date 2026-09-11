@@ -1,0 +1,77 @@
+{
+  "id": "a2-010",
+  "title": "Everyday Vocabulary",
+  "description": "Practice everyday vocabulary.",
+  "brand": "Mylingo",
+  "category": "Vocabulary",
+  "tags": "Vocabulary,A2",
+  "level": "A2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Which word is closest in meaning to “begin”?",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A2",
+      "explanation": "Begin and start have the same basic meaning.",
+      "correctIndex": 3,
+      "answers": [
+        "finish",
+        "stop",
+        "start",
+        "close"
+      ]
+    },
+    {
+      "question": "Which word means “a short trip for pleasure”?",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A2",
+      "explanation": "A journey can be a trip from one place to another; in this context it is a short trip for pleasure.",
+      "correctIndex": 1,
+      "answers": [
+        "journey",
+        "receipt",
+        "shelf",
+        "habit"
+      ]
+    },
+    {
+      "question": "What is the opposite of “cheap”?",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A2",
+      "explanation": "The opposite of cheap is expensive.",
+      "correctIndex": 2,
+      "answers": [
+        "quiet",
+        "expensive",
+        "empty",
+        "simple"
+      ]
+    },
+    {
+      "question": "Which word means “to look after someone or something”?",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A2",
+      "explanation": "Care for means to look after someone or something.",
+      "correctIndex": 4,
+      "answers": [
+        "borrow",
+        "arrive",
+        "forget",
+        "care for"
+      ]
+    },
+    {
+      "question": "Which word is closest in meaning to “quick”?",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A2",
+      "explanation": "Quick and fast have the same basic meaning.",
+      "correctIndex": 4,
+      "answers": [
+        "slow",
+        "early",
+        "late",
+        "fast"
+      ]
+    }
+  ]
+}

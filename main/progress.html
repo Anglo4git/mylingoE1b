@@ -1,0 +1,112 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1959d1"><link rel="icon" href="../shared/brand/favicon.ico"><link rel="manifest" href="../manifest.json"><script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){})})}</script><link rel="stylesheet" href="../shared/css/app-shell.css"><title>Mylingo · Progress</title><style>
+:root{--brand:#1959d1;--brand-dark:#0e45ae;--brand-soft:#eaf1fc;--ink:#17212b;--muted:#687280;--line:#e3e7ed;--bg:#f6f8fb;--card:#fff;--success:#58cc02}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}a{color:inherit}.skip{position:absolute;left:8px;top:-50px;background:var(--brand);color:#fff;padding:10px 14px;border-radius:10px;font-weight:800;z-index:10}.skip:focus{top:8px}:focus-visible{outline:3px solid #1a73e8;outline-offset:3px}header{background:#fff;border-bottom:1px solid var(--line);padding:16px;padding-top:calc(16px + env(safe-area-inset-top))}.nav{max-width:1050px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}.logo{height:27px}main{max-width:1050px;margin:auto;padding:28px 16px 60px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:var(--brand)}h1{font-size:clamp(28px,6vw,40px);line-height:1.05;letter-spacing:-.03em;margin:10px 0 8px}.lead{color:var(--muted);font-size:15px;line-height:1.5;max-width:60ch;margin:0 0 22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px}.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center}.stat .n{font-size:clamp(18px,4vw,24px);font-weight:950;letter-spacing:-.02em}.stat .l{color:var(--muted);font-size:11px;font-weight:700;margin-top:2px}@media(max-width:520px){.stats{grid-template-columns:repeat(2,1fr)}}
+.section-title{font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:26px 0 10px}
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.level{background:#fff;border:1px solid var(--line);border-radius:17px;padding:14px 14px 16px;text-decoration:none;display:flex;flex-direction:column;gap:6px}.level .lv-top{display:flex;justify-content:space-between;align-items:baseline}.level b{font-weight:950;font-size:15px}.level small{font-weight:650;color:var(--muted);font-size:10.5px}.level .lv-pct{font-weight:900;color:var(--brand-dark);font-size:13px}.level .lv-bar{height:6px;border-radius:99px;background:var(--line);overflow:hidden}.level .lv-bar i{display:block;height:100%;background:var(--success)}.level .lv-meta{color:var(--muted);font-size:11px;font-weight:650}@media(max-width:520px){.levels{grid-template-columns:repeat(2,1fr)}}
+.row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:8px;text-decoration:none;color:inherit}.row .meta{flex:1;min-width:0}.row .meta b{display:block;font-size:14px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.row .meta small{color:var(--muted);font-size:11.5px}.row .badge{font-size:10px;font-weight:900;color:var(--brand-dark);background:var(--brand-soft);border-radius:999px;padding:3px 8px;letter-spacing:.03em}.row .pct{font-weight:900;font-size:13px;min-width:34px;text-align:right}
+.empty{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center;color:var(--muted);font-size:14px}
+.loading{color:var(--muted);font-size:14px;padding:8px 2px}
+</style></head><body><a class="skip" href="#main">Skip to main content</a><header><div class="nav"><a href="./index.html" aria-label="Mylingo home"><img class="logo" src="../shared/brand/logo-horizontal.svg" alt="Mylingo"></a></div></header><main id="main">
+<div class="eyebrow">PROGRESS</div><h1>Your progress</h1><p class="lead">A single view across all six levels — streaks, XP and where you left off.</p>
+<div class="stats" id="stats"></div>
+<div class="section-title">By level</div>
+<div class="levels" id="levels"><div class="loading">Loading…</div></div>
+<div class="section-title">Recent activity</div>
+<div id="recent"><div class="loading">Loading…</div></div>
+</main><script src="../shared/js/app-shell.js"></script>
+<script>
+(function(){
+'use strict';
+var LEVELS=[['a1','A1','Beginner'],['a2','A2','Elementary'],['b1','B1','Intermediate'],['b2','B2','Upper-intermediate'],['c1','C1','Advanced'],['c2','C2','Proficiency']];
+var PROGRESS_KEY='mylingo.progress.v1';
+var GAMIFICATION_KEY='mylingo.gamification.v1';
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]})}
+function readObj(key){try{var v=JSON.parse(localStorage.getItem(key)||'{}');return (v&&typeof v==='object')?v:{}}catch(e){return{}}}
+function timeAgo(ts){
+  if(!ts)return'';
+  var s=Math.max(1,Math.round((Date.now()-ts)/1000));
+  if(s<60)return s+'s ago';
+  var m=Math.round(s/60); if(m<60)return m+'m ago';
+  var h=Math.round(m/60); if(h<24)return h+'h ago';
+  var d=Math.round(h/24); return d+'d ago';
+}
+
+var progress=readObj(PROGRESS_KEY);
+var allEntries=Object.values(progress).filter(function(e){return e&&e.id});
+
+// Global gamification state, if present — read directly so this page has no
+// hard dependency on gamification.js loading (matches the defensive pattern
+// already used by the per-level dashboards).
+var gam=readObj(GAMIFICATION_KEY);
+var xpTotal=(gam&&typeof gam.xpTotal==='number')?gam.xpTotal:0;
+var streak=(gam&&typeof gam.streak==='number')?gam.streak:0;
+
+var completed=allEntries.filter(function(e){return e.status==='completed'});
+var bestScores=allEntries.map(function(e){return e.best}).filter(function(v){return v!=null});
+var avg=bestScores.length?Math.round(bestScores.reduce(function(a,b){return a+b},0)/bestScores.length):null;
+
+document.getElementById('stats').innerHTML=[
+  ['Attempted',allEntries.length],
+  ['Completed',completed.length],
+  ['Avg. best score',avg!=null?avg+'%':'—'],
+  ['XP earned',xpTotal]
+].map(function(t){return '<div class="stat"><div class="n">'+t[1]+'</div><div class="l">'+t[0]+'</div></div>'}).join('');
+
+// Recent activity across every level, most recent first.
+var recent=allEntries.slice().sort(function(a,b){return (b.lastAccess||0)-(a.lastAccess||0)}).slice(0,8);
+var recentEl=document.getElementById('recent');
+if(!recent.length){
+  recentEl.innerHTML='<div class="empty">No quizzes attempted yet. Pick a level below to get started.</div>';
+}else{
+  recentEl.innerHTML=recent.map(function(e){
+    var lvl=(e.level||'').toLowerCase();
+    var pct=e.best!=null?e.best:(e.latest!=null?e.latest:0);
+    return '<a class="row" href="../shared/quiz.html?quiz='+encodeURIComponent(e.id)+'&level='+encodeURIComponent(lvl)+'">'+
+      '<span class="badge">'+esc(lvl.toUpperCase())+'</span>'+
+      '<div class="meta"><b>'+esc(e.title||e.id)+'</b><small>'+(e.attempts||0)+' attempt'+((e.attempts||0)===1?'':'s')+' · '+timeAgo(e.lastAccess)+'</small></div>'+
+      '<div class="pct">'+pct+'%</div>'+
+      '</a>';
+  }).join('');
+}
+
+// Per-level cards: real completion % from progress data, "not started" count
+// from each level's own quizzes.json manifest (best-effort — a level whose
+// manifest fetch fails just shows attempted/completed with no total).
+var levelsEl=document.getElementById('levels');
+Promise.all(LEVELS.map(function(l){
+  return fetch('../'+l[0]+'/quizzes.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():[]}).catch(function(){return[]});
+})).then(function(manifests){
+  levelsEl.innerHTML=LEVELS.map(function(l,i){
+    var key=l[0],label=l[1],sub=l[2];
+    var manifest=Array.isArray(manifests[i])?manifests[i]:[];
+    var entries=allEntries.filter(function(e){return (e.level||'').toLowerCase()===key});
+    var lvlCompleted=entries.filter(function(e){return e.status==='completed'}).length;
+    var total=manifest.length||null;
+    var pct=total?Math.round((lvlCompleted/total)*100):(entries.length?Math.round((lvlCompleted/entries.length)*100):0);
+    var metaText=total?(lvlCompleted+' / '+total+' completed'):(entries.length?(lvlCompleted+' completed'):'Not started');
+    return '<a class="level" href="../'+key+'/dashboard.html">'+
+      '<div class="lv-top"><b>'+label+'</b><span class="lv-pct">'+pct+'%</span></div>'+
+      '<small>'+esc(sub)+'</small>'+
+      '<div class="lv-bar" aria-hidden="true"><i style="width:'+pct+'%"></i></div>'+
+      '<div class="lv-meta">'+esc(metaText)+'</div>'+
+      '</a>';
+  }).join('');
+}).catch(function(){
+  // Manifest fetches failed entirely (e.g. offline with no cache) — degrade
+  // to attempted/completed counts only, still a real per-level breakdown.
+  levelsEl.innerHTML=LEVELS.map(function(l){
+    var key=l[0],label=l[1],sub=l[2];
+    var entries=allEntries.filter(function(e){return (e.level||'').toLowerCase()===key});
+    var lvlCompleted=entries.filter(function(e){return e.status==='completed'}).length;
+    var pct=entries.length?Math.round((lvlCompleted/entries.length)*100):0;
+    return '<a class="level" href="../'+key+'/dashboard.html">'+
+      '<div class="lv-top"><b>'+label+'</b><span class="lv-pct">'+pct+'%</span></div>'+
+      '<small>'+esc(sub)+'</small>'+
+      '<div class="lv-bar" aria-hidden="true"><i style="width:'+pct+'%"></i></div>'+
+      '<div class="lv-meta">'+esc(entries.length?(lvlCompleted+' completed'):'Not started')+'</div>'+
+      '</a>';
+  }).join('');
+});
+})();
+</script>
+</body></html>

@@ -1,0 +1,77 @@
+{
+  "id": "b2-008",
+  "title": "Collocation",
+  "description": "Practice Collocation.",
+  "brand": "Mylingo",
+  "category": "Vocabulary",
+  "tags": "Vocabulary,B2",
+  "level": "B2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The company needs to ___ a decision quickly.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B2",
+      "explanation": "Make a decision is the standard collocation.",
+      "correctIndex": 1,
+      "answers": [
+        "make",
+        "do",
+        "take up",
+        "put"
+      ]
+    },
+    {
+      "question": "The board needs to ___ a decision soon.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B2",
+      "explanation": "Make a decision is the standard collocation.",
+      "correctIndex": 2,
+      "answers": [
+        "do",
+        "make",
+        "take up",
+        "put"
+      ]
+    },
+    {
+      "question": "We should ___ a decision before Friday.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B2",
+      "explanation": "Make a decision is the standard collocation.",
+      "correctIndex": 4,
+      "answers": [
+        "do",
+        "take up",
+        "put",
+        "make"
+      ]
+    },
+    {
+      "question": "The team must ___ a decision today.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B2",
+      "explanation": "Make a decision is the standard collocation.",
+      "correctIndex": 3,
+      "answers": [
+        "do",
+        "take up",
+        "make",
+        "put"
+      ]
+    },
+    {
+      "question": "Management will ___ a decision after the review.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B2",
+      "explanation": "Make a decision is the standard collocation.",
+      "correctIndex": 4,
+      "answers": [
+        "do",
+        "take up",
+        "put",
+        "make"
+      ]
+    }
+  ]
+}

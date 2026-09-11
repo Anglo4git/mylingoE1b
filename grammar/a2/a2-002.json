@@ -1,0 +1,77 @@
+{
+  "id": "a2-002",
+  "title": "Present Continuous",
+  "description": "Practice Present Continuous.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A2",
+  "level": "A2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Look! The baby ___.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use am/is/are + -ing for an action happening now.",
+      "correctIndex": 2,
+      "answers": [
+        "sleep",
+        "is sleeping",
+        "sleeps",
+        "slept"
+      ]
+    },
+    {
+      "question": "Listen! The children ___.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use am/is/are + -ing for an action happening now.",
+      "correctIndex": 1,
+      "answers": [
+        "is sleeping",
+        "sleep",
+        "sleeps",
+        "slept"
+      ]
+    },
+    {
+      "question": "Look! The dog ___.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use am/is/are + -ing for an action happening now.",
+      "correctIndex": 4,
+      "answers": [
+        "sleep",
+        "sleeps",
+        "slept",
+        "is sleeping"
+      ]
+    },
+    {
+      "question": "Right now, she ___.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use am/is/are + -ing for an action happening now.",
+      "correctIndex": 3,
+      "answers": [
+        "sleep",
+        "sleeps",
+        "is sleeping",
+        "slept"
+      ]
+    },
+    {
+      "question": "At the moment, we ___.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use am/is/are + -ing for an action happening now.",
+      "correctIndex": 4,
+      "answers": [
+        "sleep",
+        "sleeps",
+        "slept",
+        "is sleeping"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "file": "grammar/b2/b2-001.json",
+    "id": "b2-001",
+    "title": "Mixed Conditionals",
+    "topic": "Mixed Conditionals",
+    "description": "Practice Mixed Conditionals.",
+    "category": "Grammar",
+    "tags": "Grammar,B2",
+    "level": "B2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b2/b2-002.json",
+    "id": "b2-002",
+    "title": "Inversion",
+    "topic": "Inversion",
+    "description": "Practice Inversion.",
+    "category": "Grammar",
+    "tags": "Grammar,B2",
+    "level": "B2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b2/b2-003.json",
+    "id": "b2-003",
+    "title": "Modal Perfect",
+    "topic": "Modal Perfect",
+    "description": "Practice Modal Perfect.",
+    "category": "Grammar",
+    "tags": "Grammar,B2",
+    "level": "B2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b2/b2-004.json",
+    "id": "b2-004",
+    "title": "Causative",
+    "topic": "Causative",
+    "description": "Practice Causative.",
+    "category": "Grammar",
+    "tags": "Grammar,B2",
+    "level": "B2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b2/b2-005.json",
+    "id": "b2-005",
+    "title": "Participle Clauses",
+    "topic": "Participle Clauses",
+    "description": "Practice Participle Clauses.",
+    "category": "Grammar",
+    "tags": "Grammar,B2",
+    "level": "B2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b2/b2-006.json",
+    "id": "b2-006",
+    "title": "Advanced Passive",
+    "topic": "Advanced Passive",
+    "description": "Practice Advanced Passive.",
+    "category": "Grammar",
+    "tags": "Grammar,B2",
+    "level": "B2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "academic-english/b2/b2-007.json",
+    "id": "b2-007",
+    "title": "Hedging",
+    "topic": "Hedging",
+    "description": "Practice Hedging.",
+    "category": "Academic English",
+    "tags": "Academic English,B2",
+    "level": "B2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "vocabulary/b2/b2-008.json",
+    "id": "b2-008",
+    "title": "Collocation",
+    "topic": "Collocation",
+    "description": "Practice Collocation.",
+    "category": "Vocabulary",
+    "tags": "Vocabulary,B2",
+    "level": "B2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/b2/b2-009.json",
+    "id": "b2-009",
+    "title": "Concession",
+    "topic": "Concession",
+    "description": "Practice Concession.",
+    "category": "Grammar",
+    "tags": "Grammar,B2",
+    "level": "B2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "writing/b2/b2-010.json",
+    "id": "b2-010",
+    "title": "Register",
+    "topic": "Register",
+    "description": "Practice Register.",
+    "category": "Writing",
+    "tags": "Writing,B2",
+    "level": "B2",
+    "questions": 5,
+    "version": 1
+  }
+]

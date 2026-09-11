@@ -1,0 +1,77 @@
+{
+  "id": "a2-001",
+  "title": "Comparative Adjectives",
+  "description": "Practice Comparative Adjectives.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A2",
+  "level": "A2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "A car is ___ than a bicycle.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use the comparative form faster for a two-item comparison.",
+      "correctIndex": 4,
+      "answers": [
+        "fast",
+        "fastest",
+        "more fast",
+        "faster"
+      ]
+    },
+    {
+      "question": "A train is ___ than a bicycle.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use the comparative form faster for a two-item comparison.",
+      "correctIndex": 1,
+      "answers": [
+        "faster",
+        "fast",
+        "fastest",
+        "more fast"
+      ]
+    },
+    {
+      "question": "This exercise is ___ than the last one.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use the comparative form faster for a two-item comparison.",
+      "correctIndex": 2,
+      "answers": [
+        "fast",
+        "faster",
+        "fastest",
+        "more fast"
+      ]
+    },
+    {
+      "question": "My new phone is ___ than my old phone.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use the comparative form faster for a two-item comparison.",
+      "correctIndex": 3,
+      "answers": [
+        "fast",
+        "fastest",
+        "faster",
+        "more fast"
+      ]
+    },
+    {
+      "question": "A cheetah is ___ than a horse.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use the comparative form faster for a two-item comparison.",
+      "correctIndex": 3,
+      "answers": [
+        "fast",
+        "fastest",
+        "faster",
+        "more fast"
+      ]
+    }
+  ]
+}

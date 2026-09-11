@@ -1,0 +1,203 @@
+{
+  "id": "placement-001",
+  "title": "C2 Level Check",
+  "description": "A 10-question placement check for C2.",
+  "brand": "Mylingo",
+  "category": "Placement",
+  "tags": "Placement,C2",
+  "level": "C2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "He ___ have been aware of the risk, but the evidence is inconclusive.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "May have been expresses a possible past state.",
+      "correctIndex": 1,
+      "answers": [
+        "may",
+        "must",
+        "will",
+        "should"
+      ],
+      "id": "c2-placement-001",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 5,
+      "cefr": "C2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Much as I ___ the argument, I cannot accept the conclusion.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Much as + verb introduces a strong concession.",
+      "correctIndex": 1,
+      "answers": [
+        "admire",
+        "am admiring",
+        "admired",
+        "would admire"
+      ],
+      "id": "c2-placement-002",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 5,
+      "cefr": "C2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "What the report fails to explain ___ why the figures changed.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "The subject is a singular noun clause, so use is.",
+      "correctIndex": 2,
+      "answers": [
+        "are",
+        "is",
+        "be",
+        "have"
+      ],
+      "id": "c2-placement-003",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 5,
+      "cefr": "C2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Which phrase is most suitable for a highly formal academic paper?",
+      "category": "Writing",
+      "tags": "Writing,C2",
+      "explanation": "A substantial proportion of is formal and precise.",
+      "correctIndex": 2,
+      "answers": [
+        "a lot of",
+        "a substantial proportion of",
+        "loads of",
+        "tons of"
+      ],
+      "id": "c2-placement-004",
+      "skill": "writing",
+      "subskill": "discourse-marker",
+      "difficulty": 5,
+      "cefr": "C2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The minister's response was deliberately ___, avoiding a direct commitment.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Equivocal means deliberately unclear or open to more than one interpretation.",
+      "correctIndex": 1,
+      "answers": [
+        "equivocal",
+        "equivalent",
+        "explicit",
+        "conclusive"
+      ],
+      "id": "c2-placement-005",
+      "skill": "vocabulary",
+      "subskill": "contextual-vocabulary",
+      "difficulty": 5,
+      "cefr": "C2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Read: Although the report was widely praised, its conclusions were questioned because the sample was too small. What caused the conclusions to be questioned?",
+      "category": "Reading",
+      "tags": "Reading,C2",
+      "explanation": "The passage identifies the small sample as the reason for questioning the conclusions.",
+      "correctIndex": 1,
+      "answers": [
+        "The sample was too small.",
+        "The report was widely praised.",
+        "The conclusions were obvious.",
+        "The study was too long."
+      ],
+      "id": "c2-placement-006",
+      "skill": "reading",
+      "subskill": "critical-reading",
+      "difficulty": 5,
+      "cefr": "C2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Under no circumstances ___ the data be altered.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Negative fronted adverbials trigger inversion.",
+      "correctIndex": 1,
+      "answers": [
+        "should",
+        "the data should",
+        "would",
+        "have"
+      ],
+      "id": "c2-placement-007",
+      "skill": "grammar",
+      "subskill": "grammar-usage",
+      "difficulty": 5,
+      "cefr": "C2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Her 'That's interesting' was probably ___ given her dismissive tone.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Tone and context can make a seemingly positive phrase sarcastic.",
+      "correctIndex": 2,
+      "answers": [
+        "enthusiastic",
+        "sarcastic",
+        "literal",
+        "grateful"
+      ],
+      "id": "c2-placement-008",
+      "skill": "vocabulary",
+      "subskill": "contextual-vocabulary",
+      "difficulty": 5,
+      "cefr": "C2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The new evidence ___ serious doubt on the original claim.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Cast doubt on is the standard collocation.",
+      "correctIndex": 1,
+      "answers": [
+        "casts",
+        "throws up",
+        "does",
+        "makes"
+      ],
+      "id": "c2-placement-009",
+      "skill": "vocabulary",
+      "subskill": "contextual-vocabulary",
+      "difficulty": 5,
+      "cefr": "C2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Taken together, the findings ___ a more complex picture than the initial hypothesis suggested.",
+      "category": "Academic English",
+      "tags": "Academic English,C2",
+      "explanation": "Paint a picture is a common metaphorical collocation in analytical writing.",
+      "correctIndex": 1,
+      "answers": [
+        "paint",
+        "draw",
+        "write",
+        "build"
+      ],
+      "id": "c2-placement-010",
+      "skill": "usage",
+      "subskill": "language-usage",
+      "difficulty": 5,
+      "cefr": "C2",
+      "estimated_time_seconds": 20
+    }
+  ],
+  "metadata_note": "Question skill/difficulty/CEFR/time fields are internal product metadata, not official CEFR certification."
+}

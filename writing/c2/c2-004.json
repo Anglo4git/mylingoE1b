@@ -1,0 +1,77 @@
+{
+  "id": "c2-004",
+  "title": "Register and Tone",
+  "description": "Practice Register and Tone.",
+  "brand": "Mylingo",
+  "category": "Writing",
+  "tags": "Writing,C2",
+  "level": "C2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Which phrase is most suitable for a highly formal academic paper?",
+      "category": "Writing",
+      "tags": "Writing,C2",
+      "explanation": "A substantial proportion of is formal and precise.",
+      "correctIndex": 2,
+      "answers": [
+        "a lot of",
+        "a substantial proportion of",
+        "loads of",
+        "tons of"
+      ]
+    },
+    {
+      "question": "Which phrase is most suitable for a formal research article?",
+      "category": "Writing",
+      "tags": "Writing,C2",
+      "explanation": "A substantial proportion of is formal and precise.",
+      "correctIndex": 4,
+      "answers": [
+        "a lot of",
+        "loads of",
+        "tons of",
+        "a substantial proportion of"
+      ]
+    },
+    {
+      "question": "Which expression best suits highly formal academic writing?",
+      "category": "Writing",
+      "tags": "Writing,C2",
+      "explanation": "A substantial proportion of is formal and precise.",
+      "correctIndex": 1,
+      "answers": [
+        "a substantial proportion of",
+        "a lot of",
+        "loads of",
+        "tons of"
+      ]
+    },
+    {
+      "question": "Which wording would be most appropriate in a scholarly paper?",
+      "category": "Writing",
+      "tags": "Writing,C2",
+      "explanation": "A substantial proportion of is formal and precise.",
+      "correctIndex": 3,
+      "answers": [
+        "a lot of",
+        "loads of",
+        "a substantial proportion of",
+        "tons of"
+      ]
+    },
+    {
+      "question": "Which phrase best fits a formal university report?",
+      "category": "Writing",
+      "tags": "Writing,C2",
+      "explanation": "A substantial proportion of is formal and precise.",
+      "correctIndex": 4,
+      "answers": [
+        "a lot of",
+        "loads of",
+        "tons of",
+        "a substantial proportion of"
+      ]
+    }
+  ]
+}

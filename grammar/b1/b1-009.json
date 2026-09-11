@@ -1,0 +1,77 @@
+{
+  "id": "b1-009",
+  "title": "Used to",
+  "description": "Practice Used to.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B1",
+  "level": "B1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "I ___ play football every weekend when I was younger.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Used to describes past habits or states.",
+      "correctIndex": 4,
+      "answers": [
+        "use to",
+        "am used to",
+        "used",
+        "used to"
+      ]
+    },
+    {
+      "question": "When I was a child, I ___ ride my bike every day.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Used to describes past habits or states.",
+      "correctIndex": 3,
+      "answers": [
+        "use to",
+        "am used to",
+        "used to",
+        "used"
+      ]
+    },
+    {
+      "question": "He ___ visit his grandparents every Sunday when he was young.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Used to describes past habits or states.",
+      "correctIndex": 1,
+      "answers": [
+        "used to",
+        "use to",
+        "am used to",
+        "used"
+      ]
+    },
+    {
+      "question": "We ___ live in that town years ago.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Used to describes past habits or states.",
+      "correctIndex": 2,
+      "answers": [
+        "use to",
+        "used to",
+        "am used to",
+        "used"
+      ]
+    },
+    {
+      "question": "She ___ collect stamps when she was younger.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Used to describes past habits or states.",
+      "correctIndex": 4,
+      "answers": [
+        "use to",
+        "am used to",
+        "used",
+        "used to"
+      ]
+    }
+  ]
+}

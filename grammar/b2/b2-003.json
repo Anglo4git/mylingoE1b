@@ -1,0 +1,77 @@
+{
+  "id": "b2-003",
+  "title": "Modal Perfect",
+  "description": "Practice Modal Perfect.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B2",
+  "level": "B2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "She ___ have forgotten the meeting; she never misses one.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Can't have + past participle expresses a strong negative deduction.",
+      "correctIndex": 3,
+      "answers": [
+        "must",
+        "should",
+        "can't",
+        "can"
+      ]
+    },
+    {
+      "question": "She ___ have missed the train; the station is nearby and she left early.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Can't have + past participle expresses a strong negative deduction.",
+      "correctIndex": 4,
+      "answers": [
+        "must",
+        "should",
+        "can",
+        "can't"
+      ]
+    },
+    {
+      "question": "He ___ have forgotten the deadline; he set three reminders.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Can't have + past participle expresses a strong negative deduction.",
+      "correctIndex": 2,
+      "answers": [
+        "must",
+        "can't",
+        "should",
+        "can"
+      ]
+    },
+    {
+      "question": "They ___ have lost the keys; they were in the same place yesterday.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Can't have + past participle expresses a strong negative deduction.",
+      "correctIndex": 1,
+      "answers": [
+        "can't",
+        "must",
+        "should",
+        "can"
+      ]
+    },
+    {
+      "question": "The manager ___ have ignored the warning; he was informed twice.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Can't have + past participle expresses a strong negative deduction.",
+      "correctIndex": 3,
+      "answers": [
+        "must",
+        "should",
+        "can't",
+        "can"
+      ]
+    }
+  ]
+}

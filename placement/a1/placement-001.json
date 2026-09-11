@@ -1,0 +1,203 @@
+{
+  "id": "placement-001",
+  "title": "A1 Level Check",
+  "description": "A 10-question placement check for A1.",
+  "brand": "Mylingo",
+  "category": "Placement",
+  "tags": "Placement,A1",
+  "level": "A1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Choose the correct form: She ___ to school every day.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use -s with he/she/it in the present simple.",
+      "correctIndex": 2,
+      "answers": [
+        "go",
+        "goes",
+        "going",
+        "gone"
+      ],
+      "id": "a1-placement-001",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 1,
+      "cefr": "A1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "I ___ a student.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use am with I.",
+      "correctIndex": 1,
+      "answers": [
+        "am",
+        "is",
+        "are",
+        "be"
+      ],
+      "id": "a1-placement-002",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 1,
+      "cefr": "A1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "I have ___ apple.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use an before a vowel sound.",
+      "correctIndex": 2,
+      "answers": [
+        "a",
+        "an",
+        "the",
+        "some"
+      ],
+      "id": "a1-placement-003",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 1,
+      "cefr": "A1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "There are two ___ on the table.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Most regular nouns take -s in the plural.",
+      "correctIndex": 2,
+      "answers": [
+        "book",
+        "books",
+        "bookes",
+        "a book"
+      ],
+      "id": "a1-placement-004",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 1,
+      "cefr": "A1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "___ three chairs in the room.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use There are with plural nouns.",
+      "correctIndex": 2,
+      "answers": [
+        "There is",
+        "There are",
+        "It is",
+        "They are"
+      ],
+      "id": "a1-placement-005",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 1,
+      "cefr": "A1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "I ___ swim.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Can is followed by the base form of the verb.",
+      "correctIndex": 1,
+      "answers": [
+        "can",
+        "cans",
+        "am can",
+        "can to"
+      ],
+      "id": "a1-placement-006",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 1,
+      "cefr": "A1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Yesterday, I ___ at home.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use the past simple for a finished past action.",
+      "correctIndex": 2,
+      "answers": [
+        "stay",
+        "stayed",
+        "stays",
+        "staying"
+      ],
+      "id": "a1-placement-007",
+      "skill": "grammar",
+      "subskill": "grammar-usage",
+      "difficulty": 1,
+      "cefr": "A1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Which word best completes the sentence? She is very ___; she always helps people.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A1",
+      "explanation": "Kind describes someone who is helpful and caring.",
+      "correctIndex": 1,
+      "answers": [
+        "kind",
+        "late",
+        "closed",
+        "empty"
+      ],
+      "id": "a1-placement-008",
+      "skill": "vocabulary",
+      "subskill": "contextual-vocabulary",
+      "difficulty": 1,
+      "cefr": "A1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Read: Tom has a red bag. He takes it to school every day. What color is Tom's bag?",
+      "category": "Reading",
+      "tags": "Reading,A1",
+      "explanation": "The passage directly states that Tom has a red bag.",
+      "correctIndex": 1,
+      "answers": [
+        "red",
+        "blue",
+        "green",
+        "black"
+      ],
+      "id": "a1-placement-009",
+      "skill": "reading",
+      "subskill": "reading-detail",
+      "difficulty": 1,
+      "cefr": "A1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Choose the best sentence for a simple message to your teacher.",
+      "category": "Writing",
+      "tags": "Writing,A1",
+      "explanation": "This sentence is clear and appropriate for a simple message to a teacher.",
+      "correctIndex": 1,
+      "answers": [
+        "I am absent today because I am ill.",
+        "Me no school today.",
+        "Today school no.",
+        "I absent school yesterday."
+      ],
+      "id": "a1-placement-010",
+      "skill": "writing",
+      "subskill": "appropriate-message",
+      "difficulty": 1,
+      "cefr": "A1",
+      "estimated_time_seconds": 20
+    }
+  ],
+  "metadata_note": "Question skill/difficulty/CEFR/time fields are internal product metadata, not official CEFR certification."
+}

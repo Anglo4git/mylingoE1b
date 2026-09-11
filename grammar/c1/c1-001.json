@@ -1,0 +1,77 @@
+{
+  "id": "c1-001",
+  "title": "Advanced Conditionals",
+  "description": "Practice Advanced Conditionals.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,C1",
+  "level": "C1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Had I known about the delay, I ___ earlier.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Had I known is an inverted third conditional.",
+      "correctIndex": 3,
+      "answers": [
+        "would leave",
+        "will have left",
+        "would have left",
+        "left"
+      ]
+    },
+    {
+      "question": "Had she known about the change, she ___ earlier.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Had I known is an inverted third conditional.",
+      "correctIndex": 2,
+      "answers": [
+        "would leave",
+        "would have left",
+        "will have left",
+        "left"
+      ]
+    },
+    {
+      "question": "Had we received the notice, we ___ sooner.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Had I known is an inverted third conditional.",
+      "correctIndex": 1,
+      "answers": [
+        "would have left",
+        "would leave",
+        "will have left",
+        "left"
+      ]
+    },
+    {
+      "question": "Had they understood the risk, they ___ differently.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Had I known is an inverted third conditional.",
+      "correctIndex": 4,
+      "answers": [
+        "would leave",
+        "will have left",
+        "left",
+        "would have left"
+      ]
+    },
+    {
+      "question": "Had he seen the problem, he ___ action.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Had I known is an inverted third conditional.",
+      "correctIndex": 4,
+      "answers": [
+        "would leave",
+        "will have left",
+        "left",
+        "would have left"
+      ]
+    }
+  ]
+}

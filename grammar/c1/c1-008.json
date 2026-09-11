@@ -1,0 +1,77 @@
+{
+  "id": "c1-008",
+  "title": "Inversion after Only",
+  "description": "Practice Inversion after Only.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,C1",
+  "level": "C1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Only after the meeting ___ the implications become clear.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Only + fronted adverbial can require inversion.",
+      "correctIndex": 1,
+      "answers": [
+        "did",
+        "were",
+        "have",
+        "do"
+      ]
+    },
+    {
+      "question": "Only after the report was published ___ the issue receive attention.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Only + fronted adverbial can require inversion.",
+      "correctIndex": 4,
+      "answers": [
+        "were",
+        "have",
+        "do",
+        "did"
+      ]
+    },
+    {
+      "question": "Only after the evidence was reviewed ___ the error become clear.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Only + fronted adverbial can require inversion.",
+      "correctIndex": 3,
+      "answers": [
+        "were",
+        "have",
+        "did",
+        "do"
+      ]
+    },
+    {
+      "question": "Only after the meeting ended ___ they understand the decision.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Only + fronted adverbial can require inversion.",
+      "correctIndex": 2,
+      "answers": [
+        "were",
+        "did",
+        "have",
+        "do"
+      ]
+    },
+    {
+      "question": "Only after the data were checked ___ the pattern emerge.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "Only + fronted adverbial can require inversion.",
+      "correctIndex": 1,
+      "answers": [
+        "did",
+        "were",
+        "have",
+        "do"
+      ]
+    }
+  ]
+}

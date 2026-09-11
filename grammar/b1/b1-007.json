@@ -1,0 +1,77 @@
+{
+  "id": "b1-007",
+  "title": "Passive Voice",
+  "description": "Practice Passive Voice.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B1",
+  "level": "B1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The bridge ___ in 1990.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "The past passive uses was/were + past participle.",
+      "correctIndex": 3,
+      "answers": [
+        "built",
+        "is building",
+        "was built",
+        "has build"
+      ]
+    },
+    {
+      "question": "The museum ___ in 2005.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "The past passive uses was/were + past participle.",
+      "correctIndex": 2,
+      "answers": [
+        "built",
+        "was built",
+        "is building",
+        "has build"
+      ]
+    },
+    {
+      "question": "The house ___ last year.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "The past passive uses was/were + past participle.",
+      "correctIndex": 1,
+      "answers": [
+        "was built",
+        "built",
+        "is building",
+        "has build"
+      ]
+    },
+    {
+      "question": "The road ___ in the 1980s.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "The past passive uses was/were + past participle.",
+      "correctIndex": 4,
+      "answers": [
+        "built",
+        "is building",
+        "has build",
+        "was built"
+      ]
+    },
+    {
+      "question": "The document ___ yesterday.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "The past passive uses was/were + past participle.",
+      "correctIndex": 3,
+      "answers": [
+        "built",
+        "is building",
+        "was built",
+        "has build"
+      ]
+    }
+  ]
+}

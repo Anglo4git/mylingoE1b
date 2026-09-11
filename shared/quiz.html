@@ -1,0 +1,1103 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="./brand/icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="./brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./brand/favicon-192.png">
+<link rel="apple-touch-icon" href="./brand/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1959d1">
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
+<link rel="stylesheet" href="./css/app-shell.css">
+<title>Mylingo Quiz</title><style>
+:root{--brand:#1959d1;--brand-dark:#0e45ae;--brand-soft:#eaf1fc;--success:#58cc02;--success-dark:#46a302;--success-soft:#e9f8df;--ink:#17212b;--muted:#4b5563;--line:#e5e7eb;--bg:#f7f9fc;--error:#ff4b4b;--error-soft:#fff0f0;--ease-spring:cubic-bezier(0.175,0.885,0.32,1.275);--ease-out:cubic-bezier(0.16,1,0.3,1);--ease-standard:cubic-bezier(0.4,0,0.2,1);--question-card-radius:24px;--media-card-radius:18px;--audio-card-radius:16px;--image-card-radius:18px;--option-radius:14px;--ease-micro:cubic-bezier(0.25,0.1,0.25,1);--ease-emphasis:cubic-bezier(0.32,0.72,0,1);--ease-exit:cubic-bezier(0.4,0,1,1);--ease-release:cubic-bezier(0.34,1.56,0.64,1);--dur-micro:120ms;--dur-standard:220ms;--dur-emphasis:380ms}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;padding-bottom:env(safe-area-inset-bottom)}
+a{color:inherit}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:8px;top:-48px;background:var(--brand);color:#fff;padding:10px 16px;border-radius:10px;font-weight:800;text-decoration:none;z-index:1000;transition:top .15s ease}
+.skip-link:focus{top:8px}
+:focus-visible{outline:3px solid #1a73e8;outline-offset:2px}
+button{font:inherit}
+.header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line);padding:12px 16px 10px;z-index:5;padding-top:calc(12px + env(safe-area-inset-top))}
+.header-inner{max-width:920px;margin:auto;display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center}
+.icon-btn{width:44px;height:44px;border:0;background:#f1f3f5;border-radius:50%;cursor:pointer;display:grid;place-items:center;padding:0;flex:0 0 auto}
+.icon-btn.small{width:44px;height:44px}
+.icon-btn.small svg{width:18px;height:18px}
+#speedBtn{font-size:11px;font-weight:900;color:var(--muted)}
+.brand{font-weight:900;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.counter{font-size:12px;font-weight:800;color:var(--muted);white-space:nowrap}
+#counter,#score{display:inline-block}
+.text-pop{animation:textPop var(--dur-standard) var(--ease-emphasis)}
+@keyframes textPop{from{opacity:0;transform:translateY(-6px) scale(.94);filter:blur(2px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+.progress{height:7px;background:#edf0f3;max-width:920px;margin:10px auto 0;border-radius:99px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--brand);width:0;transition:width .45s var(--ease-out)}
+/* Course-context strip (Agent 94): slim, optional bar identifying the
+   course/unit a quiz was launched from. Only rendered when the quiz was
+   reached via a course/lesson redirect that carries course/unit titles —
+   direct-practice quizzes never show this and keep the plain header. */
+/* Course-context strip (Agent 94): kept in the DOM for accessibility/
+   context purposes only. Visual display disabled per request — it is
+   never shown, regardless of how the quiz was launched. */
+.course-strip{display:none !important;max-width:920px;margin:8px auto 0;padding:8px 16px;font-size:12px;font-weight:800;color:var(--brand);background:var(--brand-soft);align-items:center;gap:6px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.course-strip.visible{display:none !important}
+.course-strip .sep{opacity:.6;font-weight:600}
+main{max-width:920px;margin:auto;padding:20px 16px 32px}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+.badges{display:flex;gap:7px;flex-wrap:wrap}
+.badge{background:var(--brand-soft);color:var(--brand);border-radius:99px;padding:7px 10px;font-size:11px;font-weight:900}
+.badge.neutral{background:#f1f3f5;color:var(--ink)}
+.score-row{display:flex;align-items:center;gap:10px}
+.score{font-weight:900;display:flex;align-items:center;gap:5px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--question-card-radius);padding:24px 18px;box-shadow:0 10px 30px rgba(23,33,43,.08)}
+.card.anim-in{animation:cardIn .42s var(--ease-spring)}
+@keyframes cardIn{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.qimg-wrap{text-align:center;margin-bottom:14px;padding:10px;border:1px solid var(--line);border-radius:var(--image-card-radius);background:#fbfcfe}
+.qimg-wrap img{max-width:100%;max-height:280px;border-radius:var(--image-card-radius);display:inline-block;object-fit:contain}
+.media-audio{margin:0 0 14px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--audio-card-radius);background:#fbfcfe}
+.media-audio audio{display:block;width:100%;min-height:44px}
+.media-label{display:block;font-size:12px;font-weight:800;color:var(--muted);margin-bottom:8px}
+.question{font-size:clamp(21px,4vw,30px);line-height:1.4;font-weight:900;text-align:center}
+.blank{display:inline-block;min-width:64px;color:transparent;border-bottom:3px solid var(--line);padding:0 4px;transition:color var(--dur-standard) var(--ease-emphasis),border-color var(--dur-standard) var(--ease-emphasis)}
+.blank.filled{color:var(--success);border-bottom-color:var(--success)}
+.subprompt{text-align:center;color:var(--muted);font-size:12px;font-weight:700;margin-top:10px}
+.hint{text-align:center;color:var(--muted);font-size:12px;margin-top:10px}
+.options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.option{min-height:58px;border:2px solid var(--line);background:#fff;border-radius:var(--option-radius);padding:12px 14px;text-align:left;font-weight:800;cursor:pointer;font-size:15px;display:flex;align-items:center;gap:10px;color:var(--ink);opacity:1;will-change:transform;transition:transform var(--dur-micro) var(--ease-release),border-color var(--dur-micro) var(--ease-micro),background-color var(--dur-micro) var(--ease-micro),color var(--dur-micro) var(--ease-micro)}
+.option.enter{animation:optIn .38s var(--ease-spring)}
+@keyframes optIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.option:active{transform:scale(.97);transition-duration:80ms;transition-timing-function:var(--ease-micro)}
+.option:disabled{cursor:default;color:var(--muted);opacity:.45}
+/* Graded-answer state: preserve the original black answer text while disabling every option. */
+.option:disabled.correct,.option:disabled.wrong{color:var(--ink);opacity:1}
+.option:disabled.correct .key{color:#fff}
+.option:disabled.wrong .key{color:#fff}
+.key{width:28px;height:28px;border-radius:99px;background:#f0f2f4;color:#5f6872;display:grid;place-items:center;font-size:11px;font-weight:900;flex:0 0 28px;transition:background-color var(--dur-micro) var(--ease-micro),color var(--dur-micro) var(--ease-micro)}
+.option.selected{border-color:var(--brand);background:var(--brand-soft)}
+.option.correct{border-color:var(--success);background:var(--success-soft);color:var(--ink)}
+.option.wrong{border-color:var(--error);background:var(--error-soft);color:var(--ink)}
+.correct .key{background:var(--success);color:#fff}
+.wrong .key{background:var(--error);color:#fff}
+.input-card,.match-card,.ranking-card{margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:var(--option-radius);background:#fbfcfe}
+.answer-input,.answer-select{width:100%;min-height:50px;border:2px solid var(--line);border-radius:var(--option-radius);padding:12px 14px;background:#fff;color:var(--ink);font-weight:700;font-size:16px}
+.answer-actions{display:flex;justify-content:center;margin-top:12px}
+.check-answer{border:0;background:var(--brand);color:#fff;font-weight:900;padding:12px 24px;border-radius:999px;min-height:46px;cursor:pointer;box-shadow:0 4px 0 var(--brand-dark)}
+.check-answer:active{transform:translateY(2px);box-shadow:0 2px 0 var(--brand-dark)}
+.match-grid{display:grid;gap:10px}
+.match-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center}
+.match-left{font-weight:800;padding:12px;border:1px solid var(--line);border-radius:var(--option-radius);background:#fff}
+.rank-list{display:grid;gap:8px}
+.rank-item{display:flex;align-items:center;gap:10px;padding:12px;border:2px solid var(--line);border-radius:var(--option-radius);background:#fff;font-weight:800;cursor:grab;user-select:none}
+.rank-item:focus-visible{outline:3px solid #1a73e8;outline-offset:2px}
+.rank-item .rank-num{width:28px;height:28px;border-radius:99px;background:#f0f2f4;display:grid;place-items:center;flex:0 0 28px;font-size:12px}
+.feedback{display:none;margin-top:14px;padding:14px 16px;border-radius:18px;line-height:1.5}.feedback-status{display:inline-flex;align-items:center;gap:7px;vertical-align:middle}.feedback-icon{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.feedback.show{display:block;animation:feedbackIn .34s var(--ease-spring)}
+@keyframes feedbackIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.good{background:var(--success-soft);color:#347800}
+.bad{background:var(--error-soft);color:#a52626}
+.actions{display:flex;flex-direction:row;align-items:stretch;justify-content:center;gap:10px;margin-top:18px;flex-wrap:wrap}.actions .next,.actions .primary,.actions .secondary{width:180px;min-width:160px;max-width:220px;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box}
+.next,.primary{border:0;background:var(--brand);color:#fff;font-weight:900;padding:14px 30px;border-radius:999px;box-shadow:0 5px 0 var(--brand-dark);cursor:pointer;font-size:15px;min-height:48px;will-change:transform;transition:transform var(--dur-standard) var(--ease-release),box-shadow var(--dur-micro) var(--ease-micro),opacity var(--dur-emphasis) var(--ease-out)}
+.next:active,.primary:active{transform:translateY(3px) scale(.97);box-shadow:0 2px 0 var(--brand-dark);transition-duration:80ms;transition-timing-function:var(--ease-micro)}
+.next{opacity:0}
+.next.show{opacity:1}
+.icon-btn{transition:transform var(--dur-standard) var(--ease-release),background-color var(--dur-micro) var(--ease-micro)}
+.icon-btn:active{transform:scale(.9);transition-duration:80ms;transition-timing-function:var(--ease-micro)}
+.secondary{transition:transform var(--dur-standard) var(--ease-release),background-color var(--dur-micro) var(--ease-micro)}
+.secondary:active{transform:scale(.97);transition-duration:80ms;transition-timing-function:var(--ease-micro)}
+.check-answer{transition:transform var(--dur-standard) var(--ease-release),box-shadow var(--dur-micro) var(--ease-micro)}
+.check-answer:active{transition-duration:80ms;transition-timing-function:var(--ease-micro)}
+.footer-note{text-align:center;color:#5b6470;font-size:11px;margin-top:14px}
+.overlay{position:fixed;inset:0;background:rgba(255,255,255,.98);display:grid;place-items:center;padding:24px;z-index:20;overflow:auto}
+.overlay.anim-in{animation:overlayIn .22s var(--ease-standard)}
+.overlay.anim-in .modal{animation:modalIn .4s var(--ease-spring)}
+@keyframes overlayIn{from{opacity:0}to{opacity:1}}
+@keyframes modalIn{from{opacity:0;transform:scale(.94) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal{text-align:center;max-width:420px;width:100%}
+.modal .stack{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:4px}
+.logo{width:64px;height:64px;border-radius:20px;margin:0 auto 16px;box-shadow:0 8px 0 var(--brand-dark)}
+.logo img{width:100%;height:100%;display:block;border-radius:20px}
+.brand-logo-sm{height:20px;width:auto;vertical-align:middle}
+.secondary{border:0;background:#f1f3f5;color:var(--ink);padding:12px 22px;border-radius:999px;font-weight:800;cursor:pointer;font-size:14px;min-height:44px;display:inline-flex;align-items:center;gap:6px;justify-content:center}
+.small{font-size:12px;color:var(--muted);margin-top:2px}
+.result-ring{--score-angle:0deg;width:120px;height:120px;padding:10px;border:0;border-radius:50%;background:conic-gradient(var(--brand) var(--score-angle),var(--brand-soft) 0deg);display:grid;place-items:center;margin:0 auto 16px;box-sizing:border-box}.result-ring::before{content:"";grid-area:1/1;width:100%;height:100%;background:#fff;border-radius:50%}.result-ring span{grid-area:1/1;position:relative;z-index:1}
+.result-ring span{font-size:28px;font-weight:900}
+.reco{margin-top:4px;padding:14px 16px;border-radius:16px;background:var(--success-soft);color:#347800;font-weight:700;text-align:left;width:100%}
+.reco.down{background:#fff7e0;color:#8a6100}
+.suggest{margin-top:6px;text-align:left;width:100%}
+.suggest h2{font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);margin:0 0 8px;text-align:center;font-weight:800}
+.suggest-grid{display:flex;flex-direction:column;gap:8px}
+.suggest-grid a{display:block;border:1px solid var(--line);border-radius:14px;padding:12px 14px;text-decoration:none;color:inherit;font-weight:800;font-size:14px;background:#fff}
+.suggest-grid a:hover{border-color:#c9d0d8}
+.spinner{width:34px;height:34px;border-radius:50%;border:4px solid var(--line);border-top-color:var(--brand);animation:spin .8s linear infinite;margin:0 auto 14px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.errbox{color:#a52626}
+@media(max-width:620px){.options{grid-template-columns:1fr}.card{padding:20px 14px}#focusBtn{display:none}}
+@media(prefers-reduced-motion:reduce){.progress i{transition:none}.spinner{animation:none}.option.grow,.option.shake{animation:none}.card.anim-in{animation:none}.option{animation:none;opacity:1;transform:none;transition:none}.feedback.show{animation:none}.overlay.anim-in{animation:none}.overlay.anim-in .modal{animation:none}.next,.primary,.icon-btn,.secondary,.check-answer{transition:none}.text-pop{animation:none}}
+.icon{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto;vertical-align:-3px}
+.back{display:inline-flex;align-items:center;gap:5px}
+.star{stroke:#e8a400}
+@keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.045)}100%{transform:scale(1)}}
+@keyframes shake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(2px)}30%,50%,70%{transform:translateX(-4px)}40%,60%{transform:translateX(4px)}}
+.option.grow{animation:pop .58s cubic-bezier(.2,.85,.25,1.2)}
+.option.shake{animation:shake .35s cubic-bezier(.4,0,.2,1)}
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:page-out .28s cubic-bezier(.4,0,.2,1) both}
+::view-transition-new(root){animation:page-in .28s cubic-bezier(.4,0,.2,1) both}
+@keyframes page-out{to{opacity:0;transform:scale(.96)}}
+@keyframes page-in{from{opacity:0;transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+</style></head><body>
+<a href="#main-content" class="skip-link">Skip to question</a>
+<header class="header"><div class="header-inner">
+  <button class="icon-btn" id="exitBtn" aria-label="Exit quiz" type="button"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <div class="brand"><img class="brand-logo-sm" src="./brand/logo-horizontal.svg" alt="Mylingo"> · <span id="titleTop"></span></div>
+  <div class="counter" id="counter" aria-live="polite"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" id="progressWrap" aria-valuenow="0"><i id="bar"></i></div>
+<div class="course-strip" id="courseStrip" aria-label="Course context"></div>
+</header>
+<main id="main-content">
+<div class="topline">
+  <div class="badges"><span class="badge" id="level"></span><span class="badge neutral" id="categoryBadge" style="display:none"></span></div>
+  <div class="score-row">
+    <button class="icon-btn small" id="speedBtn" type="button" aria-label="Sound effect speed: normal">1x</button>
+    <button class="icon-btn small" id="soundBtn" type="button" aria-pressed="false" aria-label="Mute sound effects"><svg class="icon" id="soundIcon" viewBox="0 0 24 24" aria-hidden="true"></svg></button>
+    <strong class="score"><svg class="icon star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg> <span id="score">0</span></strong>
+  </div>
+</div>
+<section class="card">
+  <div class="qimg-wrap" id="qimgWrap" style="display:none"><img id="qimg" alt="" loading="lazy" decoding="async"></div>
+  <div class="media-audio" id="qaudioWrap" style="display:none">
+    <span class="media-label" id="qaudioLabel">Listen</span>
+    <audio id="qaudio" controls preload="none"></audio>
+  </div>
+  <div class="question" id="question" role="heading" aria-level="1">Loading…</div>
+  <p class="subprompt" id="subprompt">Choose the best answer.</p>
+</section>
+<div class="options" id="options" role="group" aria-label="Answer options"></div>
+<p class="hint" id="kbHint"></p>
+<div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+<div class="actions"><button class="next" id="next" style="display:none">Continue</button></div>
+<p class="footer-note">Practice mode · Progress saves automatically</p>
+</main>
+
+<section class="overlay" id="loading"><div class="modal"><div class="spinner" aria-hidden="true"></div><p>Loading quiz…</p></div></section>
+
+<section class="overlay" id="start" style="display:none"><div class="modal">
+  <div class="logo"><img src="./brand/icon.svg" alt="Mylingo"></div>
+  <h1 id="startTitle">Mylingo Quiz</h1><p id="desc"></p>
+  <div class="stack">
+    <button class="primary" id="startBtn">Start quiz</button>
+    <button class="secondary" id="resumeBtn" style="display:none">Resume</button>
+    <button class="secondary" id="focusBtn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg> Enter focus mode</button>
+    <div class="small">Free forever · No sign-up needed</div>
+    <button class="secondary back" id="homeBtn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back</button>
+  </div>
+</div></section>
+
+<section class="overlay" id="error" style="display:none"><div class="modal">
+  <h1 class="errbox" id="errTitle" tabindex="-1">Something went wrong</h1>
+  <p id="errMsg" class="errbox"></p>
+  <div class="stack actions">
+    <button class="primary" id="retryBtn">Try again</button>
+    <button class="secondary back" id="errHomeBtn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to level</button>
+  </div>
+</div></section>
+
+<section class="overlay" id="end" style="display:none"><div class="modal">
+  <div class="result-ring"><span id="finalPct">0%</span></div>
+  <h1 id="result" tabindex="-1"></h1><p class="small" id="message"></p>
+  <div class="badges" id="gamifyBadges" style="display:none;justify-content:center;margin:4px 0 10px"></div><div id="placementProfile" style="text-align:left;margin:12px 0;display:none"></div>
+  <div class="stack actions">
+    <div class="reco" id="reco" style="display:none"></div>
+    <div class="suggest" id="suggest" style="display:none"><h2>More <span id="suggestCat"></span> practice</h2><div class="suggest-grid" id="suggestGrid"></div></div>
+    <button class="primary" id="continueBtn" style="display:none"></button>
+    <button class="primary" id="again">Try again</button>
+    <button class="secondary back" id="endHome"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back</button>
+    <div class="small">Your results are saved automatically.</div>
+  </div>
+</div></section>
+
+<script src="./js/gamification.js"></script><script src="./js/placement.js"></script><script src="./js/recommendations.js"></script><script src="./js/skill-mastery.js"></script><script src="./js/review-scheduler.js"></script><script src="./js/canonical-metadata.js"></script><script src="./js/runtime-v2-adapter.js"></script><script src="./js/runtime-content-loader.js"></script><script src="./js/app-shell.js"></script>
+<script>
+(function(){
+'use strict';
+const p=new URLSearchParams(location.search);
+const id=p.get('quiz');
+const VALID_LEVELS=['a1','a2','b1','b2','c1','c2'];
+const rawLevel=(p.get('level')||'a1').toLowerCase();
+const level=VALID_LEVELS.indexOf(rawLevel)>=0?rawLevel:'a1';
+const mode=(p.get('mode')||'').toLowerCase(); // 'placement' enables recommendation routing
+const redirect=p.get('redirect'); // where "Continue" goes to in placement mode
+// Course-mode context (Agent 94): course.html/lesson.html pass these when a
+// quiz is launched from within a course, so the quiz screen can show a
+// slim "Course · Unit" strip. Absent for direct-practice quizzes, which
+// keep today's plain header unchanged.
+const courseTitleParam=p.get('course');
+const unitTitleParam=p.get('unit_title');
+const stage=(p.get('stage')||'primary').toLowerCase();
+const anchorLevel=VALID_LEVELS.indexOf((p.get('anchor')||'').toLowerCase())>=0?(p.get('anchor')||'').toLowerCase():null;
+const $=x=>document.getElementById(x);
+const KEY='mylingo.progress.v1';
+const SESSION_KEY='mylingo.sessions.v2';
+const LEGACY_SESSION_KEY='mylingo.session.v1';
+const SESSION_SHARD_PREFIX='mylingo.sessions.v3.';
+const SESSION_INDEX_KEY='mylingo.sessions.v3.index';
+const LEVELS=['a1','a2','b1','b2','c1','c2'];
+
+let data,i=0,score=0,locked=false,focusIdx=0,suggestPool=[],suggestAttempted=false,answerCorrect={},sessionStartedAt=0,restoringSessionAnswer=false;
+
+// --- sound effects (real audio files, muteable, persisted, interruptible) ---
+let soundOn=(function(){try{return localStorage.getItem('mylingo.sound')!=='off'}catch(e){return true}})();
+let audioSpeed=(function(){try{const v=parseFloat(localStorage.getItem('mylingo.audio.speed'));return v===0.75?0.75:1}catch(e){return 1}})();
+const SFX_DIR='./sfx/';
+const sfxCache={};
+function getSfx(name){
+  if(!sfxCache[name]){
+    const a=new Audio(SFX_DIR+name);
+    a.preload='auto';
+    sfxCache[name]=a;
+  }
+  sfxCache[name].playbackRate=audioSpeed;
+  return sfxCache[name];
+}
+function updateSpeedBtn(){
+  $('speedBtn').textContent=audioSpeed===0.75?'0.75x':'1x';
+  $('speedBtn').setAttribute('aria-label','Sound effect speed: '+(audioSpeed===0.75?'slow (0.75x)':'normal (1x)')+'. Tap to change.');
+}
+$('speedBtn').onclick=()=>{audioSpeed=audioSpeed===1?0.75:1;try{localStorage.setItem('mylingo.audio.speed',String(audioSpeed))}catch(e){}updateSpeedBtn()};
+updateSpeedBtn();
+function stopAllSounds(){
+  Object.values(sfxCache).forEach(a=>{try{a.pause();a.currentTime=0}catch(e){}});
+}
+function playSfx(name,volume){
+  if(!soundOn) return null;
+  try{
+    const a=getSfx(name);
+    a.volume=(volume==null?1:volume);
+    a.currentTime=0;
+    a.play().catch(()=>{});
+    return a;
+  }catch(e){ return null }
+}
+function soundCorrect(){playSfx('correct.mp3',0.9)}
+function soundWrong(){playSfx('wrong_answer.mp3',0.9)}
+// Reaching the result screen: a very soft "win" chime reveals the result first,
+// then (once it finishes, or after a short fallback wait) the score-tier sound follows.
+function soundResult(pct){
+  if(!soundOn) return;
+  // Score quality is deterministic: 60%+ earns the positive result sound;
+  // below 60% gets the retry sound. Play the tier sound immediately from the
+  // completion click rather than delaying it behind another audio element,
+  // which can be blocked by mobile autoplay policies.
+  const tier=pct>=60?'great_job.mp3':'try_again.mp3';
+  stopAllSounds();
+  playSfx(tier,0.95);
+}
+const SOUND_ICON_ON='<path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>';
+const SOUND_ICON_OFF='<path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6"/><path d="M17 9l6 6"/>';
+function updateSoundIcon(){
+  $('soundIcon').innerHTML=soundOn?SOUND_ICON_ON:SOUND_ICON_OFF;
+  $('soundBtn').setAttribute('aria-label',soundOn?'Mute sound effects':'Unmute sound effects');
+  $('soundBtn').setAttribute('aria-pressed',String(!soundOn));
+}
+$('soundBtn').onclick=()=>{stopAllSounds();soundOn=!soundOn;try{localStorage.setItem('mylingo.sound',soundOn?'on':'off')}catch(e){}updateSoundIcon()};
+updateSoundIcon();
+
+
+
+// While any overlay (loading/start/error/end) covers the screen, the header
+// and quiz <main> sit fully hidden behind it but were still in the normal
+// tab order and screen-reader reading order — a keyboard or screen-reader
+// user could tab straight past the visible modal into invisible controls
+// (exit/sound/speed buttons, answer options) underneath it. `inert` removes
+// that background content from both focus and the accessibility tree
+// whenever a modal is up, and setBackgroundInert(false) restores it the
+// moment no overlay is showing (i.e. during live quiz play).
+function setBackgroundInert(isInert){
+  [document.querySelector('.header'),document.querySelector('main')].forEach(el=>{
+    if(!el)return;
+    if(isInert)el.setAttribute('inert','');else el.removeAttribute('inert');
+  });
+}
+function escStrip(s){return String(s==null?'':s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function renderCourseStrip(){
+  const el=$('courseStrip');
+  if(!el || !courseTitleParam) return;
+  el.innerHTML='<span>'+escStrip(courseTitleParam)+'</span>'+
+    (unitTitleParam?'<span class="sep">·</span><span>'+escStrip(unitTitleParam)+'</span>':'');
+  el.classList.add('visible');
+}
+renderCourseStrip();
+
+function show(section){
+  ['loading','start','error','end'].forEach(s=>{
+    const el=$(s);
+    if(s===section){
+      el.style.display='grid';
+      el.classList.remove('anim-in');
+      void el.offsetWidth; // reflow, so the entrance animation replays every time
+      el.classList.add('anim-in');
+    }else{
+      el.style.display='none';
+      el.classList.remove('anim-in');
+    }
+  });
+  setBackgroundInert(!!section);
+  // Agent 90: bottom nav stays visible on the pre-start/results/error/loading
+  // overlays and hides only during an in-progress question (section===null),
+  // so learners can't accidentally tab away mid-question but the nav is
+  // otherwise present everywhere in the quiz flow.
+  if(window.MylingoAppShell) window.MylingoAppShell.setVisible(!!section);
+}
+
+function homeUrl(){return './../'+level+'/index.html'}
+// The course/journey/homepage layer passes ?redirect=... so a lesson or
+// journey exercise returns the learner to that exact context instead of the
+// bare level index (this is how "Resume returns to the correct lesson"
+// holds across the lesson -> quiz -> lesson/journey/homepage loop). Only a
+// same-site relative path is accepted: redirect is reflected from the URL,
+// so anything else (a scheme, a protocol-relative //host, javascript:) is
+// rejected and the safe homeUrl() fallback is used instead.
+function isSafeRedirect(url){return typeof url==='string' && /^\.\.?\//.test(url) && !/^[a-z][a-z0-9+.-]*:/i.test(url) && url.indexOf('//')!==0;}
+function backTarget(){return isSafeRedirect(redirect)?redirect:homeUrl();}
+$('exitBtn').onclick=()=>{stopAllSounds();location.href=backTarget()};
+$('homeBtn').onclick=()=>{stopAllSounds();location.href=backTarget()};
+$('endHome').onclick=()=>{stopAllSounds();location.href=backTarget()};
+$('errHomeBtn').onclick=()=>{stopAllSounds();location.href=backTarget()};
+$('focusBtn').onclick=()=>{document.documentElement.requestFullscreen?.().catch(()=>{})};
+
+function gp(){try{const v=JSON.parse(localStorage.getItem(KEY)||'{}');return (v&&typeof v==='object')?v:{}}catch(e){return{}}}
+function sessionShardKey(quizId){return SESSION_SHARD_PREFIX+encodeURIComponent(String(quizId||''));}
+function readSessionIndex(){
+  try{
+    const v=JSON.parse(localStorage.getItem(SESSION_INDEX_KEY)||'null');
+    if(v&&v.version===1&&Array.isArray(v.quizIds)) return v;
+  }catch(e){}
+  return {version:1,quizIds:[]};
+}
+function writeSessionIndex(index){
+  localStorage.setItem(SESSION_INDEX_KEY,JSON.stringify({version:1,quizIds:Array.from(new Set(index.quizIds||[])).filter(Boolean)}));
+}
+function migrateSessionShards(){
+  const index=readSessionIndex();
+  if(index.quizIds.length) return index;
+  try{
+    const raw=localStorage.getItem(SESSION_KEY);
+    const v=JSON.parse(raw||'null');
+    if(v&&typeof v==='object'&&v.version===2&&v.sessions&&typeof v.sessions==='object'){
+      const ids=Object.keys(v.sessions);
+      ids.forEach(id=>localStorage.setItem(sessionShardKey(id),JSON.stringify(v.sessions[id])));
+      if(ids.length) writeSessionIndex({version:1,quizIds:ids});
+      localStorage.removeItem(SESSION_KEY);
+      return {version:1,quizIds:ids};
+    }
+  }catch(e){}
+  try{
+    const legacy=JSON.parse(localStorage.getItem(LEGACY_SESSION_KEY)||'null');
+    if(legacy&&typeof legacy==='object'&&legacy.version===1&&legacy.quizId){
+      localStorage.setItem(sessionShardKey(legacy.quizId),JSON.stringify(legacy));
+      writeSessionIndex({version:1,quizIds:[legacy.quizId]});
+      localStorage.removeItem(LEGACY_SESSION_KEY);
+      return {version:1,quizIds:[legacy.quizId]};
+    }
+  }catch(e){}
+  return index;
+}
+function readSessionStore(){
+  const index=migrateSessionShards();
+  const sessions={};
+  index.quizIds.forEach(id=>{
+    try{
+      const v=JSON.parse(localStorage.getItem(sessionShardKey(id))||'null');
+      if(v&&typeof v==='object') sessions[id]=v;
+    }catch(e){}
+  });
+  return {version:3,sessions};
+}
+function sanitizeSession(v){
+  if(!v||typeof v!=='object'||v.version!==1||v.status!=='in-progress'||typeof v.quizId!=='string'||typeof v.quizVersion!=='string'||!Number.isInteger(v.questionIndex)||!Array.isArray(v.answers)||!Number.isFinite(v.score)||!Number.isFinite(v.startedAt)||!Number.isFinite(v.updatedAt)) return null;
+  return v;
+}
+function readSession(quizId){
+  if(!quizId)return null;
+  try{
+    migrateSessionShards();
+    const v=JSON.parse(localStorage.getItem(sessionShardKey(quizId))||'null');
+    return sanitizeSession(v);
+  }catch(e){return null}
+}
+function sessionForCurrentQuiz(){
+  const v=readSession(data&&data.id);
+  if(!v||!data)return null;
+  const expectedVersion=String(data.version||1);
+  if(v.quizId!==data.id||v.quizVersion!==expectedVersion||v.questionIndex<0||v.questionIndex>=data.questions.length||v.answers.length!==data.questions.length||v.score<0||v.score>gradedTotal()){
+    clearSession(data.id);
+    return null;
+  }
+  return v;
+}
+function writeSession(quizId,session){
+  try{
+    if(!quizId)return false;
+    const index=migrateSessionShards();
+    const ids=index.quizIds||[];
+    const pos=ids.indexOf(quizId);
+    if(session){
+      localStorage.setItem(sessionShardKey(quizId),JSON.stringify(session));
+      if(pos<0) ids.push(quizId);
+    }else{
+      localStorage.removeItem(sessionShardKey(quizId));
+      if(pos>=0) ids.splice(pos,1);
+    }
+    writeSessionIndex({version:1,quizIds:ids});
+    return true;
+  }catch(e){return false}
+}
+function clearSession(quizId){
+  try{
+    if(quizId){writeSession(quizId,null);return;}
+    const id=data&&data.id;
+    if(id) writeSession(id,null);
+  }catch(e){}
+}
+function saveSession(){
+  if(!data||!sessionStartedAt)return;
+  const current=readSession(data.id);
+  const answers=Array.isArray(current&&current.answers)?current.answers.slice():Array(data.questions.length).fill(null);
+  answers.length=data.questions.length;
+  answers[i]=answers[i]||null;
+  writeSession(data.id,{version:1,quizId:data.id,quizVersion:String(data.version||1),questionIndex:i,answers,score,status:'in-progress',startedAt:sessionStartedAt,updatedAt:Date.now()});
+}
+function updateSessionAnswer(input,ok,correctText){
+  if(!data||restoringSessionAnswer)return;
+  try{
+    const current=readSession(data.id);
+    const answers=Array.isArray(current&&current.answers)?current.answers.slice():Array(data.questions.length).fill(null);
+    answers.length=data.questions.length;
+    answers[i]={response:input,correct:!!ok,correctText:String(correctText??''),submittedAt:Date.now()};
+    writeSession(data.id,{version:1,quizId:data.id,quizVersion:String(data.version||1),questionIndex:i,answers,score,status:'in-progress',startedAt:sessionStartedAt||Date.now(),updatedAt:Date.now()});
+  }catch(e){ /* storage unavailable - quiz still works */ }
+}
+function save(done){
+  try{
+    const x=gp(),old=x[data.id]||{},graded=gradedTotal(),pct=graded?Math.round(score/graded*100):100;
+    x[data.id]={
+      id:data.id,title:data.title,level:data.level,
+      current:done?data.questions.length:i,score,
+      latest:done?pct:(old.latest??null),
+      best:done?Math.max(old.best||0,pct):(old.best??null),
+      status:done?'completed':'in-progress',
+      attempts:done?(old.attempts||0)+1:(old.attempts||0),
+      version:data.version||1,
+      lastAccess:Date.now(),
+      totalQuestions:data.questions.length
+    };
+    localStorage.setItem(KEY,JSON.stringify(x));
+  }catch(e){ /* storage unavailable (private mode / quota) - fail silently, quiz still works */ }
+}
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function questionText(q){return typeof q.question_text==='string'?q.question_text:(typeof q.question==='string'?q.question:'')}
+function rawType(q){
+  const t=String(q.question_type||'radio').toLowerCase().replace(/[\s-]+/g,'_');
+  if(t==='comparison'){
+    if(Array.isArray(q.pairs)||Array.isArray(q.matches)) return 'matching';
+    if(Array.isArray(q.correctIndices)) return 'checkbox';
+    return q.acceptedAnswers||q.correctAnswer||q.answer?'text':'radio';
+  }
+  if(t==='reorganizer'||t==='reorganizer_task') return 'ranking';
+  if(t==='complete_question'||t==='complete-question') return 'fill_in_the_blank';
+  return t||'radio';
+}
+function normalizeText(v){return String(v??'').trim().replace(/\s+/g,' ').toLowerCase()}
+function mediaValue(q,key){
+  const m=q&&q.media&&typeof q.media==='object'?q.media:null;
+  const value=m&&m[key]!=null?m[key]:q&&q[key+'Url'];
+  if(value&&typeof value==='object') return {src:value.src||value.url||'',alt:value.alt||value.label||'',label:value.label||''};
+  return {src:typeof value==='string'?value:'',alt:q&&q[key+'Alt']||'',label:''};
+}
+function questionHTML(text){
+  return esc(text).split(/_{3,}/).join('<span class="blank">______</span>');
+}
+function answerList(q){
+  const a=Array.isArray(q.answers)?q.answers:(Array.isArray(q.options)?q.options:[]);
+  return a.map(x=>typeof x==='object'?String(x.text??x.label??''):String(x));
+}
+function correctIndexes(q,answers){
+  if(Array.isArray(q.correctIndices)) return q.correctIndices.map(Number).filter(n=>Number.isInteger(n)&&n>=1&&n<=answers.length).sort((a,b)=>a-b);
+  const fromObjects=(Array.isArray(q.answers)?q.answers:[]).map((x,i)=>x&&typeof x==='object'&&(x.is_correct===true||x.isCorrect===true)?i+1:null).filter(Boolean);
+  if(fromObjects.length)return fromObjects;
+  if(Number.isInteger(q.correctIndex))return [q.correctIndex];
+  return [];
+}
+function acceptedAnswers(q){
+  let a=q.acceptedAnswers;
+  if(a==null)a=q.accepted_answers;
+  if(a==null && q.correctAnswer!=null)a=[q.correctAnswer];
+  if(a==null && q.correct_answer!=null)a=[q.correct_answer];
+  if(a==null && q.answer!=null)a=[q.answer];
+  if(a==null && Array.isArray(q.answers)&&!Number.isInteger(q.correctIndex))a=q.answers;
+  return Array.isArray(a)?a:[a].filter(v=>v!=null);
+}
+
+function validate(d){
+  if(!d||typeof d!=='object') return 'Quiz data is not a valid object.';
+  if(!Array.isArray(d.questions)||d.questions.length===0) return 'This quiz has no questions.';
+  for(const q of d.questions){
+    if(!q||typeof q!=='object') return 'A question is invalid.';
+    const type=rawType(q),text=questionText(q);
+    if(type!=='banner'&&(!text||!text.trim())) return 'A question is missing its text.';
+    if(type==='radio'||type==='dropdown'){
+      const a=answerList(q),idx=correctIndexes(q,a);
+      if(a.length<2||a.length>9) return 'A choice question needs 2–9 answers.';
+      if(idx.length!==1||idx[0]<1||idx[0]>a.length) return 'A choice question has an invalid correct answer.';
+    }else if(type==='checkbox'){
+      const a=answerList(q),idx=correctIndexes(q,a);
+      if(a.length<2||a.length>9||!idx.length) return 'A multiple-choice question needs 2–9 answers and at least one correct answer.';
+    }else if(type==='text'||type==='short_text'||type==='number'||type==='date'||type==='fill_in_the_blank'){
+      if(!acceptedAnswers(q).length) return 'A '+type.replaceAll('_',' ')+' question is missing its accepted answer.';
+    }else if(type==='matching'){
+      const pairs=Array.isArray(q.pairs)?q.pairs:(Array.isArray(q.matches)?q.matches:[]);
+      if(pairs.length<2) return 'A matching question needs at least 2 pairs.';
+      if(pairs.some(p=>!p||p.left==null||p.right==null)) return 'A matching question contains an invalid pair.';
+    }else if(type==='ranking'){
+      const items=Array.isArray(q.items)?q.items:answerList(q);
+      const order=Array.isArray(q.correctOrder)?q.correctOrder:items.slice();
+      if(items.length<2||order.length!==items.length) return 'A ranking question needs items and a complete correct order.';
+    }else if(type!=='banner'){
+      return 'Unsupported question type: '+type+'.';
+    }
+  }
+  return null;
+}
+
+// The manifest is intentionally lazy: the quiz itself is loaded without
+// materializing the whole level index. Suggestions can request the manifest
+// later, after the learner reaches the result screen.
+function getManifest(){
+  if(!window.MylingoRuntimeContentLoader) return Promise.resolve(null);
+  return window.MylingoRuntimeContentLoader.loadManifest(level)
+    .then(list=>Array.isArray(list)?window.MylingoRuntimeV2.normalizeManifest(list):null)
+    .catch(()=>null);
+}
+
+function loadSuggestions(){
+  if(!data||!data.category) return;
+  return getManifest().then(list=>{ if(Array.isArray(list)) suggestPool=list.filter(item=>item.category===data.category&&item.id!==data.id); return suggestPool; });
+}
+
+async function resolveQuizPath(quizId){
+  // Placement quizzes live in their own per-level folder and are never
+  // listed in a level's quizzes.json manifest, so they can't be resolved
+  // by the generic RuntimeContentLoader. Match any placement-* id, not
+  // just the one that happens to exist today, so new placement quizzes
+  // added later don't silently 404.
+  if(/^placement-[a-z0-9_-]+$/i.test(String(quizId||''))) return '../placement/'+encodeURIComponent(level)+'/'+encodeURIComponent(quizId)+'.json';
+  return null; // RuntimeContentLoader resolves the normal content route lazily.
+}
+
+
+async function load(){
+  show('loading');
+  if(!id){errorState('No quiz to load','We couldn\'t find a quiz in this link. Head back and pick one from the list.',false);return}
+  let json;
+  try{
+    const placementPath=await resolveQuizPath(id);
+    if(placementPath){
+      const res=await fetch(placementPath,{cache:'no-store'});
+      if(!res.ok) throw Object.assign(new Error('placement unavailable'),{status:res.status});
+      json=await res.json();
+    }else{
+      json=await window.MylingoRuntimeContentLoader.load(level,id);
+    }
+  }catch(e){
+    if(e&&e.status===404) errorState('Quiz not found','We can\'t find this quiz. It may have been moved or removed — try picking another one.',false);
+    else errorState('Connection problem','We couldn\'t reach the quiz file. Check your connection and try again.',true);
+    return;
+  }
+  let normalized;
+  try{normalized=window.MylingoRuntimeV2.normalizeQuiz(json,{level:level})}catch(e){errorState('Quiz data error','This quiz file is corrupted and can\'t be read.',false);return}
+  const err=validate(normalized);
+  if(err){errorState('Quiz data error',err,false);return}
+  data=normalized;
+  document.title='Mylingo · '+data.title;
+  $('titleTop').textContent=data.title;
+  $('startTitle').textContent=data.title;
+  $('desc').textContent=(data.questions.length+' questions · ')+(data.description||'Practice and improve your English.');
+  $('level').textContent=data.level||level.toUpperCase();
+  if(data.category){$('categoryBadge').textContent=data.category;$('categoryBadge').style.display='inline-block'}
+  show('start');
+  configureStart();
+  $('startBtn').focus();
+}
+
+function configureStart(){
+  const session=sessionForCurrentQuiz();
+  const hasResume=!!session;
+  $('resumeBtn').style.display=hasResume?'inline-flex':'none';
+  $('startBtn').textContent=hasResume?'Start over':'Start quiz';
+}
+
+function startFresh(){
+  clearSession();
+  sessionStartedAt=Date.now();
+  i=0;score=0;answerCorrect={};$('score').textContent=0;$('score').classList.remove('text-pop');
+  stopAllSounds();show(null);document.querySelectorAll('.overlay').forEach(o=>o.style.display='none');render();saveSession();
+}
+
+function resumeSession(){
+  const session=sessionForCurrentQuiz();
+  if(!session){configureStart();return startFresh()}
+  sessionStartedAt=session.startedAt;
+  i=session.questionIndex;score=session.score;answerCorrect={};
+  session.answers.forEach((entry,n)=>{if(entry&&typeof entry==='object'&&typeof entry.correct==='boolean')answerCorrect[n]=entry.correct});
+  setTextSmooth($('score'),score);
+  stopAllSounds();show(null);document.querySelectorAll('.overlay').forEach(o=>o.style.display='none');render();
+  const entry=session.answers[i];
+  if(entry&&entry.response&&typeof entry.response==='object'&&typeof entry.correct==='boolean'){
+    applyResponseToUI(entry.response);
+    restoringSessionAnswer=true;
+    try{finishAnswer(entry.correct,entry.correctText||'',entry.response)}finally{restoringSessionAnswer=false}
+  }
+}
+
+function errorState(title,msg,retryable){
+  $('errTitle').textContent=title;$('errMsg').textContent=msg;$('retryBtn').style.display=retryable?'inline-block':'none';
+  show('error');$('retryBtn').style.display!=='none'?$('retryBtn').focus():$('errHomeBtn').focus();
+}
+$('retryBtn').onclick=()=>{stopAllSounds();load()};
+
+function gradedTotal(){return Array.isArray(data?.questions)?data.questions.filter(q=>rawType(q)!=='banner').length:0}
+function clearQuestionUI(){
+  // renderChoice() sets #options' role to 'radiogroup'/'group' for
+  // radio/checkbox questions but nothing ever resets it, so a radio question
+  // followed by a text/matching/ranking/banner question left the container
+  // announced as a "radio group" to screen readers even though it now holds
+  // a text input, select dropdowns, or a ranking list. Reset to a neutral
+  // 'group' on every question change; renderChoice() re-specializes it when
+  // the next question actually is radio/checkbox.
+  const box=$('options');
+  box.innerHTML='';
+  box.setAttribute('role','group');
+  box.setAttribute('aria-label','Answer options');
+  $('feedback').className='feedback';$('feedback').textContent='';
+  $('next').style.display='none';$('next').classList.remove('show');
+  $('kbHint').textContent='';
+}
+function renderMedia(q){
+  const img=mediaValue(q,'image'),iw=$('qimgWrap');
+  if(img.src){$('qimg').src=img.src;$('qimg').alt=img.alt||'';iw.style.display='block';$('qimg').onerror=()=>{iw.style.display='none'}}
+  else{iw.style.display='none';$('qimg').removeAttribute('src')}
+  const au=mediaValue(q,'audio'),aw=$('qaudioWrap');
+  if(au.src){$('qaudio').src=au.src;$('qaudio').setAttribute('aria-label',au.label||'Question audio');$('qaudioLabel').textContent=au.label||'Listen';aw.style.display='block'}
+  else{aw.style.display='none';$('qaudio').removeAttribute('src');$('qaudio').load()}
+}
+function makeCheckButton(onclick,label='Check answer'){
+  const wrap=document.createElement('div');wrap.className='answer-actions';
+  const b=document.createElement('button');b.type='button';b.className='check-answer';b.textContent=label;b.addEventListener('click',onclick);wrap.appendChild(b);return wrap;
+}
+function renderChoice(q,type){
+  const answers=answerList(q),box=$('options');
+  box.className=type==='dropdown'?'options':'options';
+  if(type==='dropdown'){
+    const card=document.createElement('div');card.className='input-card';
+    const select=document.createElement('select');select.className='answer-select';select.id='choiceSelect';select.setAttribute('aria-label','Choose an answer');
+    select.innerHTML='<option value="">Choose an answer…</option>'+answers.map((a,n)=>'<option value="'+(n+1)+'">'+esc(a)+'</option>').join('');
+    card.appendChild(select);card.appendChild(makeCheckButton(()=>submitAnswer({index:Number(select.value)})));
+    box.appendChild(card);select.focus();return;
+  }
+  box.setAttribute('role',type==='checkbox'?'group':'radiogroup');box.setAttribute('aria-label',type==='checkbox'?'Answer options':'Answer options');
+  answers.forEach((a,n)=>{
+    const b=document.createElement('button');b.className='option enter';b.type='button';
+    b.setAttribute('role',type==='checkbox'?'checkbox':'radio');b.setAttribute('aria-checked','false');b.tabIndex=n===0?0:-1;
+    b.innerHTML='<span class="key" aria-hidden="true">'+(n+1)+'</span><span>'+esc(a)+'</span>';
+    b.style.animationDelay=(n*45)+'ms';b.dataset.index=String(n+1);b.addEventListener('click',()=>{
+      if(type==='checkbox'){b.setAttribute('aria-checked',b.getAttribute('aria-checked')!=='true');b.classList.toggle('selected',b.getAttribute('aria-checked')==='true')}
+      else submitAnswer({index:n+1,button:b});
+    });b.addEventListener('keydown',onOptionKeydown);box.appendChild(b);
+  });
+  if(type==='checkbox')box.appendChild(makeCheckButton(()=>submitAnswer({indices:Array.from(box.querySelectorAll('[aria-checked="true"]')).map(b=>Number(b.dataset.index))})));
+  $('kbHint').textContent=type==='checkbox'?'Select all that apply, then press Check answer.':'Press 1–'+answers.length+' to answer, arrow keys to move, Enter to select.';
+  box.children[0]?.focus();
+}
+function renderTextLike(q,type){
+  const card=document.createElement('div');card.className='input-card';
+  const input=document.createElement('input');input.className='answer-input';input.type=type==='number'?'number':type==='date'?'date':'text';
+  input.id='answerInput';input.autocomplete='off';input.setAttribute('aria-label',type==='fill_in_the_blank'?'Complete the sentence':'Your answer');
+  if(type==='short_text')input.maxLength=120;
+  card.appendChild(input);
+  card.appendChild(makeCheckButton(()=>submitAnswer({value:input.value})));
+  input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();submitAnswer({value:input.value})}});
+  $('options').appendChild(card);input.focus();
+  $('kbHint').textContent='Type your answer, then press Enter or Check answer.';
+}
+function renderMatching(q){
+  const pairs=Array.isArray(q.pairs)?q.pairs:q.matches,card=document.createElement('div');card.className='match-card';
+  const grid=document.createElement('div');grid.className='match-grid';
+  const rights=pairs.map(p=>String(p.right)).sort(()=>Math.random()-.5);
+  pairs.forEach((p,n)=>{
+    const row=document.createElement('div');row.className='match-row';
+    const left=document.createElement('div');left.className='match-left';left.textContent=p.left;
+    const select=document.createElement('select');select.className='answer-select';select.dataset.left=String(p.left);select.setAttribute('aria-label','Match '+p.left);
+    select.innerHTML='<option value="">Choose…</option>'+rights.map(r=>'<option value="'+esc(r)+'">'+esc(r)+'</option>').join('');
+    row.append(left,select);grid.appendChild(row);
+  });
+  card.appendChild(grid);card.appendChild(makeCheckButton(()=>submitAnswer({matching:Array.from(grid.querySelectorAll('select')).map(s=>({left:s.dataset.left,right:s.value}))})));
+  $('options').appendChild(card);grid.querySelector('select')?.focus();$('kbHint').textContent='Choose a match for each item, then press Check answer.';
+}
+function renderRanking(q){
+  const items=Array.isArray(q.items)?q.items:answerList(q),card=document.createElement('div');card.className='ranking-card';
+  const list=document.createElement('div');list.className='rank-list';items.slice().sort(()=>Math.random()-.5).forEach((item)=>{
+    const row=document.createElement('div');row.className='rank-item';row.draggable=true;row.tabIndex=0;row.dataset.value=String(item);
+    row.innerHTML='<span class="rank-num"></span><span>'+esc(item)+'</span>';
+    row.addEventListener('keydown',e=>{const rows=Array.from(list.children),at=rows.indexOf(row);if(e.key==='ArrowUp'&&at>0){e.preventDefault();list.insertBefore(row,rows[at-1]);updateRanks(list);row.focus()}if(e.key==='ArrowDown'&&at<rows.length-1){e.preventDefault();list.insertBefore(rows[at+1],row);updateRanks(list);row.focus()}});
+    row.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',String(item));row.classList.add('dragging')});
+    row.addEventListener('dragend',()=>row.classList.remove('dragging'));
+    row.addEventListener('dragover',e=>e.preventDefault());
+    row.addEventListener('drop',e=>{e.preventDefault();const dragging=list.querySelector('.dragging');if(dragging&&dragging!==row){const rows=Array.from(list.children),a=rows.indexOf(dragging),b=rows.indexOf(row);if(a<b)list.insertBefore(dragging,row.nextSibling);else list.insertBefore(dragging,row);updateRanks(list)}});
+    list.appendChild(row);
+  });updateRanks(list);card.appendChild(list);card.appendChild(makeCheckButton(()=>submitAnswer({ranking:Array.from(list.children).map(x=>x.dataset.value)}),'Check order'));$('options').appendChild(card);
+  list.children[0]?.focus();$('kbHint').textContent='Use Up/Down arrows to reorder, or drag items, then press Check order.';
+}
+function updateRanks(list){Array.from(list.children).forEach((el,n)=>el.querySelector('.rank-num').textContent=String(n+1))}
+function render(){
+  const q=data.questions[i],type=rawType(q);
+  setTextSmooth($('counter'),(i+1)+' / '+data.questions.length);
+  const pct=Math.round(i/data.questions.length*100);$('bar').style.width=pct+'%';$('progressWrap').setAttribute('aria-valuenow',String(pct));
+  $('question').innerHTML=questionHTML(questionText(q));$('subprompt').textContent=q.subprompt||({banner:'',checkbox:'Select all that apply.',matching:'Match each item.',ranking:'Put the items in the correct order.',text:'Type your answer.',short_text:'Type your answer.',number:'Enter a number.',date:'Choose a date.',fill_in_the_blank:'Complete the sentence.'}[type]||'Choose the best answer.');
+  const card=document.querySelector('.card');card.classList.remove('anim-in');void card.offsetWidth;card.classList.add('anim-in');
+  renderMedia(q);clearQuestionUI();locked=false;focusIdx=0;
+  if(type==='banner'){
+    $('question').innerHTML=questionHTML(questionText(q)||q.content||'');
+    $('options').appendChild(makeCheckButton(()=>submitAnswer({banner:true}),'Continue'));
+    $('options').children[0].querySelector('button')?.focus();
+  }else if(type==='radio'||type==='checkbox'||type==='dropdown')renderChoice(q,type);
+  else if(type==='text'||type==='short_text'||type==='number'||type==='date'||type==='fill_in_the_blank')renderTextLike(q,type);
+  else if(type==='matching')renderMatching(q);
+  else if(type==='ranking')renderRanking(q);
+}
+function onOptionKeydown(e){
+  const opts=Array.from(document.querySelectorAll('#options > .option')),idx=opts.indexOf(e.target);
+  if(idx<0)return;
+  if(e.key==='ArrowRight'||e.key==='ArrowDown'){e.preventDefault();moveFocus(opts,idx,1)}
+  else if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();moveFocus(opts,idx,-1)}
+  else if(e.key==='Enter'||e.key===' '){e.preventDefault();if(!locked)e.target.click()}
+}
+function moveFocus(opts,idx,dir){
+  if(locked||!opts.length)return;opts[idx].tabIndex=-1;const next=(idx+dir+opts.length)%opts.length;opts[next].tabIndex=0;opts[next].focus();
+}
+document.addEventListener('keydown',e=>{
+  if(locked||!data)return;
+  if($('start').style.display==='grid'||$('end').style.display==='grid'||$('error').style.display==='grid')return;
+  const q=data.questions[i],type=rawType(q),n=parseInt(e.key,10);
+  if((type==='radio')&&n&&n>=1&&n<=answerList(q).length){const btn=$('options').querySelectorAll('.option')[n-1];if(btn&&!btn.disabled)btn.click()}
+});
+function valuesEqual(a,b,type){
+  if(type==='number')return Number.isFinite(Number(a))&&Number.isFinite(Number(b))&&Math.abs(Number(a)-Number(b))<=(Number(qGlobalTolerance)||0);
+  return normalizeText(a)===normalizeText(b);
+}
+let qGlobalTolerance=0;
+function submitAnswer(input){
+  if(locked)return;
+  const q=data.questions[i],type=rawType(q),answers=answerList(q);
+  let ok=false,correctText='',response=input;
+  if(type==='radio'||type==='dropdown'){
+    const idx=input.index;if(!idx)return;
+    const ci=correctIndexes(q,answers)[0];ok=idx===ci;correctText=answers[ci-1];
+  }else if(type==='checkbox'){
+    const got=(input.indices||[]).map(Number).sort((a,b)=>a-b),want=correctIndexes(q,answers);
+    ok=got.length===want.length&&got.every((v,n)=>v===want[n]);correctText=want.map(n=>answers[n-1]).join(', ');
+  }else if(type==='text'||type==='short_text'||type==='fill_in_the_blank'){
+    const accepted=acceptedAnswers(q).map(String);ok=accepted.some(a=>normalizeText(a)===normalizeText(input.value));correctText=accepted[0]||'';
+  }else if(type==='number'){
+    const accepted=acceptedAnswers(q).map(Number),tol=Number(q.tolerance??q.acceptableRange??0);ok=accepted.some(a=>Number.isFinite(a)&&Number.isFinite(Number(input.value))&&Math.abs(Number(input.value)-a)<=tol);correctText=String(accepted[0]??'');
+  }else if(type==='date'){
+    const accepted=acceptedAnswers(q).map(String);ok=accepted.some(a=>String(a)===String(input.value));correctText=accepted[0]||'';
+  }else if(type==='matching'){
+    const pairs=Array.isArray(q.pairs)?q.pairs:q.matches;const got=input.matching||[];
+    ok=got.length===pairs.length&&pairs.every(p=>got.some(g=>normalizeText(g.left)===normalizeText(p.left)&&normalizeText(g.right)===normalizeText(p.right)));correctText=pairs.map(p=>p.left+' → '+p.right).join(', ');
+  }else if(type==='ranking'){
+    const want=(Array.isArray(q.correctOrder)?q.correctOrder:(Array.isArray(q.items)?q.items:answers)).map(String),got=(input.ranking||[]).map(String);
+    const norm=v=>String(v||'').trim().replace(/\s+/g,' ').toLowerCase();
+    ok=got.length===want.length&&got.every((v,n)=>norm(v)===norm(want[n]));correctText=want.join(' → ');
+  }else if(type==='banner'){ok=true}
+  finishAnswer(ok,correctText,input);
+}
+function applyResponseToUI(input){
+  const q=data.questions[i],type=rawType(q);
+  if(type==='radio'){
+    const n=Number(input.index);const b=$('options').querySelector(`.option[data-index="${n}"]`);if(b){b.classList.add('selected');b.setAttribute('aria-checked','true')}
+  }else if(type==='checkbox'){
+    const want=new Set((input.indices||[]).map(Number));Array.from($('options').querySelectorAll('.option')).forEach(b=>{if(want.has(Number(b.dataset.index))){b.classList.add('selected');b.setAttribute('aria-checked','true')}});
+  }else if(type==='dropdown'){
+    const select=$('choiceSelect');if(select)select.value=String(input.index||'');
+  }else if(type==='text'||type==='short_text'||type==='number'||type==='date'||type==='fill_in_the_blank'){
+    const el=$('answerInput');if(el)el.value=input.value==null?'':String(input.value);
+  }else if(type==='matching'){
+    const byLeft=new Map((input.matching||[]).map(x=>[normalizeText(x.left),String(x.right||'')]));Array.from($('options').querySelectorAll('select[data-left]')).forEach(s=>{s.value=byLeft.get(normalizeText(s.dataset.left))||''});
+  }else if(type==='ranking'){
+    const list=$('options').querySelector('.rank-list');const order=(input.ranking||[]).map(String);if(list){order.forEach(v=>{const el=Array.from(list.children).find(x=>x.dataset.value===v);if(el)list.appendChild(el)});updateRanks(list)}
+  }
+}
+function finishAnswer(ok,correctText,input){
+  locked=true;const q=data.questions[i],type=rawType(q),answers=answerList(q);
+  if(type==='radio'||type==='dropdown'){
+    const ci=correctIndexes(q,answers)[0];Array.from($('options').querySelectorAll('.option')).forEach((b,j)=>{b.disabled=true;b.tabIndex=-1;if(j+1===ci){b.classList.add('correct','grow');b.setAttribute('aria-checked','true')}})
+    if(!ok&&input&&input.index){const wrongBtn=$('options').querySelector('.option[data-index="'+Number(input.index)+'"]');if(wrongBtn){wrongBtn.classList.add('wrong','shake');wrongBtn.disabled=true;wrongBtn.setAttribute('aria-checked','true')}}
+  }else if(type==='checkbox'){
+    const want=correctIndexes(q,answers),got=input.indices||[];Array.from($('options').querySelectorAll('.option')).forEach((b,j)=>{b.disabled=true;b.tabIndex=-1;const n=j+1;if(want.includes(n))b.classList.add('correct');if(got.includes(n)&&!want.includes(n))b.classList.add('wrong')})
+  }else{
+    $('options').querySelectorAll('.rank-item').forEach(el=>{el.setAttribute('aria-disabled','true');el.draggable=false});
+  }
+  // Every question type must end up fully inert once graded — radio/dropdown/
+  // checkbox only disable their own .option buttons above, which leaves a
+  // dropdown's <select> and every type's "Check answer" button clickable
+  // (only the invisible `locked` flag was stopping a resubmit). Disable
+  // everything interactive left in #options as a final, type-agnostic pass.
+  $('options').querySelectorAll('input,select,button').forEach(el=>el.disabled=true);
+  if(rawType(q)!=='banner'){answerCorrect[i]=!!ok;if(!restoringSessionAnswer){if(ok){score++;soundCorrect()}else{soundWrong()}}}
+  setTextSmooth($('score'),score);
+  if(!restoringSessionAnswer)updateSessionAnswer(input,ok,correctText);
+  document.querySelectorAll('#question .blank').forEach(el=>{el.textContent=correctText;el.classList.add('filled')});
+  const f=$('feedback');f.className='feedback show '+(ok?'good':'bad');
+  const explanation=q.explanation||q.right_explanation||q.wrong_explanation||'';
+  const feedbackLabel=ok
+    ? '<span class="feedback-status"><svg class="feedback-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 2.5 2.5L16 9"></path></svg><strong>Correct!</strong></span>'
+    : '<span class="feedback-status"><svg class="feedback-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m9 9 6 6M15 9l-6 6"></path></svg><strong>Not quite.</strong></span>';
+  f.innerHTML=feedbackLabel+' '+(ok?'':('The correct answer is "'+esc(correctText)+'". '))+esc(explanation);
+  $('next').style.display='inline-block';requestAnimationFrame(()=>requestAnimationFrame(()=>$('next').classList.add('show')));$('next').focus();save(false);
+}
+function next(){
+  if(i<data.questions.length-1){i++;render();saveSession()}else end();
+}
+
+function recommendation(pct){
+  const idx=LEVELS.indexOf(level);
+  if(pct>=85 && idx<LEVELS.length-1){
+    return {cls:'',text:'This felt easy for you — consider trying '+LEVELS[idx+1].toUpperCase()+' next.',
+      href:'../'+LEVELS[idx+1]+'/index.html',label:'Go to '+LEVELS[idx+1].toUpperCase()};
+  }
+  if(pct<50 && idx>0){
+    return {cls:'down',text:'This one was tough — a quick review at '+LEVELS[idx-1].toUpperCase()+' might help before trying again.',
+      href:'../'+LEVELS[idx-1]+'/index.html',label:'Go to '+LEVELS[idx-1].toUpperCase()};
+  }
+  return {cls:'',text:LEVELS[idx].toUpperCase()+' looks like a good fit for you right now.',
+    href:backTarget(),label:'Continue'};
+}
+
+function congratsTitle(pct){
+  return pct===100?'Perfect score!':pct>=80?'Excellent!':pct>=60?'Good work!':'Keep practicing!';
+}
+
+function renderSuggestions(){
+  const box=$('suggest'),grid=$('suggestGrid');
+  if(!suggestPool.length){
+    // Guard against retrying forever: if a category has no matching quizzes
+    // in the manifest (e.g. placement categories, which are never listed in
+    // a level's quizzes.json), loadSuggestions() would keep resolving to an
+    // empty list and renderSuggestions() would keep calling it again,
+    // looping indefinitely and starving the page of responsiveness. Only
+    // ever attempt the fetch once per quiz load.
+    if(data&&data.category&&!suggestAttempted){
+      suggestAttempted=true;
+      loadSuggestions().then(()=>renderSuggestions()).catch(()=>{});
+    }
+    box.style.display='none';return
+  }
+  const picks=suggestPool.slice().sort(()=>Math.random()-0.5).slice(0,3);
+  grid.innerHTML=picks.map(item=>'<a href="./quiz.html?quiz='+encodeURIComponent(item.id)+'&level='+level+'">'+esc(item.title)+'</a>').join('');
+  $('suggestCat').textContent=data.category;
+  box.style.display='block';
+}
+
+function orientationEstimate(){
+  try{const o=JSON.parse(localStorage.getItem('mylingo.orientation.v1')||'null');return o&&(o.estimated_level||o.recommendedLevel||o.level)||level}catch(e){return level}
+}
+function saveAssessmentResult(pct){
+  if(mode!=='placement'||!window.MylingoPlacement||!data)return null;
+  const estimated=anchorLevel||orientationEstimate();
+  const currentEvidence=window.MylingoPlacement.buildEvidence(data.questions,answerCorrect,data.id,stage);
+  if(stage==='verification'){
+    let pending=null; try{pending=JSON.parse(localStorage.getItem('mylingo.assessment.pending.v1')||'null')}catch(e){}
+    const mergedEvidence=window.MylingoPlacement.mergePlacementEvidence(pending&&Array.isArray(pending.primary_evidence)?pending.primary_evidence:[],currentEvidence);
+    const final=window.MylingoPlacement.resolvePlacement({
+      estimated_level:pending&&pending.estimated_level||estimated,
+      assessed_level:level,
+      score:pct,
+      graded_questions:gradedTotal(),
+      complete:Object.keys(answerCorrect).length>=gradedTotal(),
+      stage:'verification'
+    });
+    const profile=window.MylingoPlacement.calculateResult({
+      estimated_level:pending&&pending.estimated_level||estimated,
+      assessed_level:level,
+      score:pct,
+      graded_questions:gradedTotal(),
+      questions:data.questions,
+      evidence:mergedEvidence,
+      assessment_quiz_ids:[pending&&pending.primary_quiz_id,data.id].filter(Boolean),
+      complete:Object.keys(answerCorrect).length>=gradedTotal()
+    });
+    profile.recommended_level=final.recommended_level;
+    profile.confidence=final.confidence;
+    profile.boundary_reason=final.reason;
+    profile.primary_score=pending&&Number(pending.primary_score)||null;
+    profile.verification_score=pct;
+    profile.evidence_stages=['primary','verification'];
+    try{localStorage.removeItem('mylingo.assessment.pending.v1')}catch(e){}
+    window.MylingoPlacement.writeStored(profile);
+    return profile;
+  }
+  const profile=window.MylingoPlacement.calculateResult({estimated_level:estimated,assessed_level:level,score:pct,graded_questions:gradedTotal(),questions:data.questions,evidence:currentEvidence,assessment_quiz_ids:[data.id],complete:Object.keys(answerCorrect).length>=gradedTotal()});
+  const decision=window.MylingoPlacement.resolvePlacement({estimated_level:estimated,assessed_level:level,score:pct,graded_questions:gradedTotal(),complete:Object.keys(answerCorrect).length>=gradedTotal(),stage:'primary'});
+  profile.verification_level=decision.action==='verify_boundary'?decision.verification_level:null;
+  if(decision.action==='verify_boundary'){
+    try{localStorage.setItem('mylingo.assessment.pending.v1',JSON.stringify({version:1,estimated_level:estimated,primary_level:level,primary_score:pct,primary_quiz_id:data.id,verification_level:decision.verification_level,primary_evidence:currentEvidence,timestamp:Date.now()}))}catch(e){}
+    profile.recommended_level=level;
+    profile.confidence=decision.confidence;
+    profile.boundary_reason=decision.reason;
+  }else{
+    profile.recommended_level=decision.recommended_level;
+    profile.confidence=decision.confidence;
+    profile.boundary_reason=decision.reason;
+    window.MylingoPlacement.writeStored(profile);
+  }
+  return profile;
+}
+
+function renderPlacementResult(profile){
+  if(!profile) return;
+  const box=$('placementProfile'); box.style.display='block';
+  const skillBits=Object.keys(profile.skills||{}).filter(k=>profile.skills[k]!=null);
+  const strong=skillBits.filter(k=>profile.skills[k]>=80);
+  const practice=skillBits.filter(k=>profile.skills[k]<70);
+  const pending=profile.verification_level&&profile.verification_level!==profile.assessed_level;
+  box.innerHTML='<div style="font-weight:900;margin-bottom:7px">'+(pending?'Placement assessment':'Final placement')+'</div>'+
+    '<div style="color:#6b7280;font-size:13px">Assessed: <strong style="color:#17212b">'+profile.assessed_level.toUpperCase()+' — '+profile.score+'%</strong> · Confidence: <strong style="color:#17212b">'+profile.confidence.charAt(0).toUpperCase()+profile.confidence.slice(1)+'</strong></div>'+
+    (pending?'<div style="margin-top:8px;font-size:13px">Boundary check recommended at <strong>'+profile.verification_level.toUpperCase()+'</strong>.</div>':'<div style="margin-top:8px;font-size:13px">Recommended level: <strong>'+profile.recommended_level.toUpperCase()+'</strong></div>')+
+    '<div style="margin-top:10px;color:#6b7280;font-size:12px"><strong style="color:#17212b">Evidence basis:</strong> '+(profile.evidence_question_count||0)+' unique graded questions'+(profile.evidence_stages&&profile.evidence_stages.length?' across '+profile.evidence_stages.join(' + ')+' stages':'')+'. '+(profile.coverage&&profile.coverage.unavailable_skills&&profile.coverage.unavailable_skills.listening||'')+'</div>'+
+    (strong.length?'<div style="margin-top:10px"><strong>Strong areas</strong><br><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;display:inline-block" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> '+strong.map(k=>k.charAt(0).toUpperCase()+k.slice(1)).join(' · ')+'</div>':'')+
+    (practice.length?'<div style="margin-top:8px"><strong>Practice next</strong><br>• '+practice.map(k=>k.charAt(0).toUpperCase()+k.slice(1)).join(' · ')+'</div>':'');
+}
+function renderPlacementRecommendations(profile){
+  if(!profile||!window.MylingoRecommendations) return;
+  const box=$('placementProfile');
+  const recs=window.MylingoRecommendations.recommendSkillLevels(profile);
+  if(!recs.length) return;
+  const levels=[...new Set(recs.map(r=>r.level))];
+  Promise.all(levels.map(lv=>fetch('../'+lv+'/quizzes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).catch(()=>[])))
+    .then(lists=>{
+      const manifests={};
+      levels.forEach((lv,idx)=>{manifests[lv]=Array.isArray(lists[idx])?lists[idx]:[]});
+      const picks=window.MylingoRecommendations.resolveQuizPicks(recs,manifests);
+      if(!picks.length)return;
+      const links=picks.map(p=>{
+        const q=p.quiz;
+        return '<a style="display:block;margin:7px 0;color:inherit;font-weight:800" href="./quiz.html?quiz='+encodeURIComponent(q.id)+'&level='+encodeURIComponent(p.level)+'">→ '+esc(q.title)+' <span style="font-weight:700;color:#6b7280">('+p.skill.toUpperCase()+' · '+p.score+'% · '+p.level.toUpperCase()+')</span></a>';
+      }).join('');
+      box.innerHTML+= '<div style="margin-top:12px"><strong>Skill-level recommendations</strong><div style="color:#6b7280;font-size:12px;margin-top:3px">Practice each skill at the level that best matches your evidence.</div>'+links+'</div>';
+    }).catch(()=>{});
+}
+
+function placementContinue(profile){
+  if(stage==='verification'||!profile||!profile.verification_level||profile.verification_level===profile.assessed_level){
+    const target=(profile&&profile.recommended_level)||level;
+    const cb=$('continueBtn'); cb.style.display='inline-block'; cb.textContent='Continue to '+target.toUpperCase(); cb.onclick=()=>{stopAllSounds();location.href='../'+target+'/index.html'};
+    return;
+  }
+  const target=profile.verification_level;
+  const cb=$('continueBtn'); cb.style.display='inline-block'; cb.textContent='Take '+target.toUpperCase()+' boundary check';
+  cb.onclick=()=>{stopAllSounds();location.href='../shared/quiz.html?quiz=placement-001&level='+target+'&mode=placement&stage=verification&anchor='+profile.assessed_level};
+}
+
+function end(){
+ // Agent 102: everything below computes/renders the results screen, but none
+ // of it is allowed to prevent the transition out of the hidden-nav,
+ // mid-question state (show(null) was the last call before end() runs — see
+ // the advance-or-finish branch that calls end()). Without this try/finally,
+ // any uncaught throw in the unguarded lines below (e.g. a missing
+ // '.result-ring' node) would leave the learner on a blank screen with the
+ // bottom nav permanently hidden and no way back except a manual reload —
+ // the exact class of mid-question nav-hide gap Agent 99 flagged as still
+ // needing a traced path rather than an assumed-safe one.
+ try{
+  $('bar').style.width='100%';
+  $('progressWrap').setAttribute('aria-valuenow','100');
+  const graded=gradedTotal();
+  const pct=graded?Math.round(score/graded*100):100;
+  $('finalPct').textContent=pct+'%';
+  $('end').querySelector('.result-ring').style.setProperty('--score-angle',Math.round(pct*3.6)+'deg');
+  $('result').textContent=congratsTitle(pct);
+  $('message').textContent='You scored '+score+' out of '+graded+' ('+pct+'%).';
+  save(true);
+  clearSession(data.id);
+  soundResult(pct);
+
+  // Gamification is purely additive: if the module didn't load for any
+  // reason, the quiz still saves and completes normally.
+  try{
+    if(window.MylingoGamification){
+      const g=window.MylingoGamification.recordSession(score,graded,new Date(),{quizId:data.id,quizVersion:String(data.version||1),mode});
+      const box=$('gamifyBadges');
+      box.innerHTML='<span class="badge">+'+g.xpEarned+' XP</span>'+
+        '<span class="badge neutral"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> '+g.streak+' day'+(g.streak===1?'':'s')+'</span>';
+      box.style.display='flex';
+    }
+  }catch(e){ /* never let gamification break the results screen */ }
+
+  // Skill mastery is additive and best-effort: it never blocks quiz completion.
+  try{
+    if(window.MylingoSkillMastery){
+      window.MylingoSkillMastery.recordAndPersist({
+        quiz_id:data.id, level:data.level||level, questions:data.questions,
+        correctMap:answerCorrect, timestamp:Date.now()
+      });
+    }
+  }catch(e){ /* mastery storage must never break the results screen */ }
+
+  // Review scheduling is additive and disabled for placement assessments.
+  try{
+    if(mode!=='placement' && window.MylingoReviewScheduler){
+      window.MylingoReviewScheduler.recordAndPersist({
+        quiz_id:data.id, level:data.level||level, questions:data.questions,
+        correctMap:answerCorrect, timestamp:Date.now()
+      });
+    }
+  }catch(e){ /* review storage must never break the results screen */ }
+
+  if(mode==='placement'){
+    const profile=saveAssessmentResult(pct);
+    renderPlacementResult(profile);
+    renderPlacementRecommendations(profile);
+    placementContinue(profile);
+    // No "more Placement practice" suggestions exist (placement quizzes
+    // aren't listed in a level's manifest), so don't call renderSuggestions()
+    // here — see the guard in renderSuggestions() for why this used to spin.
+  }else{
+    $('reco').style.display='none';
+    $('continueBtn').style.display='none';
+    renderSuggestions();
+  }
+ }finally{
+  // Always fires, even on an uncaught throw above: nav returns and the end
+  // overlay is shown no matter how incomplete its contents ended up being.
+  show('end');
+  $('result').focus?.();
+ }
+}
+
+function setTextSmooth(el,val){
+  if(!el||el.textContent===String(val))return;
+  el.textContent=val;
+  el.classList.remove('text-pop');
+  void el.offsetWidth;
+  el.classList.add('text-pop');
+}
+
+$('startBtn').onclick=startFresh;
+$('resumeBtn').onclick=resumeSession;
+$('next').onclick=()=>{stopAllSounds();next()};
+$('again').onclick=()=>{startFresh()};
+
+load();
+})();
+</script>
+</body></html>

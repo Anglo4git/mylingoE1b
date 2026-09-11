@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "levels": {
+    "a1": {
+      "quiz": "placement-001",
+      "file": "a1/placement-001.json"
+    },
+    "a2": {
+      "quiz": "placement-001",
+      "file": "a2/placement-001.json"
+    },
+    "b1": {
+      "quiz": "placement-001",
+      "file": "b1/placement-001.json"
+    },
+    "b2": {
+      "quiz": "placement-001",
+      "file": "b2/placement-001.json"
+    },
+    "c1": {
+      "quiz": "placement-001",
+      "file": "c1/placement-001.json"
+    },
+    "c2": {
+      "quiz": "placement-001",
+      "file": "c2/placement-001.json"
+    }
+  }
+}

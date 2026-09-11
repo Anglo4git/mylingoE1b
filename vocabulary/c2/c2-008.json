@@ -1,0 +1,77 @@
+{
+  "id": "c2-008",
+  "title": "Pragmatics",
+  "description": "Practice Pragmatics.",
+  "brand": "Mylingo",
+  "category": "Vocabulary",
+  "tags": "Vocabulary,C2",
+  "level": "C2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Her 'That's interesting' was probably ___ given her dismissive tone.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Tone and context can make a seemingly positive phrase sarcastic.",
+      "correctIndex": 3,
+      "answers": [
+        "enthusiastic",
+        "literal",
+        "sarcastic",
+        "grateful"
+      ]
+    },
+    {
+      "question": "Her \"That is interesting\" sounded ___ given her dismissive expression.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Tone and context can make a seemingly positive phrase sarcastic.",
+      "correctIndex": 1,
+      "answers": [
+        "sarcastic",
+        "enthusiastic",
+        "literal",
+        "grateful"
+      ]
+    },
+    {
+      "question": "His \"Well done\" was probably ___ given his sarcastic tone.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Tone and context can make a seemingly positive phrase sarcastic.",
+      "correctIndex": 2,
+      "answers": [
+        "enthusiastic",
+        "sarcastic",
+        "literal",
+        "grateful"
+      ]
+    },
+    {
+      "question": "Her \"Great idea\" seemed ___ after she rolled her eyes.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Tone and context can make a seemingly positive phrase sarcastic.",
+      "correctIndex": 4,
+      "answers": [
+        "enthusiastic",
+        "literal",
+        "grateful",
+        "sarcastic"
+      ]
+    },
+    {
+      "question": "His \"How helpful\" was clearly ___ in context.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Tone and context can make a seemingly positive phrase sarcastic.",
+      "correctIndex": 1,
+      "answers": [
+        "sarcastic",
+        "enthusiastic",
+        "literal",
+        "grateful"
+      ]
+    }
+  ]
+}

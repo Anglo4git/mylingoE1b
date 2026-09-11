@@ -1,0 +1,242 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="../shared/brand/icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../shared/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../shared/brand/favicon-192.png">
+<link rel="apple-touch-icon" href="../shared/brand/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1959d1">
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
+<title>Mylingo · Lesson</title>
+<style>
+:root{--brand:#1959d1;--brand-dark:#0e45ae;--brand-soft:#eaf1fc;--success:#58cc02;--success-dark:#46a302;--success-soft:#e9f8df;--ink:#17212b;--muted:#4b5563;--line:#e5e7eb;--bg:#f7f9fc;--ease-micro:cubic-bezier(0.25,0.1,0.25,1);--ease-release:cubic-bezier(0.34,1.56,0.64,1)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:var(--ink)}
+:focus-visible{outline:3px solid #1a73e8;outline-offset:2px}
+a{color:inherit}
+.skip-link{position:absolute;left:8px;top:-48px;background:var(--brand);color:#fff;padding:10px 16px;border-radius:10px;font-weight:800;text-decoration:none;z-index:1000;transition:top .15s ease}
+.skip-link:focus{top:8px}
+header{padding:22px 16px;background:#fff;border-bottom:1px solid var(--line);padding-top:calc(22px + env(safe-area-inset-top))}
+.headrow{max-width:680px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand-logo{height:26px;width:auto;display:block}
+.headrow nav a{font-size:13px;font-weight:700;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:12px 16px;display:inline-flex;align-items:center;min-height:44px}
+main{max-width:680px;margin:auto;padding:20px 16px 60px}
+.crumb{font-size:13px;color:var(--muted);margin:0 0 14px}
+.crumb a{color:var(--brand);text-decoration:none;font-weight:700}
+/* Course-identity header (Agent 94): gives the lesson page its own visual
+   identity distinct from a generic content page — the same course/unit
+   context that carries forward into the quiz via quizUrl(). */
+.course-id{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:12px;font-weight:800;color:var(--brand)}
+.course-id .lvl-badge{background:var(--brand-soft);border-radius:99px;padding:3px 9px}
+.course-id .sep{color:var(--muted);font-weight:600}
+.course-id .unit-name{color:var(--muted);font-weight:700}
+.topline{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:6px}
+.chip{display:inline-block;font-size:11px;font-weight:900;color:var(--brand);background:var(--brand-soft);border-radius:99px;padding:3px 10px}
+.skipbtn{flex:0 0 auto;text-decoration:none;font-weight:800;font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:8px 14px;min-height:36px;display:inline-flex;align-items:center;white-space:nowrap}
+h1{margin:6px 0 8px;font-size:24px}
+.readtime{color:var(--muted);font-size:13px;margin:0 0 20px;display:flex;align-items:center;gap:6px}
+.readtime svg{flex:0 0 auto}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px}
+.card h2{margin:0 0 10px;font-size:13px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.summary{font-size:17px;line-height:1.5;margin:0}
+.examples{margin:0;padding:0;list-style:none}
+.examples li{font-size:15px;line-height:1.5;padding:9px 0 9px 22px;position:relative;border-top:1px solid var(--line)}
+.examples li:first-child{border-top:none}
+.examples li::before{content:"";position:absolute;left:0;top:17px;width:8px;height:8px;border-radius:99px;background:var(--success)}
+.terms{display:flex;gap:8px;flex-wrap:wrap}
+.term{font-size:13px;font-weight:700;background:var(--success-soft);color:#2f6d06;border-radius:99px;padding:6px 12px}
+.media img{max-width:100%;border-radius:12px;display:block}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-fallback{background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:16px;color:var(--muted);font-size:13px;text-align:center}
+.video-link{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:13px;color:var(--brand);margin-top:10px}
+.exlist{list-style:none;margin:0;padding:0}
+.exlist li{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.exlist li:first-child{border-top:none}
+.exlist .meta{flex:1;min-width:0;font-size:13px}
+.exlist .meta b{display:block;font-size:14px}
+.exlist a{flex:0 0 auto;text-decoration:none;font-weight:800;font-size:12px;color:var(--brand);border:1px solid var(--brand-soft);background:var(--brand-soft);border-radius:99px;padding:8px 12px;min-height:36px;display:inline-flex;align-items:center}
+.cta{position:sticky;bottom:0;background:linear-gradient(to top,var(--bg) 60%,transparent);padding:16px 0 4px;margin-top:8px}
+.btn{display:block;width:100%;text-align:center;text-decoration:none;font-weight:800;font-size:16px;padding:15px 16px;border-radius:99px;min-height:52px;box-sizing:border-box;transition:transform 220ms var(--ease-release)}
+.btn:active{transform:scale(.98)}
+.btn.primary{background:var(--brand);color:#fff}
+.loading{text-align:center;color:var(--muted);padding:60px 20px}
+.err{text-align:center;color:var(--muted);padding:50px 20px}
+.err a{color:var(--brand);font-weight:800;text-decoration:none}
+footer{max-width:680px;margin:0 auto;padding:24px 16px 40px;color:var(--muted);font-size:13px;text-align:center}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:active{transform:none}}
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:page-out .28s cubic-bezier(.4,0,.2,1) both}
+::view-transition-new(root){animation:page-in .28s cubic-bezier(.4,0,.2,1) both}
+@keyframes page-out{to{opacity:0;transform:scale(.96)}}
+@keyframes page-in{from{opacity:0;transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+</style><link rel="stylesheet" href="../shared/css/app-shell.css"></head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header><div class="headrow">
+  <img class="brand-logo" src="../shared/brand/logo-horizontal.svg" alt="Mylingo">
+  <nav><a href="./index.html">All courses</a> <a href="../main/index.html">All levels</a></nav>
+</div></header>
+<main id="main-content">
+  <p class="crumb" id="crumb">…</p>
+  <div id="content"><div class="loading" role="status" aria-live="polite">Loading lesson…</div></div>
+</main>
+<footer>Mylingo · Works offline once installed · Free forever</footer>
+<script>
+(function(){
+'use strict';
+var $=function(x){return document.getElementById(x)};
+var VALID_LEVELS=['a1','a2','b1','b2','c1','c2'];
+var params=new URLSearchParams(location.search);
+var lessonId=params.get('lesson');
+var rawLevel=(params.get('level')||'').toLowerCase();
+var levelParam=VALID_LEVELS.indexOf(rawLevel)>=0?rawLevel:null;
+var redirectParam=params.get('redirect');
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]})}
+
+function fetchJson(url){
+  return fetch(url,{cache:'no-store'}).then(function(r){ if(!r.ok) throw new Error('http '+r.status); return r.json() });
+}
+
+function renderError(message){
+  $('content').innerHTML='<div class="err"><p>'+esc(message)+'</p><p><a href="./index.html">Back to all courses</a> or <a href="../main/index.html">find my level</a>.</p></div>';
+}
+
+// A lesson's revision.estimated_minutes is optional content. When absent,
+// estimate from word count (summary + examples + key terms) at ~200
+// words/minute, rounded up, minimum 1 — this is a display estimate only,
+// never a gate: "Start exercises" is always available regardless.
+function estimateMinutes(revision){
+  if(revision && revision.estimated_minutes != null && isFinite(Number(revision.estimated_minutes))){
+    return Math.max(1, Math.round(Number(revision.estimated_minutes)));
+  }
+  var text=[revision && revision.summary]
+    .concat((revision && revision.examples) || [])
+    .concat((revision && revision.key_terms) || [])
+    .filter(Boolean).join(' ');
+  var words=text.trim().length ? text.trim().split(/\s+/).length : 0;
+  return Math.max(1, Math.ceil(words/200));
+}
+
+// Extracts a YouTube video ID from watch/short/embed link shapes. Returns
+// null (rather than throwing or embedding blindly) for anything that
+// doesn't clearly parse, so a malformed url never breaks the page — it
+// just falls back to "no video", exactly like an absent youtube_url.
+function youtubeId(url){
+  if(!url || typeof url!=='string') return null;
+  var m=url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{6,})/);
+  return m ? m[1] : null;
+}
+
+// Agent 94: also pass the course/unit titles through so shared/quiz.html
+// can show a "you're in this course" context strip. Direct-practice quiz
+// links (built elsewhere, without these params) are unaffected — the
+// strip only renders when course/unit_title are present in the URL.
+function quizUrl(quizId,level,redirect,courseTitle,unitTitle){
+  var url='../shared/quiz.html?quiz='+encodeURIComponent(quizId)+'&level='+encodeURIComponent(level)+(redirect?'&redirect='+encodeURIComponent(redirect):'');
+  if(courseTitle) url+='&course='+encodeURIComponent(courseTitle);
+  if(unitTitle) url+='&unit_title='+encodeURIComponent(unitTitle);
+  return url;
+}
+
+if(!lessonId){
+  renderError('No lesson was specified.');
+  return;
+}
+
+Promise.all([
+  fetchJson('../course_content/courses.json'),
+  fetchJson('../course_content/units.json'),
+  fetchJson('../course_content/lessons.json')
+]).then(function(results){
+  var courses=results[0], units=results[1], lessons=results[2];
+  var lesson=lessons.find(function(l){ return l.lesson_id===lessonId && l.status==='published' });
+  if(!lesson){ renderError('This lesson isn\u2019t available yet.'); return }
+  var unit=units.find(function(u){ return u.unit_id===lesson.unit_id });
+  var course=unit ? courses.find(function(c){ return c.course_id===unit.course_id && c.status==='published' }) : null;
+  if(!unit || !course){ renderError('This lesson isn\u2019t available yet.'); return }
+
+  var level=levelParam || course.level.toLowerCase();
+
+  return fetchJson('../'+level+'/quizzes.json').catch(function(){ return [] }).then(function(quizList){
+    var quizMap={}; (quizList||[]).forEach(function(q){ quizMap[q.id]=q });
+
+    document.title='Mylingo · '+lesson.title;
+    $('crumb').innerHTML='<a href="./index.html">Courses</a> / <a href="./course.html?level='+level+'">'+esc(course.title)+'</a> / '+esc(unit.title);
+
+    var courseBack='../courses/course.html?level='+level+'&unit='+encodeURIComponent(unit.unit_id);
+    var backUrl=redirectParam || courseBack;
+    var exerciseIds=lesson.exercise_quiz_ids||[];
+    var firstExercise=exerciseIds[0];
+    var startUrl=firstExercise ? quizUrl(firstExercise,level,backUrl,course.title,unit.title) : null;
+
+    var minutes=estimateMinutes(lesson.revision);
+    var revision=lesson.revision||{};
+    var hasSummary=!!(revision.summary && revision.summary.trim());
+    var examples=(revision.examples||[]).filter(Boolean);
+    var terms=(revision.key_terms||[]).filter(Boolean);
+    var vid=youtubeId(lesson.youtube_url);
+    var isOnline=('onLine' in navigator) ? navigator.onLine : true;
+
+    var mediaHtml='';
+    if(lesson.presentation_url){
+      mediaHtml+='<div class="card media"><h2>Presentation</h2>'+
+        '<img src="'+esc(lesson.presentation_url)+'" alt="'+esc(lesson.title)+' presentation" loading="lazy" '+
+        'onerror="this.closest(\'.media\').remove()">'+
+      '</div>';
+    }
+    if(lesson.youtube_url){
+      if(vid && isOnline){
+        mediaHtml+='<div class="card"><h2>Watch</h2><div class="video-wrap">'+
+          '<iframe src="https://www.youtube.com/embed/'+esc(vid)+'" title="'+esc(lesson.title)+' video explanation" '+
+          'loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen '+
+          'onerror="this.closest(\'.video-wrap\').outerHTML=\'<div class=&quot;video-fallback&quot;>Video unavailable right now. Read the quick revision instead.</div>\'"></iframe>'+
+        '</div></div>';
+      } else if(vid && !isOnline){
+        mediaHtml+='<div class="card"><h2>Watch</h2><div class="video-fallback">Video unavailable offline. Read the quick revision instead.</div></div>';
+      }
+      // vid===null (unparseable youtube_url): skip the section entirely rather
+      // than show a broken embed or a dead link.
+    }
+
+    var exercisesHtml='';
+    if(exerciseIds.length>1){
+      exercisesHtml='<div class="card"><h2>Exercises in this lesson</h2><ul class="exlist">'+
+        exerciseIds.map(function(id){
+          var q=quizMap[id];
+          return '<li><div class="meta"><b>'+esc((q&&q.title)||id)+'</b>'+(q&&q.questions?q.questions+' question'+(q.questions===1?'':'s'):'')+'</div>'+
+            '<a href="'+quizUrl(id,level,backUrl,course.title,unit.title)+'">Practice</a></li>';
+        }).join('')+
+      '</ul></div>';
+    }
+
+    $('content').innerHTML=
+      '<div class="course-id"><span class="lvl-badge">'+esc(course.level)+'</span><span>'+esc(course.title)+'</span><span class="sep">·</span><span class="unit-name">'+esc(unit.title)+'</span></div>'+
+      '<div class="topline"><span class="chip">'+esc(lesson.category)+'</span>'+
+        (startUrl?'<a class="skipbtn" href="'+startUrl+'">Skip revision</a>':'')+
+      '</div>'+
+      '<h1>'+esc(lesson.title)+'</h1>'+
+      '<p class="readtime"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> ~'+minutes+' min read</p>'+
+      '<div class="card"><h2>Quick revision</h2>'+
+        (hasSummary ? '<p class="summary">'+esc(revision.summary)+'</p>' : '<p class="summary">No revision notes yet for this lesson \u2014 you can still practice.</p>')+
+      '</div>'+
+      (examples.length ? '<div class="card"><h2>Examples</h2><ul class="examples">'+examples.map(function(e){ return '<li>'+esc(e)+'</li>' }).join('')+'</ul></div>' : '')+
+      (terms.length ? '<div class="card"><h2>Key terms</h2><div class="terms">'+terms.map(function(t){ return '<span class="term">'+esc(t)+'</span>' }).join('')+'</div></div>' : '')+
+      mediaHtml+
+      exercisesHtml+
+      '<div class="cta">'+
+        (startUrl ? '<a class="btn primary" href="'+startUrl+'">Start exercises</a>' : '<p class="err">No exercises are linked to this lesson yet.</p>')+
+      '</div>';
+
+    window.addEventListener('offline',function(){
+      // Best-effort live update: if the learner goes offline while reading
+      // (not just on load), swap a live video for the same offline message.
+      var wrap=document.querySelector('.video-wrap');
+      if(wrap) wrap.outerHTML='<div class="video-fallback">Video unavailable offline. Read the quick revision instead.</div>';
+    });
+  });
+}).catch(function(){ renderError('This lesson isn\u2019t available right now.') });
+})();
+</script>
+<script src="../shared/js/app-shell.js"></script></body></html>

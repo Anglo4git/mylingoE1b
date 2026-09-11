@@ -1,0 +1,77 @@
+{
+  "id": "c2-003",
+  "title": "Fronting",
+  "description": "Practice Fronting.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,C2",
+  "level": "C2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "What the report fails to explain ___ why the figures changed.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "The subject is a singular noun clause, so use is.",
+      "correctIndex": 1,
+      "answers": [
+        "is",
+        "are",
+        "be",
+        "have"
+      ]
+    },
+    {
+      "question": "What the study fails to show ___ how the results changed over time.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "The subject is a singular noun clause, so use is.",
+      "correctIndex": 4,
+      "answers": [
+        "are",
+        "be",
+        "have",
+        "is"
+      ]
+    },
+    {
+      "question": "What the report does not explain ___ why the costs increased.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "The subject is a singular noun clause, so use is.",
+      "correctIndex": 2,
+      "answers": [
+        "are",
+        "is",
+        "be",
+        "have"
+      ]
+    },
+    {
+      "question": "What the figures reveal ___ a shift in consumer behavior.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "The subject is a singular noun clause, so use is.",
+      "correctIndex": 3,
+      "answers": [
+        "are",
+        "be",
+        "is",
+        "have"
+      ]
+    },
+    {
+      "question": "What the analysis leaves unclear ___ the reason for the discrepancy.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "The subject is a singular noun clause, so use is.",
+      "correctIndex": 1,
+      "answers": [
+        "is",
+        "are",
+        "be",
+        "have"
+      ]
+    }
+  ]
+}

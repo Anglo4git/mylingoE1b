@@ -1,0 +1,77 @@
+{
+  "id": "c1-005",
+  "title": "Nominalisation",
+  "description": "Practice Nominalisation.",
+  "brand": "Mylingo",
+  "category": "Academic English",
+  "tags": "Academic English,C1",
+  "level": "C1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The committee decided to delay the vote. The ___ was unexpected.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Decision is the noun form of decide.",
+      "correctIndex": 2,
+      "answers": [
+        "decide",
+        "decision",
+        "deciding",
+        "decisive"
+      ]
+    },
+    {
+      "question": "The committee refused to comment. The ___ was unexpected.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Decision is the noun form of decide.",
+      "correctIndex": 3,
+      "answers": [
+        "decide",
+        "deciding",
+        "decision",
+        "decisive"
+      ]
+    },
+    {
+      "question": "The board chose to postpone the vote. The ___ was controversial.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Decision is the noun form of decide.",
+      "correctIndex": 4,
+      "answers": [
+        "decide",
+        "deciding",
+        "decisive",
+        "decision"
+      ]
+    },
+    {
+      "question": "The team agreed to revise the plan. The ___ was welcomed.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Decision is the noun form of decide.",
+      "correctIndex": 1,
+      "answers": [
+        "decision",
+        "decide",
+        "deciding",
+        "decisive"
+      ]
+    },
+    {
+      "question": "The panel decided to reject the offer. The ___ surprised everyone.",
+      "category": "Academic English",
+      "tags": "Academic English,C1",
+      "explanation": "Decision is the noun form of decide.",
+      "correctIndex": 2,
+      "answers": [
+        "decide",
+        "decision",
+        "deciding",
+        "decisive"
+      ]
+    }
+  ]
+}

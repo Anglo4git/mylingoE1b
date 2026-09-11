@@ -1,0 +1,77 @@
+{
+  "id": "a2-009",
+  "title": "Present Perfect",
+  "description": "Practice Present Perfect.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A2",
+  "level": "A2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "I ___ my homework already.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use have/has + past participle for a completed action connected to now.",
+      "correctIndex": 4,
+      "answers": [
+        "finish",
+        "finished",
+        "am finishing",
+        "have finished"
+      ]
+    },
+    {
+      "question": "I ___ my project already.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use have/has + past participle for a completed action connected to now.",
+      "correctIndex": 3,
+      "answers": [
+        "finish",
+        "finished",
+        "have finished",
+        "am finishing"
+      ]
+    },
+    {
+      "question": "We ___ the report already.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use have/has + past participle for a completed action connected to now.",
+      "correctIndex": 1,
+      "answers": [
+        "have finished",
+        "finish",
+        "finished",
+        "am finishing"
+      ]
+    },
+    {
+      "question": "They ___ dinner already.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use have/has + past participle for a completed action connected to now.",
+      "correctIndex": 2,
+      "answers": [
+        "finish",
+        "have finished",
+        "finished",
+        "am finishing"
+      ]
+    },
+    {
+      "question": "I ___ the email already.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use have/has + past participle for a completed action connected to now.",
+      "correctIndex": 2,
+      "answers": [
+        "finish",
+        "have finished",
+        "finished",
+        "am finishing"
+      ]
+    }
+  ]
+}

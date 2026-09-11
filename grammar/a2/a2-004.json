@@ -1,0 +1,77 @@
+{
+  "id": "a2-004",
+  "title": "Future: going to",
+  "description": "Practice Future: going to.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A2",
+  "level": "A2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "We ___ visit next weekend.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use be + going to + base verb for plans.",
+      "correctIndex": 2,
+      "answers": [
+        "going",
+        "are going to",
+        "are go",
+        "went"
+      ]
+    },
+    {
+      "question": "I ___ study tonight.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use be + going to + base verb for plans.",
+      "correctIndex": 4,
+      "answers": [
+        "going",
+        "are go",
+        "went",
+        "are going to"
+      ]
+    },
+    {
+      "question": "They ___ move next month.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use be + going to + base verb for plans.",
+      "correctIndex": 3,
+      "answers": [
+        "going",
+        "are go",
+        "are going to",
+        "went"
+      ]
+    },
+    {
+      "question": "She ___ buy a new computer soon.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use be + going to + base verb for plans.",
+      "correctIndex": 1,
+      "answers": [
+        "are going to",
+        "going",
+        "are go",
+        "went"
+      ]
+    },
+    {
+      "question": "We ___ travel next summer.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use be + going to + base verb for plans.",
+      "correctIndex": 1,
+      "answers": [
+        "are going to",
+        "going",
+        "are go",
+        "went"
+      ]
+    }
+  ]
+}

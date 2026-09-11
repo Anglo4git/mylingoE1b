@@ -1,0 +1,77 @@
+{
+  "id": "b2-004",
+  "title": "Causative",
+  "description": "Practice Causative.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B2",
+  "level": "B2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "I had my car ___ yesterday.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Have + object + past participle describes a service arranged for someone.",
+      "correctIndex": 2,
+      "answers": [
+        "repair",
+        "repaired",
+        "repairing",
+        "to repair"
+      ]
+    },
+    {
+      "question": "I had my laptop ___ yesterday.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Have + object + past participle describes a service arranged for someone.",
+      "correctIndex": 4,
+      "answers": [
+        "repair",
+        "repairing",
+        "to repair",
+        "repaired"
+      ]
+    },
+    {
+      "question": "She had her dress ___ for the event.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Have + object + past participle describes a service arranged for someone.",
+      "correctIndex": 3,
+      "answers": [
+        "repair",
+        "repairing",
+        "repaired",
+        "to repair"
+      ]
+    },
+    {
+      "question": "We had the windows ___ last week.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Have + object + past participle describes a service arranged for someone.",
+      "correctIndex": 1,
+      "answers": [
+        "repaired",
+        "repair",
+        "repairing",
+        "to repair"
+      ]
+    },
+    {
+      "question": "He had his watch ___ this morning.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Have + object + past participle describes a service arranged for someone.",
+      "correctIndex": 1,
+      "answers": [
+        "repaired",
+        "repair",
+        "repairing",
+        "to repair"
+      ]
+    }
+  ]
+}

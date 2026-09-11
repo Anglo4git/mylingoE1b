@@ -1,0 +1,77 @@
+{
+  "id": "a1-006",
+  "title": "Can",
+  "description": "Practice Can.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A1",
+  "level": "A1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "I ___ how to swim.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Can is followed by the base form of the verb.",
+      "correctIndex": 1,
+      "answers": [
+        "can",
+        "cans",
+        "am can",
+        "can to"
+      ]
+    },
+    {
+      "question": "She ___ speak French.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Can is followed by the base form of the verb.",
+      "correctIndex": 4,
+      "answers": [
+        "cans",
+        "am can",
+        "can to",
+        "can"
+      ]
+    },
+    {
+      "question": "We ___ swim very well.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Can is followed by the base form of the verb.",
+      "correctIndex": 3,
+      "answers": [
+        "cans",
+        "am can",
+        "can",
+        "can to"
+      ]
+    },
+    {
+      "question": "My brother ___ ride a bike.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Can is followed by the base form of the verb.",
+      "correctIndex": 2,
+      "answers": [
+        "cans",
+        "can",
+        "am can",
+        "can to"
+      ]
+    },
+    {
+      "question": "They ___ help us tomorrow.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Can is followed by the base form of the verb.",
+      "correctIndex": 4,
+      "answers": [
+        "cans",
+        "am can",
+        "can to",
+        "can"
+      ]
+    }
+  ]
+}

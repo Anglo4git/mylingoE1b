@@ -1,0 +1,77 @@
+{
+  "id": "a2-006",
+  "title": "Countable/Uncountable",
+  "description": "Practice Countable/Uncountable.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A2",
+  "level": "A2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "How ___ water do you need?",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use much with uncountable nouns.",
+      "correctIndex": 3,
+      "answers": [
+        "many",
+        "few",
+        "much",
+        "a lot"
+      ]
+    },
+    {
+      "question": "How ___ milk is in the fridge?",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use much with uncountable nouns.",
+      "correctIndex": 2,
+      "answers": [
+        "many",
+        "much",
+        "few",
+        "a lot"
+      ]
+    },
+    {
+      "question": "How ___ rice do we need?",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use much with uncountable nouns.",
+      "correctIndex": 1,
+      "answers": [
+        "much",
+        "many",
+        "few",
+        "a lot"
+      ]
+    },
+    {
+      "question": "How ___ water should I add?",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use much with uncountable nouns.",
+      "correctIndex": 4,
+      "answers": [
+        "many",
+        "few",
+        "a lot",
+        "much"
+      ]
+    },
+    {
+      "question": "How ___ juice did they drink?",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use much with uncountable nouns.",
+      "correctIndex": 2,
+      "answers": [
+        "many",
+        "much",
+        "few",
+        "a lot"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "a1-010",
+  "title": "Everyday Vocabulary",
+  "description": "Practice everyday vocabulary.",
+  "brand": "Mylingo",
+  "category": "Vocabulary",
+  "tags": "Vocabulary,A1",
+  "level": "A1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "What is the closest meaning of “happy”?",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A1",
+      "explanation": "Happy means feeling glad.",
+      "correctIndex": 4,
+      "answers": [
+        "sad",
+        "angry",
+        "tired",
+        "glad"
+      ]
+    },
+    {
+      "question": "Which word means “a place where you buy food”?",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A1",
+      "explanation": "A market is a place where people buy food and other goods.",
+      "correctIndex": 3,
+      "answers": [
+        "school",
+        "hospital",
+        "market",
+        "station"
+      ]
+    },
+    {
+      "question": "Which word is a fruit?",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A1",
+      "explanation": "An apple is a fruit.",
+      "correctIndex": 1,
+      "answers": [
+        "apple",
+        "carrot",
+        "bread",
+        "rice"
+      ]
+    },
+    {
+      "question": "What is the opposite of “big”?",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A1",
+      "explanation": "The opposite of big is small.",
+      "correctIndex": 2,
+      "answers": [
+        "long",
+        "small",
+        "fast",
+        "hot"
+      ]
+    },
+    {
+      "question": "Which word means “very small”?",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A1",
+      "explanation": "Tiny means very small.",
+      "correctIndex": 4,
+      "answers": [
+        "huge",
+        "heavy",
+        "wide",
+        "tiny"
+      ]
+    }
+  ]
+}

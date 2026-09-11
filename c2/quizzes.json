@@ -1,0 +1,122 @@
+[
+  {
+    "file": "grammar/c2/c2-001.json",
+    "id": "c2-001",
+    "title": "Nuanced Modality",
+    "topic": "Nuanced Modality",
+    "description": "Practice Nuanced Modality.",
+    "category": "Grammar",
+    "tags": "Grammar,C2",
+    "level": "C2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/c2/c2-002.json",
+    "id": "c2-002",
+    "title": "Concessive Inversion",
+    "topic": "Concessive Inversion",
+    "description": "Practice Concessive Inversion.",
+    "category": "Grammar",
+    "tags": "Grammar,C2",
+    "level": "C2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/c2/c2-003.json",
+    "id": "c2-003",
+    "title": "Fronting",
+    "topic": "Fronting",
+    "description": "Practice Fronting.",
+    "category": "Grammar",
+    "tags": "Grammar,C2",
+    "level": "C2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "writing/c2/c2-004.json",
+    "id": "c2-004",
+    "title": "Register and Tone",
+    "topic": "Register and Tone",
+    "description": "Practice Register and Tone.",
+    "category": "Writing",
+    "tags": "Writing,C2",
+    "level": "C2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "vocabulary/c2/c2-005.json",
+    "id": "c2-005",
+    "title": "Semantic Nuance",
+    "topic": "Semantic Nuance",
+    "description": "Practice Semantic Nuance.",
+    "category": "Vocabulary",
+    "tags": "Vocabulary,C2",
+    "level": "C2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/c2/c2-006.json",
+    "id": "c2-006",
+    "title": "Advanced Relative Construction",
+    "topic": "Advanced Relative Construction",
+    "description": "Practice Advanced Relative Construction.",
+    "category": "Grammar",
+    "tags": "Grammar,C2",
+    "level": "C2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "grammar/c2/c2-007.json",
+    "id": "c2-007",
+    "title": "Inversion with Negative Adverbial",
+    "topic": "Inversion with Negative Adverbial",
+    "description": "Practice Inversion with Negative Adverbial.",
+    "category": "Grammar",
+    "tags": "Grammar,C2",
+    "level": "C2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "vocabulary/c2/c2-008.json",
+    "id": "c2-008",
+    "title": "Pragmatics",
+    "topic": "Pragmatics",
+    "description": "Practice Pragmatics.",
+    "category": "Vocabulary",
+    "tags": "Vocabulary,C2",
+    "level": "C2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "vocabulary/c2/c2-009.json",
+    "id": "c2-009",
+    "title": "Idiomatic Precision",
+    "topic": "Idiomatic Precision",
+    "description": "Practice Idiomatic Precision.",
+    "category": "Vocabulary",
+    "tags": "Vocabulary,C2",
+    "level": "C2",
+    "questions": 5,
+    "version": 1
+  },
+  {
+    "file": "academic-english/c2/c2-010.json",
+    "id": "c2-010",
+    "title": "Synthesis",
+    "topic": "Synthesis",
+    "description": "Practice Synthesis.",
+    "category": "Academic English",
+    "tags": "Academic English,C2",
+    "level": "C2",
+    "questions": 5,
+    "version": 1
+  }
+]

@@ -1,0 +1,203 @@
+{
+  "id": "placement-001",
+  "title": "B2 Level Check",
+  "description": "A 10-question placement check for B2.",
+  "brand": "Mylingo",
+  "category": "Placement",
+  "tags": "Placement,B2",
+  "level": "B2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "If I had studied harder, I ___ more confident now.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "A past condition can have a present result.",
+      "correctIndex": 2,
+      "answers": [
+        "will be",
+        "would be",
+        "am",
+        "would have been"
+      ],
+      "id": "b2-placement-001",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 4,
+      "cefr": "B2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Rarely ___ such a beautiful performance.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Restrictive adverbs at the front can trigger inversion.",
+      "correctIndex": 2,
+      "answers": [
+        "I have seen",
+        "have I seen",
+        "I saw",
+        "did I have seen"
+      ],
+      "id": "b2-placement-002",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 4,
+      "cefr": "B2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "She ___ have forgotten the meeting; she never misses one.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Can't have + past participle expresses a strong negative deduction.",
+      "correctIndex": 2,
+      "answers": [
+        "must",
+        "can't",
+        "should",
+        "can"
+      ],
+      "id": "b2-placement-003",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 4,
+      "cefr": "B2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "I had my car ___ yesterday.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Have + object + past participle describes a service arranged for someone.",
+      "correctIndex": 2,
+      "answers": [
+        "repair",
+        "repaired",
+        "repairing",
+        "to repair"
+      ],
+      "id": "b2-placement-004",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 4,
+      "cefr": "B2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "___ the report, she sent it to the manager.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Having + past participle shows the first action happened before the second.",
+      "correctIndex": 2,
+      "answers": [
+        "Finishing",
+        "Having finished",
+        "To finish",
+        "Finished"
+      ],
+      "id": "b2-placement-005",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 4,
+      "cefr": "B2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The suspect is believed ___ abroad.",
+      "category": "Grammar",
+      "tags": "Grammar,B2",
+      "explanation": "Is believed + to have + past participle reports an earlier action.",
+      "correctIndex": 1,
+      "answers": [
+        "to have fled",
+        "fleeing to have",
+        "that fled",
+        "to fleeing"
+      ],
+      "id": "b2-placement-006",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 4,
+      "cefr": "B2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The results ___ suggest that the policy was effective.",
+      "category": "Academic English",
+      "tags": "Academic English,B2",
+      "explanation": "Appear to is a cautious way to state a conclusion.",
+      "correctIndex": 2,
+      "answers": [
+        "clearly",
+        "appear to",
+        "must",
+        "never"
+      ],
+      "id": "b2-placement-007",
+      "skill": "usage",
+      "subskill": "language-usage",
+      "difficulty": 4,
+      "cefr": "B2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The company needs to ___ a decision quickly.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B2",
+      "explanation": "Make a decision is the standard collocation.",
+      "correctIndex": 2,
+      "answers": [
+        "do",
+        "make",
+        "take up",
+        "put"
+      ],
+      "id": "b2-placement-008",
+      "skill": "vocabulary",
+      "subskill": "contextual-vocabulary",
+      "difficulty": 4,
+      "cefr": "B2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Read: The road was closed after heavy rain, but engineers repaired the damaged bridge within two days. What happened first?",
+      "category": "Reading",
+      "tags": "Reading,B2",
+      "explanation": "The road closure happened before the engineers repaired the bridge.",
+      "correctIndex": 1,
+      "answers": [
+        "The road was closed.",
+        "The bridge was repaired.",
+        "The engineers left.",
+        "The rain stopped before the closure."
+      ],
+      "id": "b2-placement-009",
+      "skill": "reading",
+      "subskill": "reading-sequence",
+      "difficulty": 4,
+      "cefr": "B2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Which is most appropriate in a formal report?",
+      "category": "Writing",
+      "tags": "Writing,B2",
+      "explanation": "Formal reports favor precise, neutral vocabulary.",
+      "correctIndex": 2,
+      "answers": [
+        "Kids need more help.",
+        "Children require additional support.",
+        "Kids gotta get help.",
+        "Children need stuff."
+      ],
+      "id": "b2-placement-010",
+      "skill": "writing",
+      "subskill": "discourse-marker",
+      "difficulty": 4,
+      "cefr": "B2",
+      "estimated_time_seconds": 20
+    }
+  ],
+  "metadata_note": "Question skill/difficulty/CEFR/time fields are internal product metadata, not official CEFR certification."
+}

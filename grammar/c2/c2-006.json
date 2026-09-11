@@ -1,0 +1,77 @@
+{
+  "id": "c2-006",
+  "title": "Advanced Relative Construction",
+  "description": "Practice Advanced Relative Construction.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,C2",
+  "level": "C2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The proposal, ___ merits were debated for months, was finally rejected.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Whose can express possession in a non-defining relative clause.",
+      "correctIndex": 4,
+      "answers": [
+        "which",
+        "whom",
+        "where",
+        "whose"
+      ]
+    },
+    {
+      "question": "The policy, ___ provisions were debated for weeks, was finally approved.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Whose can express possession in a non-defining relative clause.",
+      "correctIndex": 1,
+      "answers": [
+        "whose",
+        "which",
+        "whom",
+        "where"
+      ]
+    },
+    {
+      "question": "The agreement, ___ terms were revised twice, was signed yesterday.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Whose can express possession in a non-defining relative clause.",
+      "correctIndex": 2,
+      "answers": [
+        "which",
+        "whose",
+        "whom",
+        "where"
+      ]
+    },
+    {
+      "question": "The proposal, ___ details were discussed at length, was accepted.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Whose can express possession in a non-defining relative clause.",
+      "correctIndex": 3,
+      "answers": [
+        "which",
+        "whom",
+        "whose",
+        "where"
+      ]
+    },
+    {
+      "question": "The document, ___ clauses attracted criticism, was published later.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "Whose can express possession in a non-defining relative clause.",
+      "correctIndex": 3,
+      "answers": [
+        "which",
+        "whom",
+        "whose",
+        "where"
+      ]
+    }
+  ]
+}

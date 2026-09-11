@@ -1,0 +1,77 @@
+{
+  "id": "c2-010",
+  "title": "Synthesis",
+  "description": "Practice Synthesis.",
+  "brand": "Mylingo",
+  "category": "Academic English",
+  "tags": "Academic English,C2",
+  "level": "C2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "Taken together, the findings ___ a more complex picture than the initial hypothesis suggested.",
+      "category": "Academic English",
+      "tags": "Academic English,C2",
+      "explanation": "Paint a picture is a common metaphorical collocation in analytical writing.",
+      "correctIndex": 1,
+      "answers": [
+        "paint",
+        "draw",
+        "write",
+        "build"
+      ]
+    },
+    {
+      "question": "Taken together, the studies ___ a more complex picture than expected.",
+      "category": "Academic English",
+      "tags": "Academic English,C2",
+      "explanation": "Paint a picture is a common metaphorical collocation in analytical writing.",
+      "correctIndex": 4,
+      "answers": [
+        "draw",
+        "write",
+        "build",
+        "paint"
+      ]
+    },
+    {
+      "question": "Taken together, the results ___ a nuanced picture of the problem.",
+      "category": "Academic English",
+      "tags": "Academic English,C2",
+      "explanation": "Paint a picture is a common metaphorical collocation in analytical writing.",
+      "correctIndex": 3,
+      "answers": [
+        "draw",
+        "write",
+        "paint",
+        "build"
+      ]
+    },
+    {
+      "question": "Taken together, the findings ___ a broader picture of the issue.",
+      "category": "Academic English",
+      "tags": "Academic English,C2",
+      "explanation": "Paint a picture is a common metaphorical collocation in analytical writing.",
+      "correctIndex": 2,
+      "answers": [
+        "draw",
+        "paint",
+        "write",
+        "build"
+      ]
+    },
+    {
+      "question": "Taken together, the data ___ a more complicated picture than the model predicted.",
+      "category": "Academic English",
+      "tags": "Academic English,C2",
+      "explanation": "Paint a picture is a common metaphorical collocation in analytical writing.",
+      "correctIndex": 2,
+      "answers": [
+        "draw",
+        "paint",
+        "write",
+        "build"
+      ]
+    }
+  ]
+}

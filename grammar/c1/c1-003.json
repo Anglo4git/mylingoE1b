@@ -1,0 +1,77 @@
+{
+  "id": "c1-003",
+  "title": "Cleft Sentences",
+  "description": "Practice Cleft Sentences.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,C1",
+  "level": "C1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "___ I object to is the lack of evidence.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "What I object to is a cleft construction.",
+      "correctIndex": 3,
+      "answers": [
+        "That",
+        "Which",
+        "What",
+        "It"
+      ]
+    },
+    {
+      "question": "___ concerns me is the lack of detail.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "What I object to is a cleft construction.",
+      "correctIndex": 4,
+      "answers": [
+        "That",
+        "Which",
+        "It",
+        "What"
+      ]
+    },
+    {
+      "question": "___ we need is a clearer explanation.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "What I object to is a cleft construction.",
+      "correctIndex": 2,
+      "answers": [
+        "That",
+        "What",
+        "Which",
+        "It"
+      ]
+    },
+    {
+      "question": "___ matters most is the quality of the evidence.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "What I object to is a cleft construction.",
+      "correctIndex": 1,
+      "answers": [
+        "What",
+        "That",
+        "Which",
+        "It"
+      ]
+    },
+    {
+      "question": "___ I find surprising is the final conclusion.",
+      "category": "Grammar",
+      "tags": "Grammar,C1",
+      "explanation": "What I object to is a cleft construction.",
+      "correctIndex": 4,
+      "answers": [
+        "That",
+        "Which",
+        "It",
+        "What"
+      ]
+    }
+  ]
+}

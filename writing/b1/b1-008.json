@@ -1,0 +1,77 @@
+{
+  "id": "b1-008",
+  "title": "Linkers",
+  "description": "Practice Linkers.",
+  "brand": "Mylingo",
+  "category": "Writing",
+  "tags": "Writing,B1",
+  "level": "B1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "I was tired; ___, I finished the report.",
+      "category": "Writing",
+      "tags": "Writing,B1",
+      "explanation": "However introduces a contrast.",
+      "correctIndex": 4,
+      "answers": [
+        "because",
+        "so that",
+        "unless",
+        "however"
+      ]
+    },
+    {
+      "question": "I was exhausted; ___, I completed the assignment.",
+      "category": "Writing",
+      "tags": "Writing,B1",
+      "explanation": "However introduces a contrast.",
+      "correctIndex": 3,
+      "answers": [
+        "because",
+        "so that",
+        "however",
+        "unless"
+      ]
+    },
+    {
+      "question": "The task was difficult; ___, we finished it on time.",
+      "category": "Writing",
+      "tags": "Writing,B1",
+      "explanation": "However introduces a contrast.",
+      "correctIndex": 2,
+      "answers": [
+        "because",
+        "however",
+        "so that",
+        "unless"
+      ]
+    },
+    {
+      "question": "She felt nervous; ___, she gave the presentation.",
+      "category": "Writing",
+      "tags": "Writing,B1",
+      "explanation": "However introduces a contrast.",
+      "correctIndex": 1,
+      "answers": [
+        "however",
+        "because",
+        "so that",
+        "unless"
+      ]
+    },
+    {
+      "question": "It was raining; ___, they continued the match.",
+      "category": "Writing",
+      "tags": "Writing,B1",
+      "explanation": "However introduces a contrast.",
+      "correctIndex": 4,
+      "answers": [
+        "because",
+        "so that",
+        "unless",
+        "however"
+      ]
+    }
+  ]
+}

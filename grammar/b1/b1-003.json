@@ -1,0 +1,77 @@
+{
+  "id": "b1-003",
+  "title": "Relative Clauses",
+  "description": "Practice Relative Clauses.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B1",
+  "level": "B1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The woman ___ lives next door is a doctor.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use who when the relative pronoun refers to a person in a defining relative clause.",
+      "correctIndex": 3,
+      "answers": [
+        "which",
+        "where",
+        "who",
+        "what"
+      ]
+    },
+    {
+      "question": "The man ___ called earlier is my uncle.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use who when the relative pronoun refers to a person in a defining relative clause.",
+      "correctIndex": 2,
+      "answers": [
+        "which",
+        "who",
+        "where",
+        "what"
+      ]
+    },
+    {
+      "question": "The teacher ___ helped me was very patient.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use who when the relative pronoun refers to a person in a defining relative clause.",
+      "correctIndex": 1,
+      "answers": [
+        "who",
+        "which",
+        "where",
+        "what"
+      ]
+    },
+    {
+      "question": "The student ___ won the prize is from our class.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use who when the relative pronoun refers to a person in a defining relative clause.",
+      "correctIndex": 4,
+      "answers": [
+        "which",
+        "where",
+        "what",
+        "who"
+      ]
+    },
+    {
+      "question": "The doctor ___ works here is highly respected.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use who when the relative pronoun refers to a person in a defining relative clause.",
+      "correctIndex": 4,
+      "answers": [
+        "which",
+        "where",
+        "what",
+        "who"
+      ]
+    }
+  ]
+}

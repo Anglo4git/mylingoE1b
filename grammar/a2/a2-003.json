@@ -1,0 +1,77 @@
+{
+  "id": "a2-003",
+  "title": "Past Continuous",
+  "description": "Practice Past Continuous.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A2",
+  "level": "A2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "At 8 p.m., I ___ dinner.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use was/were + -ing for an action in progress at a past time.",
+      "correctIndex": 1,
+      "answers": [
+        "was cooking",
+        "cook",
+        "cooked",
+        "am cooking"
+      ]
+    },
+    {
+      "question": "At 6 p.m., she ___ dinner.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use was/were + -ing for an action in progress at a past time.",
+      "correctIndex": 2,
+      "answers": [
+        "cook",
+        "was cooking",
+        "cooked",
+        "am cooking"
+      ]
+    },
+    {
+      "question": "At midnight, they ___ home.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use was/were + -ing for an action in progress at a past time.",
+      "correctIndex": 3,
+      "answers": [
+        "cook",
+        "cooked",
+        "was cooking",
+        "am cooking"
+      ]
+    },
+    {
+      "question": "While I called, he ___ TV.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use was/were + -ing for an action in progress at a past time.",
+      "correctIndex": 4,
+      "answers": [
+        "cook",
+        "cooked",
+        "am cooking",
+        "was cooking"
+      ]
+    },
+    {
+      "question": "At that time, we ___ for the bus.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use was/were + -ing for an action in progress at a past time.",
+      "correctIndex": 3,
+      "answers": [
+        "cook",
+        "cooked",
+        "was cooking",
+        "am cooking"
+      ]
+    }
+  ]
+}

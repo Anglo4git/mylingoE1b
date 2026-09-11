@@ -1,0 +1,77 @@
+{
+  "id": "c1-004",
+  "title": "Discourse Markers",
+  "description": "Practice Discourse Markers.",
+  "brand": "Mylingo",
+  "category": "Writing",
+  "tags": "Writing,C1",
+  "level": "C1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The proposal is ambitious. ___, it is financially realistic.",
+      "category": "Writing",
+      "tags": "Writing,C1",
+      "explanation": "Nevertheless signals contrast.",
+      "correctIndex": 4,
+      "answers": [
+        "For example",
+        "Similarly",
+        "Consequently",
+        "Nevertheless"
+      ]
+    },
+    {
+      "question": "The plan is ambitious. ___, it is achievable.",
+      "category": "Writing",
+      "tags": "Writing,C1",
+      "explanation": "Nevertheless signals contrast.",
+      "correctIndex": 3,
+      "answers": [
+        "For example",
+        "Similarly",
+        "Nevertheless",
+        "Consequently"
+      ]
+    },
+    {
+      "question": "The task is difficult. ___, the team completed it.",
+      "category": "Writing",
+      "tags": "Writing,C1",
+      "explanation": "Nevertheless signals contrast.",
+      "correctIndex": 2,
+      "answers": [
+        "For example",
+        "Nevertheless",
+        "Similarly",
+        "Consequently"
+      ]
+    },
+    {
+      "question": "The idea is unconventional. ___, it has strong support.",
+      "category": "Writing",
+      "tags": "Writing,C1",
+      "explanation": "Nevertheless signals contrast.",
+      "correctIndex": 1,
+      "answers": [
+        "Nevertheless",
+        "For example",
+        "Similarly",
+        "Consequently"
+      ]
+    },
+    {
+      "question": "The proposal is expensive. ___, it may save money later.",
+      "category": "Writing",
+      "tags": "Writing,C1",
+      "explanation": "Nevertheless signals contrast.",
+      "correctIndex": 3,
+      "answers": [
+        "For example",
+        "Similarly",
+        "Nevertheless",
+        "Consequently"
+      ]
+    }
+  ]
+}

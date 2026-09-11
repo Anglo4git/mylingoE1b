@@ -1,0 +1,77 @@
+{
+  "id": "a2-008",
+  "title": "Modal: should",
+  "description": "Practice Modal: should.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A2",
+  "level": "A2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "You ___ see a doctor if you feel very ill.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Should is followed by the base verb.",
+      "correctIndex": 2,
+      "answers": [
+        "must to",
+        "should",
+        "can to",
+        "should to"
+      ]
+    },
+    {
+      "question": "You ___ rest if you feel sick.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Should is followed by the base verb.",
+      "correctIndex": 3,
+      "answers": [
+        "must to",
+        "can to",
+        "should",
+        "should to"
+      ]
+    },
+    {
+      "question": "He ___ call a doctor if the pain continues.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Should is followed by the base verb.",
+      "correctIndex": 1,
+      "answers": [
+        "should",
+        "must to",
+        "can to",
+        "should to"
+      ]
+    },
+    {
+      "question": "We ___ leave early to avoid traffic.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Should is followed by the base verb.",
+      "correctIndex": 4,
+      "answers": [
+        "must to",
+        "can to",
+        "should to",
+        "should"
+      ]
+    },
+    {
+      "question": "She ___ take an umbrella today.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Should is followed by the base verb.",
+      "correctIndex": 4,
+      "answers": [
+        "must to",
+        "can to",
+        "should to",
+        "should"
+      ]
+    }
+  ]
+}

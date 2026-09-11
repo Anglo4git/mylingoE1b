@@ -1,0 +1,77 @@
+{
+  "id": "b2-007",
+  "title": "Hedging",
+  "description": "Practice Hedging.",
+  "brand": "Mylingo",
+  "category": "Academic English",
+  "tags": "Academic English,B2",
+  "level": "B2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The results ___ suggest that the policy was effective.",
+      "category": "Academic English",
+      "tags": "Academic English,B2",
+      "explanation": "Appear to is a cautious way to state a conclusion.",
+      "correctIndex": 1,
+      "answers": [
+        "appear to",
+        "clearly",
+        "must",
+        "never"
+      ]
+    },
+    {
+      "question": "The figures ___ indicate a gradual increase.",
+      "category": "Academic English",
+      "tags": "Academic English,B2",
+      "explanation": "Appear to is a cautious way to state a conclusion.",
+      "correctIndex": 2,
+      "answers": [
+        "clearly",
+        "appear to",
+        "must",
+        "never"
+      ]
+    },
+    {
+      "question": "The results ___ suggest that demand is falling.",
+      "category": "Academic English",
+      "tags": "Academic English,B2",
+      "explanation": "Appear to is a cautious way to state a conclusion.",
+      "correctIndex": 3,
+      "answers": [
+        "clearly",
+        "must",
+        "appear to",
+        "never"
+      ]
+    },
+    {
+      "question": "The findings ___ appear to support the theory.",
+      "category": "Academic English",
+      "tags": "Academic English,B2",
+      "explanation": "Appear to is a cautious way to state a conclusion.",
+      "correctIndex": 4,
+      "answers": [
+        "clearly",
+        "must",
+        "never",
+        "appear to"
+      ]
+    },
+    {
+      "question": "The data ___ suggest a change in consumer behavior.",
+      "category": "Academic English",
+      "tags": "Academic English,B2",
+      "explanation": "Appear to is a cautious way to state a conclusion.",
+      "correctIndex": 4,
+      "answers": [
+        "clearly",
+        "must",
+        "never",
+        "appear to"
+      ]
+    }
+  ]
+}

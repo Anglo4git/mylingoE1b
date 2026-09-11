@@ -1,0 +1,77 @@
+{
+  "id": "b1-002",
+  "title": "Second Conditional",
+  "description": "Practice Second Conditional.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B1",
+  "level": "B1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "If I had more time, I ___ another language.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use if + past, would + base verb for hypothetical situations.",
+      "correctIndex": 2,
+      "answers": [
+        "learn",
+        "would learn",
+        "will learn",
+        "learned"
+      ]
+    },
+    {
+      "question": "If I lived near the sea, I ___ every morning.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use if + past, would + base verb for hypothetical situations.",
+      "correctIndex": 1,
+      "answers": [
+        "would learn",
+        "learn",
+        "will learn",
+        "learned"
+      ]
+    },
+    {
+      "question": "If she had a car, she ___ to work.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use if + past, would + base verb for hypothetical situations.",
+      "correctIndex": 4,
+      "answers": [
+        "learn",
+        "will learn",
+        "learned",
+        "would learn"
+      ]
+    },
+    {
+      "question": "If we had more money, we ___ abroad more often.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use if + past, would + base verb for hypothetical situations.",
+      "correctIndex": 3,
+      "answers": [
+        "learn",
+        "will learn",
+        "would learn",
+        "learned"
+      ]
+    },
+    {
+      "question": "If he knew the answer, he ___ us.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use if + past, would + base verb for hypothetical situations.",
+      "correctIndex": 4,
+      "answers": [
+        "learn",
+        "will learn",
+        "learned",
+        "would learn"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "c2-001",
+  "title": "Nuanced Modality",
+  "description": "Practice Nuanced Modality.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,C2",
+  "level": "C2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "He ___ have been aware of the risk, but the evidence is inconclusive.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "May have been expresses a possible past state.",
+      "correctIndex": 3,
+      "answers": [
+        "must",
+        "will",
+        "may",
+        "should"
+      ]
+    },
+    {
+      "question": "She ___ have known about the change, but the evidence is unclear.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "May have been expresses a possible past state.",
+      "correctIndex": 4,
+      "answers": [
+        "must",
+        "will",
+        "should",
+        "may"
+      ]
+    },
+    {
+      "question": "They ___ have misunderstood the message, although we cannot be certain.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "May have been expresses a possible past state.",
+      "correctIndex": 2,
+      "answers": [
+        "must",
+        "may",
+        "will",
+        "should"
+      ]
+    },
+    {
+      "question": "He ___ have noticed the error, but there is no proof.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "May have been expresses a possible past state.",
+      "correctIndex": 1,
+      "answers": [
+        "may",
+        "must",
+        "will",
+        "should"
+      ]
+    },
+    {
+      "question": "The committee ___ have anticipated the problem, but the record is inconclusive.",
+      "category": "Grammar",
+      "tags": "Grammar,C2",
+      "explanation": "May have been expresses a possible past state.",
+      "correctIndex": 4,
+      "answers": [
+        "must",
+        "will",
+        "should",
+        "may"
+      ]
+    }
+  ]
+}

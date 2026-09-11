@@ -1,0 +1,77 @@
+{
+  "id": "c2-009",
+  "title": "Idiomatic Precision",
+  "description": "Practice Idiomatic Precision.",
+  "brand": "Mylingo",
+  "category": "Vocabulary",
+  "tags": "Vocabulary,C2",
+  "level": "C2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The new evidence ___ serious doubt on the original claim.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Cast doubt on is the standard collocation.",
+      "correctIndex": 3,
+      "answers": [
+        "throws up",
+        "does",
+        "casts",
+        "makes"
+      ]
+    },
+    {
+      "question": "The new findings ___ serious doubt on the earlier conclusion.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Cast doubt on is the standard collocation.",
+      "correctIndex": 1,
+      "answers": [
+        "casts",
+        "throws up",
+        "does",
+        "makes"
+      ]
+    },
+    {
+      "question": "The latest evidence ___ doubt on the original interpretation.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Cast doubt on is the standard collocation.",
+      "correctIndex": 2,
+      "answers": [
+        "throws up",
+        "casts",
+        "does",
+        "makes"
+      ]
+    },
+    {
+      "question": "The report ___ considerable doubt on the proposed explanation.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Cast doubt on is the standard collocation.",
+      "correctIndex": 4,
+      "answers": [
+        "throws up",
+        "does",
+        "makes",
+        "casts"
+      ]
+    },
+    {
+      "question": "The results ___ further doubt on the initial claim.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Cast doubt on is the standard collocation.",
+      "correctIndex": 3,
+      "answers": [
+        "throws up",
+        "does",
+        "casts",
+        "makes"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "c2-005",
+  "title": "Semantic Nuance",
+  "description": "Practice Semantic Nuance.",
+  "brand": "Mylingo",
+  "category": "Vocabulary",
+  "tags": "Vocabulary,C2",
+  "level": "C2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The minister's response was deliberately ___, avoiding a direct commitment.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Equivocal means deliberately unclear or open to more than one interpretation.",
+      "correctIndex": 2,
+      "answers": [
+        "equivalent",
+        "equivocal",
+        "explicit",
+        "conclusive"
+      ]
+    },
+    {
+      "question": "The spokesperson gave an ___ answer, avoiding a firm commitment.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Equivocal means deliberately unclear or open to more than one interpretation.",
+      "correctIndex": 3,
+      "answers": [
+        "equivalent",
+        "explicit",
+        "equivocal",
+        "conclusive"
+      ]
+    },
+    {
+      "question": "His response remained ___, leaving both interpretations open.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Equivocal means deliberately unclear or open to more than one interpretation.",
+      "correctIndex": 4,
+      "answers": [
+        "equivalent",
+        "explicit",
+        "conclusive",
+        "equivocal"
+      ]
+    },
+    {
+      "question": "The statement was deliberately ___, so no clear promise was made.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Equivocal means deliberately unclear or open to more than one interpretation.",
+      "correctIndex": 1,
+      "answers": [
+        "equivocal",
+        "equivalent",
+        "explicit",
+        "conclusive"
+      ]
+    },
+    {
+      "question": "Her reply was ___ rather than explicit, which frustrated the audience.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C2",
+      "explanation": "Equivocal means deliberately unclear or open to more than one interpretation.",
+      "correctIndex": 3,
+      "answers": [
+        "equivalent",
+        "explicit",
+        "equivocal",
+        "conclusive"
+      ]
+    }
+  ]
+}

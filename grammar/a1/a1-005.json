@@ -1,0 +1,77 @@
+{
+  "id": "a1-005",
+  "title": "There is / There are",
+  "description": "Practice There is / There are.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A1",
+  "level": "A1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "___ three chairs in the room.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use There are with plural nouns.",
+      "correctIndex": 4,
+      "answers": [
+        "There is",
+        "It is",
+        "They are",
+        "There are"
+      ]
+    },
+    {
+      "question": "There are two windows in this room.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use There are with plural nouns.",
+      "correctIndex": 3,
+      "answers": [
+        "There is",
+        "It is",
+        "There are",
+        "They are"
+      ]
+    },
+    {
+      "question": "There are four students in the library.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use There are with plural nouns.",
+      "correctIndex": 1,
+      "answers": [
+        "There are",
+        "There is",
+        "It is",
+        "They are"
+      ]
+    },
+    {
+      "question": "There are three books on the desk.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use There are with plural nouns.",
+      "correctIndex": 2,
+      "answers": [
+        "There is",
+        "There are",
+        "It is",
+        "They are"
+      ]
+    },
+    {
+      "question": "There are five chairs near the door.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Use There are with plural nouns.",
+      "correctIndex": 1,
+      "answers": [
+        "There are",
+        "There is",
+        "It is",
+        "They are"
+      ]
+    }
+  ]
+}

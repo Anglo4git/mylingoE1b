@@ -1,0 +1,203 @@
+{
+  "id": "placement-001",
+  "title": "A2 Level Check",
+  "description": "A 10-question placement check for A2.",
+  "brand": "Mylingo",
+  "category": "Placement",
+  "tags": "Placement,A2",
+  "level": "A2",
+  "version": 1,
+  "questions": [
+    {
+      "question": "A car is ___ than a bicycle.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use the comparative form faster for a two-item comparison.",
+      "correctIndex": 1,
+      "answers": [
+        "faster",
+        "fast",
+        "fastest",
+        "more fast"
+      ],
+      "id": "a2-placement-001",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 2,
+      "cefr": "A2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Look! The baby ___.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use am/is/are + -ing for an action happening now.",
+      "correctIndex": 3,
+      "answers": [
+        "sleep",
+        "sleeps",
+        "is sleeping",
+        "slept"
+      ],
+      "id": "a2-placement-002",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 2,
+      "cefr": "A2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "At 8 p.m., I ___ dinner.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use was/were + -ing for an action in progress at a past time.",
+      "correctIndex": 2,
+      "answers": [
+        "cook",
+        "was cooking",
+        "cooked",
+        "am cooking"
+      ],
+      "id": "a2-placement-003",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 2,
+      "cefr": "A2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "We ___ visit next weekend.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use be + going to + base verb for plans.",
+      "correctIndex": 1,
+      "answers": [
+        "are going to",
+        "going",
+        "are go",
+        "went"
+      ],
+      "id": "a2-placement-004",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 2,
+      "cefr": "A2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "If it rains, we ___ at home.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "The first conditional uses if + present, then will + base verb.",
+      "correctIndex": 2,
+      "answers": [
+        "stay",
+        "will stay",
+        "stayed",
+        "would stay"
+      ],
+      "id": "a2-placement-005",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 2,
+      "cefr": "A2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "How ___ water do you need?",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Use much with uncountable nouns.",
+      "correctIndex": 2,
+      "answers": [
+        "many",
+        "much",
+        "few",
+        "a lot"
+      ],
+      "id": "a2-placement-006",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 2,
+      "cefr": "A2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "She ___ gets up early; almost every day.",
+      "category": "Grammar",
+      "tags": "Grammar,A2",
+      "explanation": "Usually means something happens often but not always.",
+      "correctIndex": 3,
+      "answers": [
+        "never",
+        "rarely",
+        "usually",
+        "never is"
+      ],
+      "id": "a2-placement-007",
+      "skill": "grammar",
+      "subskill": "grammar-usage",
+      "difficulty": 2,
+      "cefr": "A2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The room is very ___. Please open the window.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,A2",
+      "explanation": "Hot describes a room with a high temperature.",
+      "correctIndex": 1,
+      "answers": [
+        "hot",
+        "early",
+        "careful",
+        "narrow"
+      ],
+      "id": "a2-placement-008",
+      "skill": "vocabulary",
+      "subskill": "contextual-vocabulary",
+      "difficulty": 2,
+      "cefr": "A2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Read: Maya missed the bus, so she walked to work. Why did Maya walk to work?",
+      "category": "Reading",
+      "tags": "Reading,A2",
+      "explanation": "The passage says Maya walked because she missed the bus.",
+      "correctIndex": 1,
+      "answers": [
+        "She missed the bus.",
+        "She wanted exercise.",
+        "Her car was new.",
+        "The train was late."
+      ],
+      "id": "a2-placement-009",
+      "skill": "reading",
+      "subskill": "reading-cause",
+      "difficulty": 2,
+      "cefr": "A2",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Choose the best sentence for a polite email to a teacher.",
+      "category": "Writing",
+      "tags": "Writing,A2",
+      "explanation": "Could you please is an appropriate polite request in a teacher email.",
+      "correctIndex": 1,
+      "answers": [
+        "Could you please explain the homework?",
+        "Explain homework now.",
+        "You explain homework.",
+        "Homework? Tell me."
+      ],
+      "id": "a2-placement-010",
+      "skill": "writing",
+      "subskill": "polite-request",
+      "difficulty": 2,
+      "cefr": "A2",
+      "estimated_time_seconds": 20
+    }
+  ],
+  "metadata_note": "Question skill/difficulty/CEFR/time fields are internal product metadata, not official CEFR certification."
+}

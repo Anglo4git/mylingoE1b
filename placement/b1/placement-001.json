@@ -1,0 +1,203 @@
+{
+  "id": "placement-001",
+  "title": "B1 Level Check",
+  "description": "A 10-question placement check for B1.",
+  "brand": "Mylingo",
+  "category": "Placement",
+  "tags": "Placement,B1",
+  "level": "B1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "I ___ London twice, but I first went there in 2022.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use present perfect for life experience without a finished past time.",
+      "correctIndex": 1,
+      "answers": [
+        "have visited",
+        "visited",
+        "am visiting",
+        "visit"
+      ],
+      "id": "b1-placement-001",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 3,
+      "cefr": "B1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "If I had more time, I ___ another language.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use if + past, would + base verb for hypothetical situations.",
+      "correctIndex": 3,
+      "answers": [
+        "learn",
+        "will learn",
+        "would learn",
+        "learned"
+      ],
+      "id": "b1-placement-002",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 3,
+      "cefr": "B1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The woman ___ lives next door is a doctor.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Use who for people.",
+      "correctIndex": 2,
+      "answers": [
+        "which",
+        "who",
+        "where",
+        "what"
+      ],
+      "id": "b1-placement-003",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 3,
+      "cefr": "B1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "He said that he ___ tired.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Backshift is commonly used when reporting a past statement.",
+      "correctIndex": 2,
+      "answers": [
+        "is",
+        "was",
+        "has",
+        "will"
+      ],
+      "id": "b1-placement-004",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 3,
+      "cefr": "B1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "She enjoys ___ books.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Enjoy is followed by a gerund (-ing form).",
+      "correctIndex": 3,
+      "answers": [
+        "read",
+        "to read",
+        "reading",
+        "reads"
+      ],
+      "id": "b1-placement-005",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 3,
+      "cefr": "B1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The lights are off. They ___ be at home.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Can't expresses a strong negative deduction.",
+      "correctIndex": 2,
+      "answers": [
+        "must",
+        "can't",
+        "should",
+        "need"
+      ],
+      "id": "b1-placement-006",
+      "skill": "grammar",
+      "subskill": "verb-forms",
+      "difficulty": 3,
+      "cefr": "B1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "The bridge ___ in 1990.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "The past passive uses was/were + past participle.",
+      "correctIndex": 2,
+      "answers": [
+        "built",
+        "was built",
+        "is building",
+        "has build"
+      ],
+      "id": "b1-placement-007",
+      "skill": "grammar",
+      "subskill": "grammar-usage",
+      "difficulty": 3,
+      "cefr": "B1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "I was tired; ___, I finished the report.",
+      "category": "Writing",
+      "tags": "Writing,B1",
+      "explanation": "However introduces a contrast.",
+      "correctIndex": 1,
+      "answers": [
+        "however",
+        "because",
+        "so that",
+        "unless"
+      ],
+      "id": "b1-placement-008",
+      "skill": "writing",
+      "subskill": "discourse-marker",
+      "difficulty": 3,
+      "cefr": "B1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Read: Lina studied every evening for the exam. On Friday, she felt prepared and finished the test early. Why did Lina finish the test early?",
+      "category": "Reading",
+      "tags": "Reading,B1",
+      "explanation": "The passage says Lina felt prepared after studying every evening.",
+      "correctIndex": 1,
+      "answers": [
+        "She felt prepared.",
+        "She had not studied.",
+        "The test was cancelled.",
+        "She arrived late."
+      ],
+      "id": "b1-placement-009",
+      "skill": "reading",
+      "subskill": "reading-inference",
+      "difficulty": 3,
+      "cefr": "B1",
+      "estimated_time_seconds": 20
+    },
+    {
+      "question": "Please ___ the lights before you leave.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,B1",
+      "explanation": "Turn off means switch something off.",
+      "correctIndex": 1,
+      "answers": [
+        "turn off",
+        "turn up to",
+        "turning off",
+        "turned"
+      ],
+      "id": "b1-placement-010",
+      "skill": "vocabulary",
+      "subskill": "contextual-vocabulary",
+      "difficulty": 3,
+      "cefr": "B1",
+      "estimated_time_seconds": 20
+    }
+  ],
+  "metadata_note": "Question skill/difficulty/CEFR/time fields are internal product metadata, not official CEFR certification."
+}

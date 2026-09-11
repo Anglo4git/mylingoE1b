@@ -1,0 +1,77 @@
+{
+  "id": "c1-010",
+  "title": "Collocation",
+  "description": "Practice Collocation.",
+  "brand": "Mylingo",
+  "category": "Vocabulary",
+  "tags": "Vocabulary,C1",
+  "level": "C1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "The report draws ___ attention to a serious gap.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Draw sharp attention to is a natural formal collocation.",
+      "correctIndex": 3,
+      "answers": [
+        "strong",
+        "heavy",
+        "sharp",
+        "big"
+      ]
+    },
+    {
+      "question": "The article draws ___ attention to the limitations of the study.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Draw sharp attention to is a natural formal collocation.",
+      "correctIndex": 2,
+      "answers": [
+        "strong",
+        "sharp",
+        "heavy",
+        "big"
+      ]
+    },
+    {
+      "question": "The report draws ___ attention to the need for reform.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Draw sharp attention to is a natural formal collocation.",
+      "correctIndex": 1,
+      "answers": [
+        "sharp",
+        "strong",
+        "heavy",
+        "big"
+      ]
+    },
+    {
+      "question": "The paper draws ___ attention to a significant gap.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Draw sharp attention to is a natural formal collocation.",
+      "correctIndex": 4,
+      "answers": [
+        "strong",
+        "heavy",
+        "big",
+        "sharp"
+      ]
+    },
+    {
+      "question": "The review draws ___ attention to an unresolved issue.",
+      "category": "Vocabulary",
+      "tags": "Vocabulary,C1",
+      "explanation": "Draw sharp attention to is a natural formal collocation.",
+      "correctIndex": 3,
+      "answers": [
+        "strong",
+        "heavy",
+        "sharp",
+        "big"
+      ]
+    }
+  ]
+}

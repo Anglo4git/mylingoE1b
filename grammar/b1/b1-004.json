@@ -1,0 +1,77 @@
+{
+  "id": "b1-004",
+  "title": "Reported Speech",
+  "description": "Practice Reported Speech.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,B1",
+  "level": "B1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "He said that he ___ tired.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Backshift is commonly used when reporting a past statement.",
+      "correctIndex": 1,
+      "answers": [
+        "was",
+        "is",
+        "has",
+        "will"
+      ]
+    },
+    {
+      "question": "She said that she ___ busy.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Backshift is commonly used when reporting a past statement.",
+      "correctIndex": 3,
+      "answers": [
+        "is",
+        "has",
+        "was",
+        "will"
+      ]
+    },
+    {
+      "question": "They told me that the shop ___ closed.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Backshift is commonly used when reporting a past statement.",
+      "correctIndex": 4,
+      "answers": [
+        "is",
+        "has",
+        "will",
+        "was"
+      ]
+    },
+    {
+      "question": "He explained that he ___ tired.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Backshift is commonly used when reporting a past statement.",
+      "correctIndex": 2,
+      "answers": [
+        "is",
+        "was",
+        "has",
+        "will"
+      ]
+    },
+    {
+      "question": "Maria said that she ___ late.",
+      "category": "Grammar",
+      "tags": "Grammar,B1",
+      "explanation": "Backshift is commonly used when reporting a past statement.",
+      "correctIndex": 4,
+      "answers": [
+        "is",
+        "has",
+        "will",
+        "was"
+      ]
+    }
+  ]
+}

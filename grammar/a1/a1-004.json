@@ -1,0 +1,77 @@
+{
+  "id": "a1-004",
+  "title": "Plural Nouns",
+  "description": "Practice Plural Nouns.",
+  "brand": "Mylingo",
+  "category": "Grammar",
+  "tags": "Grammar,A1",
+  "level": "A1",
+  "version": 1,
+  "questions": [
+    {
+      "question": "There are two ___ on the table.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Most regular nouns take -s in the plural.",
+      "correctIndex": 4,
+      "answers": [
+        "book",
+        "bookes",
+        "a book",
+        "books"
+      ]
+    },
+    {
+      "question": "There are two ___ in the garden.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Most regular nouns take -s in the plural.",
+      "correctIndex": 2,
+      "answers": [
+        "book",
+        "books",
+        "bookes",
+        "a book"
+      ]
+    },
+    {
+      "question": "I bought three ___ yesterday.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Most regular nouns take -s in the plural.",
+      "correctIndex": 1,
+      "answers": [
+        "books",
+        "book",
+        "bookes",
+        "a book"
+      ]
+    },
+    {
+      "question": "The shop has five ___ on the shelf.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Most regular nouns take -s in the plural.",
+      "correctIndex": 3,
+      "answers": [
+        "book",
+        "bookes",
+        "books",
+        "a book"
+      ]
+    },
+    {
+      "question": "We saw two ___ near the house.",
+      "category": "Grammar",
+      "tags": "Grammar,A1",
+      "explanation": "Most regular nouns take -s in the plural.",
+      "correctIndex": 2,
+      "answers": [
+        "book",
+        "books",
+        "bookes",
+        "a book"
+      ]
+    }
+  ]
+}
