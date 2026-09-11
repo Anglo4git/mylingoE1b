@@ -1,0 +1,74 @@
+name: Deploy MYLINGO to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build MYLINGO Pages Artifact
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout mylingoE1b
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare MYLINGO website
+        shell: bash
+        run: |
+          set -e
+
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Preparing MYLINGO from ./site"
+
+          test -f site/index.html
+          test -f site/main/index.html
+          test -f site/manifest.json
+          test -f site/sw.js
+
+          rm -rf _site
+          mkdir -p _site
+
+          cp -R site/. _site/
+
+          echo "Checking deployed site structure..."
+          test -f _site/index.html
+          test -f _site/main/index.html
+          test -f _site/manifest.json
+          test -f _site/sw.js
+
+          echo "MYLINGO site prepared successfully."
+
+      - name: Upload MYLINGO Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    name: Deploy MYLINGO
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
