@@ -1,76 +1,82 @@
-name: Deploy MYLINGO to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main2
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: github-pages
-  cancel-in-progress: true
-
-jobs:
-  build:
-    name: Build MYLINGO Pages Artifact
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout mylingoE1b
-        uses: actions/checkout@v4
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
       - name: Prepare MYLINGO website
         shell: bash
         run: |
           set -e
 
+          echo "========================================"
+          echo "MYLINGO DEPLOYMENT DIAGNOSTICS"
+          echo "========================================"
+
           echo "Repository: $GITHUB_REPOSITORY"
           echo "Branch: $GITHUB_REF"
-          echo "Preparing MYLINGO from ./site"
+          echo "Working directory:"
+          pwd
 
-          test -f site/index.html
-          test -f site/main/index.html
-          test -f site/manifest.json
-          test -f site/sw.js
+          echo ""
+          echo "Repository root:"
+          ls -la
+
+          echo ""
+          echo "Checking site directory..."
+
+          if [ ! -d "site" ]; then
+            echo "ERROR: site/ directory does not exist."
+            echo "Available directories:"
+            find . -maxdepth 2 -type d | sort
+            exit 1
+          fi
+
+          echo "site/ exists."
+
+          echo ""
+          echo "site/ contents:"
+          ls -la site
+
+          echo ""
+          echo "Checking required MYLINGO files..."
+
+          REQUIRED_FILES=(
+            "site/index.html"
+            "site/main/index.html"
+            "site/manifest.json"
+            "site/sw.js"
+          )
+
+          for FILE in "${REQUIRED_FILES[@]}"; do
+            if [ -f "$FILE" ]; then
+              echo "OK: $FILE"
+            else
+              echo "MISSING: $FILE"
+              exit 1
+            fi
+          done
+
+          echo ""
+          echo "All required MYLINGO files found."
 
           rm -rf _site
           mkdir -p _site
 
           cp -R site/. _site/
 
-          echo "Checking deployed site structure..."
+          echo ""
+          echo "Checking deployment artifact..."
 
-          test -f _site/index.html
-          test -f _site/main/index.html
-          test -f _site/manifest.json
-          test -f _site/sw.js
+          for FILE in \
+            "_site/index.html" \
+            "_site/main/index.html" \
+            "_site/manifest.json" \
+            "_site/sw.js"
+          do
+            if [ -f "$FILE" ]; then
+              echo "OK: $FILE"
+            else
+              echo "ERROR: deployment file missing: $FILE"
+              exit 1
+            fi
+          done
 
-          echo "MYLINGO site prepared successfully."
-
-      - name: Upload MYLINGO Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./_site
-
-  deploy:
-    name: Deploy MYLINGO
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-
-    needs: build
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          echo ""
+          echo "========================================"
+          echo "MYLINGO SITE PREPARATION SUCCESSFUL"
+          echo "========================================"
