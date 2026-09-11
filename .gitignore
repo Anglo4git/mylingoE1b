@@ -1,64 +1,582 @@
-# ==========================================
-# MYLINGO - Git Ignore
-# ==========================================
+============================================================
 
-# ---------- Dependencies ----------
+MYLINGO
+
+Complete Git Ignore
+
+============================================================
+
+============================================================
+
+1. NODE / NPM DEPENDENCIES
+
+============================================================
+
 node_modules/
+.npm/
+.npmrc.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
 
-# ---------- Environment / Secrets ----------
+============================================================
+
+2. ENVIRONMENT VARIABLES / SECRETS
+
+============================================================
+
 .env
 .env.*
 !.env.example
+!.env.template
 
-# ---------- Operating System ----------
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+secrets/
+.secret/
+secrets.json
+credentials.json
+credentials.local.json
+
+============================================================
+
+3. BUILD OUTPUT / GENERATED RELEASE FILES
+
+============================================================
+
+MYLINGO generated release directory
+
+dist-release/
+
+Generic build directories
+
+dist/
+build/
+out/
+release/
+releases/
+
+Temporary generated application copies
+
+generated/
+generated-release/
+generated-site/
+
+Bundler caches
+
+.vite/
+.parcel-cache/
+.turbo/
+.next/
+.nuxt/
+
+============================================================
+
+4. TEST OUTPUT
+
+============================================================
+
+coverage/
+.nyc_output/
+
+playwright-report/
+test-results/
+
+reports/
+test-reports/
+qa-reports/
+
+*.test-output
+*.test-report
+
+============================================================
+
+5. PYTHON
+
+============================================================
+
+pycache/
+*.py[cod]
+*$py.class
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.venv/
+venv/
+ENV/
+env/
+
+*.egg
+*.egg-info/
+.eggs/
+
+.pyre/
+.pytype/
+
+============================================================
+
+6. TEMPORARY FILES
+
+============================================================
+
+*.tmp
+*.temp
+*.temporary
+
+*.bak
+*.backup
+*.old
+*.orig
+
+*.swp
+*.swo
+*.swn
+
+*~
+.#*
+
+.tmp/
+.temp/
+temporary/
+temp/
+
+============================================================
+
+7. OPERATING SYSTEM FILES
+
+============================================================
+
+macOS
+
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+Windows
+
 Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 desktop.ini
 
-# ---------- Logs ----------
+Windows thumbnail/cache
+
+$RECYCLE.BIN/
+
+Linux
+
+.directory
+.Trash-*
+.nfs*
+
+============================================================
+
+8. IDE / EDITOR FILES
+
+============================================================
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.example.json
+
+.idea/
+*.iml
+
+.project
+.classpath
+.settings/
+
+.history/
+
+Sublime
+
+*.sublime-workspace
+*.sublime-project
+
+Vim
+
+[._]*.s[a-v][a-z]
+*.un~
+Session.vim
+
+============================================================
+
+9. LOGS
+
+============================================================
+
 *.log
+logs/
+log/
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# ---------- Test Output ----------
-coverage/
+lerna-debug.log*
+
+============================================================
+
+10. CACHE FILES
+
+============================================================
+
+.cache/
+.cache-loader/
+.eslintcache
+.stylelintcache
+
+.npm-cache/
+.yarn-cache/
+
+*.cache
+
+============================================================
+
+11. ARCHIVES / UPLOAD PACKAGES
+
+============================================================
+
+Do not commit release/handoff ZIP packages
+
+*.zip
+.zip.
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.7z
+*.rar
+
+If a future project requirement needs a specific archive,
+
+explicitly force-add it with:
+
+git add -f path/to/file.zip
+
+============================================================
+
+12. LOCAL DEVELOPMENT COPIES
+
+============================================================
+
+.local/
+.local-data/
+.local-storage/
+.local-cache/
+
+dev-data/
+local-data/
+
+sandbox/
+scratch/
+work/
+workspace-temp/
+
+============================================================
+
+13. GENERATED DATA / EXPORTS
+
+============================================================
+
+exports/
+export/
+generated-data/
+generated-content/
+
+*.export
+*.dump
+*.bak.json
+*.bak.csv
+*.bak.tsv
+
+============================================================
+
+14. DATABASE / LOCAL STORAGE
+
+============================================================
+
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+data/.db
+data/.sqlite
+data/*.sqlite3
+
+============================================================
+
+15. LOCAL WEB SERVER / DEVELOPMENT FILES
+
+============================================================
+
+.server/
+.server-data/
+
+http-server.log
+server.log
+
+*.pid
+
+============================================================
+
+16. BROWSER / AUTOMATION ARTIFACTS
+
+============================================================
+
+Playwright
+
 playwright-report/
 test-results/
+blob-report/
 
-# ---------- Temporary Files ----------
-*.tmp
-*.temp
-*.bak
-*.swp
-*.swo
-*~
+Browser downloads produced by tests
 
-# ---------- IDE ----------
-.vscode/
-.idea/
+downloads/
+test-downloads/
 
-# ---------- Build / Generated Release ----------
-dist-release/
+Selenium
 
-# ---------- Local Development ----------
-.local/
-.cache/
-.temp/
+selenium-downloads/
 
-# ---------- Python ----------
-__pycache__/
-*.py[cod]
+============================================================
+
+17. COVERAGE / PROFILING
+
+============================================================
+
+coverage/
+.nyc_output/
+*.lcov
+
+.prof
+.profraw
+.profdata
+
+============================================================
+
+18. TYPESCRIPT GENERATED FILES
+
+============================================================
+
+*.tsbuildinfo
+
+============================================================
+
+19. JAVASCRIPT TOOLING
+
+============================================================
+
+.eslintcache
+.stylelintcache
+
+Storybook
+
+storybook-static/
+
+Cypress
+
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+============================================================
+
+20. PYTHON TEST / TOOL OUTPUT
+
+============================================================
+
 .pytest_cache/
-.venv/
-venv/
-ENV/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
 
-# ---------- Archives ----------
-*.zip
-*.tar
-*.gz
+.pyre/
+.pytype/
 
-# ---------- Local / Personal Files ----------
-.DS_Store
+============================================================
+
+21. GENERATED DOCUMENTATION
+
+============================================================
+
+docs/_build/
+docs/build/
+site/_build/
+
+Keep manually written documentation tracked.
+
+============================================================
+
+22. CLOUD / LOCAL TOOL CONFIG
+
+============================================================
+
+.firebase/
+.vercel/
+.netlify/
+.serverless/
+
+Local deployment configuration
+
+.deploy/
+deployment-local/
+deployment-temp/
+
+============================================================
+
+23. CHATGPT / AI / AGENT TEMPORARY OUTPUT
+
+============================================================
+
+Temporary AI-generated working files
+
+.ai-temp/
+.ai-cache/
+.agent-temp/
+.agent-cache/
+
+Temporary Claude/Codex/agent workspaces
+
+.claude-local/
+.codex-local/
+
+Keep intentional project documentation and source files.
+
+============================================================
+
+24. MYLINGO HANDOFF / AUDIT TEMPORARY MATERIAL
+
+============================================================
+
+Temporary handoff copies
+
+handoff-temp/
+audit-temp/
+audit-output/
+audit-results/
+
+Temporary extracted releases
+
+extracted-release/
+release-temp/
+
+IMPORTANT:
+
+Do NOT ignore docs/handoffs/ or docs/audits/ automatically.
+
+Those can contain intentional project records.
+
+============================================================
+
+25. GENERATED MYLINGO RELEASE MATERIAL
+
+============================================================
+
+Generated release packages/directories
+
+MYLINGO_FINAL_RELEASE.zip
+MYLINGORELEASE.zip
+MYLINGO*_HANDOFF.zip
+
+MYLINGO_FINAL_RELEASE/
+MYLINGORELEASE/
+MYLINGO*_HANDOFF/
+
+============================================================
+
+26. COMMON LOCAL BACKUPS
+
+============================================================
+
+*.orig
+*.rej
+
+Backup directories
+
+backup/
+backups/
+_backup/
+_backups/
+
+============================================================
+
+27. LOCK / RUNTIME FILES
+
+============================================================
+
+*.pid
+*.pid.lock
+*.lock
+
+============================================================
+
+28. LOCAL CONFIGURATION
+
+============================================================
+
+*.local
+*.local.json
+*.local.js
+*.local.cjs
+*.local.mjs
+
+Allow explicitly tracked examples
+
+!.example
+!.example.*
+!.local.example
+!.local.example.*
+
+============================================================
+
+29. KEEP MYLINGO SOURCE CONTENT
+
+============================================================
+
+The following MUST remain trackable:
+
+site/
+
+course_content/
+
+scripts/
+
+tests/
+
+ci/
+
+docs/
+
+master_source.csv
+
+package.json
+
+package-lock.json
+
+playwright.config.js
+
+RELEASE_IDENTITY.json
+
+No ignore rule above intentionally excludes these.
+
+============================================================
+
+END OF MYLINGO .gitignore
+
+============================================================
