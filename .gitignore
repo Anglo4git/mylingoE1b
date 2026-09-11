@@ -1,0 +1,64 @@
+# ==========================================
+# MYLINGO - Git Ignore
+# ==========================================
+
+# ---------- Dependencies ----------
+node_modules/
+
+# ---------- Environment / Secrets ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Operating System ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Logs ----------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- Test Output ----------
+coverage/
+playwright-report/
+test-results/
+
+# ---------- Temporary Files ----------
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ---------- IDE ----------
+.vscode/
+.idea/
+
+# ---------- Build / Generated Release ----------
+dist-release/
+
+# ---------- Local Development ----------
+.local/
+.cache/
+.temp/
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+ENV/
+
+# ---------- Archives ----------
+*.zip
+*.tar
+*.gz
+
+# ---------- Local / Personal Files ----------
+.DS_Store
