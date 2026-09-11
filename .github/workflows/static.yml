@@ -3,7 +3,7 @@ name: Deploy MYLINGO to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main2
   workflow_dispatch:
 
 permissions:
@@ -33,6 +33,7 @@ jobs:
           set -e
 
           echo "Repository: $GITHUB_REPOSITORY"
+          echo "Branch: $GITHUB_REF"
           echo "Preparing MYLINGO from ./site"
 
           test -f site/index.html
@@ -46,6 +47,7 @@ jobs:
           cp -R site/. _site/
 
           echo "Checking deployed site structure..."
+
           test -f _site/index.html
           test -f _site/main/index.html
           test -f _site/manifest.json
